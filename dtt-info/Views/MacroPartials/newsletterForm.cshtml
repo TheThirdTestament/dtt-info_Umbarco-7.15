@@ -1,0 +1,59 @@
+﻿@model TheThirdTestament.ViewModels.NewsletterRegistration
+@{
+                /**/
+
+                Layout = null;
+}
+@if (TempData["success"] == null)
+{
+
+ 
+    
+            <div class="row">
+                <div class="col-sm-2">
+                </div>
+                <div class="col-sm-8">
+                    <h2>
+                        Stay updated regarding on live stream interactive events
+                    </h2>
+                    <br />
+                </div>
+            </div>
+           
+                
+            using (Html.BeginUmbracoForm("HandleFormSubmit", "NewsletterFormSurface", new object { }, new { @class = "form-horizontal" }))
+            {
+
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Firstname, new { @class = "col-sm-2 control-label" })
+                <div class="col-sm-5">
+                    @Html.TextBoxFor(m => m.Firstname, new { @class = "form-control", placeholder = "Name" })
+                    @Html.ValidationMessageFor(m => m.Firstname)
+                </div>
+            </div>
+             <div class="form-group row">
+                @Html.LabelFor(m => m.Lastname, new { @class = "col-sm-2 control-label" })
+                <div class="col-sm-5">
+                    @Html.TextBoxFor(m => m.Lastname, new { @class = "form-control", placeholder = "Name" })
+                    @Html.ValidationMessageFor(m => m.Lastname)
+                </div>
+            </div>
+            <div class="form-group row">
+                @Html.LabelFor(m => m.Email, new { @class = "col-sm-2 control-label" })
+                <div class="col-sm-5">
+                    @Html.TextBoxFor(m => m.Email, new { @class = "form-control", placeholder = "Email address" })
+                    @Html.ValidationMessageFor(m => m.Email)
+                </div>
+            </div>
+          
+            <div class="form-group row">
+                <div class="col-sm-5 offset-sm-2">
+                    <button id="contact-submit" type="submit" class="btn btn-primary input-medium">Subscribe</button>
+                </div>
+            </div>
+                }
+                }
+                else
+                {
+                <p>Thank you for the registration!</p>
+                }

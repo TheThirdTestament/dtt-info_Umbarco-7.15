@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<SimplePage>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <h1>@Model.Title</h1>
+    </div>
+</div>
+
+<div class="row" >
+    <div class="col-sm-8 text-body">
+        <div class="intro">@Model.Intro</div>
+        <div>@Model.Content</div>
+    </div>
+
+    <div class="col-sm-4">
+        @Html.GetGridHtml(Umbraco.AssignedContentItem, "rightPanel")
+    </div>
+</div>

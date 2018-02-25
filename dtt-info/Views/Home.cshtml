@@ -1,0 +1,27 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Home>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+@* the fun starts here *@
+
+<div class="row">
+    <div class="col-12">
+        <h1> </h1>
+        <div>&nbsp;</div>
+    </div>
+</div>
+
+@Html.GetGridHtml(Model, "mainContent", "bootstrap3")
+
+
+@*
+    Responsonsive GridPage images implemented:
+    \Views\Partials\Grid\Editors\Media.cshtml has implementend 4/12 grid
+
+    <div class="col-md-8 column">
+        <div class="two-column-frontpage-image">
+            <img srcset="@Model.Image.Url?width=320 320w, @Model.Image.Url?width=420 480w, @Model.Image.Url 680w" sizes="(max-width: 320px) 310px, (max-width: 480px) 460px, 600px" src="@Model.Image.Url" alt="The Third Testament" />
+        </div>
+    </div>*@

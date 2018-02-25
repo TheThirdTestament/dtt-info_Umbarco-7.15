@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<DocumentType>
+  <Info>
+    <Name>Newsletter Form</Name>
+    <Alias>newsletterForm</Alias>
+    <Icon>icon-document</Icon>
+    <Thumbnail>folder.png</Thumbnail>
+    <Description>Newsletter registration form</Description>
+    <AllowAtRoot>False</AllowAtRoot>
+    <IsListView>True</IsListView>
+    <Master>master</Master>
+    <Compositions>
+      <Composition>master</Composition>
+    </Compositions>
+    <AllowedTemplates>
+      <Template>NewsletterForm</Template>
+    </AllowedTemplates>
+    <DefaultTemplate>NewsletterForm</DefaultTemplate>
+  </Info>
+  <Structure>
+    <DocumentType>newsletterRegistration</DocumentType>
+  </Structure>
+  <GenericProperties>
+    <GenericProperty>
+      <Name>Title</Name>
+      <Alias>title</Alias>
+      <Type>Umbraco.Textbox</Type>
+      <Definition>675752a4-29e6-4ecb-9079-462cacbd5890</Definition>
+      <Tab>Content</Tab>
+      <SortOrder>0</SortOrder>
+      <Mandatory>False</Mandatory>
+    </GenericProperty>
+  </GenericProperties>
+  <Tabs>
+    <Tab>
+      <Id>33</Id>
+      <Caption>Content</Caption>
+      <SortOrder>1</SortOrder>
+    </Tab>
+  </Tabs>
+</DocumentType>

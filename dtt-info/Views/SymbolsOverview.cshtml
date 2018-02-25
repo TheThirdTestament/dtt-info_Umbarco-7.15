@@ -1,0 +1,64 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<SymbolsOverview>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <h1>@Model.Title </h1>
+    </div>
+
+    <div class="col-8">
+        <div>@Model.Intro</div>
+        <div>&nbsp;</div>
+    </div>
+    <div class="col-sm-4">
+        @Html.GetGridHtml(Umbraco.AssignedContentItem, "rightPanel")
+    </div>
+</div>
+
+
+@{
+    IEnumerable<IPublishedContent> selection = Model.Children.Where(x => x.IsVisible()).OrderBy(x => x.GetPropertyValue<int>("sortNo"));
+    int size = selection.Count();
+}
+
+@for (int i = 0; i < selection.Count(); i++)
+{
+    
+    @Html.Raw(i % 2 == 0 ? "<div class=\"row\">" : "")
+
+<div class="col-sm-4">
+    @if (selection.ElementAt(i).HasValue("imageFile"))
+    {
+        var imageFile = selection.ElementAt(i).GetPropertyValue<IPublishedContent>("imageFile");
+        var mediaFile = Umbraco.TypedMedia(imageFile.Id);
+
+        var height = mediaFile.GetPropertyValue<int>("umbracoHeight");
+        var width = mediaFile.GetPropertyValue<int>("umbracoWidth");
+
+        var resizeUrl = "";
+        if (width >= height)
+        {
+            resizeUrl = mediaFile.GetCropUrl(width: 200);
+        }
+        else
+        {
+            resizeUrl = mediaFile.GetCropUrl(height: 200);
+
+        }
+        <div id="symbol-overview">
+            <a href="@selection.ElementAt(i).Url">
+                <img src="@resizeUrl" alt="@selection.ElementAt(i).Name" />
+            </a>
+            <div>
+                <span>
+                    @selection.ElementAt(i).GetPropertyValue("title") (@selection.ElementAt(i).Name). <a href="@selection.ElementAt(i).Url">Introduction</a>
+                </span>
+            </div>
+        </div>
+    }
+    </div>
+    @Html.Raw(i % 2 == 1 ? "</div>" : "")
+}

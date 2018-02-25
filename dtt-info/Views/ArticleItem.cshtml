@@ -1,0 +1,50 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<ContentModels.ArticleItem>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-sm-4">       
+    </div>
+    <div class="col-sm-8">
+        <h1>@Model.Name</h1>
+        <div class="author">by <span>@Model.Author</span></div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-4">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Other Articles</h3>
+                <ul>
+                    @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") == 121))
+                    {
+                        <li><a href="@articleItem.Url">@articleItem.Title</a></li>
+                    }
+                </ul>
+                <h3 class="card-title">Other Texts</h3>
+                <ul>
+                @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") != 121))
+                {
+                    <li><a href="@articleItem.Url">@articleItem.Title</a></li>
+                }
+                </ul>
+            </div>
+        </div>
+    </div>    
+    <div class="col-sm-8 article text-body">
+
+        @if (@Model.Intro != null) {
+            @Model.Intro
+        }
+
+        @if (@Model.Content != null) {
+            @Model.Content
+        }
+
+
+    </div>
+</div>

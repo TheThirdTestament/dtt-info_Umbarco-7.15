@@ -2,20 +2,31 @@
 @using Umbraco.Web.Templates
 
 @if (Model.value != null)
-{   
+{
+    // Responsive Images with hard coded single 3 column gridCol
+    //int grid = 8;
+    int grid = 4;
+
+    double gridCol = 12 / grid;
+    var intGridCol = (int)Math.Ceiling(gridCol);
+
     var url = Model.value.image;
-    if(Model.editor.config != null && Model.editor.config.size != null){
+    if (Model.editor.config != null && Model.editor.config.size != null)
+    {
         url += "?width=" + Model.editor.config.size.width;
         url += "&height=" + Model.editor.config.size.height;
 
-        if(Model.value.focalPoint != null){
-            url += "&center=" + Model.value.focalPoint.top +"," + Model.value.focalPoint.left;
+        if (Model.value.focalPoint != null)
+        {
+            url += "&center=" + Model.value.focalPoint.top + "," + Model.value.focalPoint.left;
             url += "&mode=crop";
         }
     }
-    
-    <img src="@url" alt="@Model.value.caption">
-    
+
+    @*<img src="@url" alt="@Model.value.caption">*@
+    // Responsive Images
+    <img sizes="(min-width: 1200px) calc(1120px / @intGridCol), (min-width: 992px) calc(920px / @intGridCol), (min-width: 768px) calc(700px / @intGridCol), 100vw" srcset="@url?width=200 200w,@url?width=200 200w,@url?width=340 340w,@url?width=447 447w,@url?width=541 541w,@url?width=628 628w,@url?width=703 703w,@url?width=775 775w,@url?width=843 843w, @url?width=908 908w,@url?width=967 967w,@url?width=1023 1023w,@url?width=1082 1082w,@url?width=1135 1135w,@url?width=1188 1188w,@url?width=1242 1242w,@url?width=1291 1291w,@url?width=1340 1340w, @url?width=1387 1387w,@url?width=1431 1431w,@url?width=1476 1476w,@url?width=1520 1520w,@url?width=1565 1565w,@url?width=1605 1605w,@url?width=1650 1650w,@url?width=1690 1690w, @url?width=1729 1729w,@url?width=1765 1765w,@url?width=1805 1805w,@url?width=1847 1847w,@url?width=1885 1885w,@url?width=1923 1923w,@url?width=1956 1956w,@url?width=1995 1995w,@url?width=2031 2031w,@url?width=2069 2069w,@url?width=2101 2101w,@url?width=2137 2137w,@url?width=2170 2170w,@url?width=2206 2206w,@url?width=2240 2240w" src="@url" alt="@Model.value.altText" class="xxs-margin-bottom xs-margin-bottom img-responsive">
+
     if (Model.value.caption != null)
     {
         <p class="caption">@Model.value.caption</p>

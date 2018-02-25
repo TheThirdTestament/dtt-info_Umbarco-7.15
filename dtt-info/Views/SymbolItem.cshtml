@@ -1,0 +1,63 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<SymbolItem>
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+<div class="row" id="single-symbol-page-header">
+    <div class="col-12"></div>
+</div>
+
+
+@{
+    var imageFile = Model.ImageFile;
+    var mediaFile = Umbraco.TypedMedia(imageFile.Id);
+    var height = mediaFile.GetPropertyValue<int>("umbracoHeight");
+    var width = mediaFile.GetPropertyValue<int>("umbracoWidth");
+
+    int imageWith = (width >= height)? imageWith = 800: imageWith = 600;
+
+    int xs = (int)(imageWith * 0.4);
+    int sm = (int)(imageWith * 0.6);
+    int md = (int)(imageWith * 0.8);
+    int lg = (int)(imageWith * 1);
+}
+
+<div class="row" id="symbol-image">
+    <div class="col-12">
+
+        <figure class="item">
+            <img srcset="@Model.ImageFile.GetCropUrl(width: xs) 320w, @Model.ImageFile.GetCropUrl(width: sm) 480w, @Model.ImageFile.GetCropUrl(width: md)  680w" sizes="(max-width: 320px) 310px, (max-width: 480px) 460px, 800px" src="@Model.ImageFile.GetCropUrl(width: imageWith)" alt="The Third Testament - @Model.Name" />
+            <figcaption class="caption" style="max-width:@(md)px">@Model.Name.<br /> @Model.SymbolTitle. ©&nbsp;Martinus&nbsp;Institut</figcaption>
+        </figure>
+    </div>
+</div>
+
+
+<div class="row">
+    @*Left panel *@
+    @{
+        var selection = Model.Parent.Children.Where(x => x.IsVisible()).OrderBy(x => x.GetPropertyValue<int>("SortNo"));
+
+    }
+
+    <div class="col-md-4 order-2 order-md-1">
+        <div class="card">
+            <div class="card-body">
+                <h3 class="card-title">Other Symbol Explanations</h3>
+                <ul class="symbol-item-symbol-list">
+                    @foreach (var symbolItem in selection)
+                    {
+                    <li>
+                        <a href="@symbolItem.Url">@symbolItem.GetPropertyValue("Title")</a> (@symbolItem.Name)
+                    </li>
+                    }
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-8  order-1 order-md-2" id="symbol-explanation">
+        <h1>@Model.Title: A Short Explanation of @(WebUtility.HtmlDecode(Model.Name.Replace("No. ", "No.&nbsp;")))</h1>
+        @Model.Explanation
+    </div>
+</div>
