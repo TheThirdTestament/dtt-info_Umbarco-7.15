@@ -13,9 +13,9 @@
 
 <div class="row">
     <div class="col-sm-4">
-        <h2>Articles</h2>
+        <h2>Artikler</h2>
 
-        @foreach (ArticleItem articleItem in Model.Children.Where(x => x.HasValue("category") && x.GetPropertyValue<int>("category") == 121))
+        @foreach (ArticleItem articleItem in Model.Children.Where(x => x.HasValue("category") && x.GetPropertyValue<int>("category") == 10))
         {
             <div>
                 <a href="@articleItem.Url">@articleItem.Title</a>
@@ -27,8 +27,8 @@
     </div>
     <div class="col-sm-4">
 
-        <h2>Other Texts and Excerpts by Martinus</h2>
-        @foreach (ArticleItem articleItem in Model.Children.Where(x => x.GetPropertyValue<int>("category") != 121))
+        <h2>Andre tekster og citater af Martinus</h2>
+        @foreach (ArticleItem articleItem in Model.Children.Where(x => x.GetPropertyValue<int>("category") != 10))
         {
             <div>
                 <a href="@articleItem.Url">@articleItem.Title</a>

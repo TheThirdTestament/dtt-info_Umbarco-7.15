@@ -10,7 +10,7 @@
     </div>
     <div class="col-sm-8">
         <h1>@Model.Name</h1>
-        <div class="author">by <span>@Model.Author</span></div>
+        <div class="author">af <span>@Model.Author</span></div>
     </div>
 </div>
 
@@ -18,16 +18,16 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">Other Articles</h3>
+                <h3 class="card-title">Andre artikler</h3>
                 <ul>
-                    @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") == 121))
+                    @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") == 10))
                     {
-                        <li><a href="@articleItem.Url">@articleItem.Title</a></li>
+                    <li><a href="@articleItem.Url">@articleItem.Title</a> </li>
                     }
                 </ul>
-                <h3 class="card-title">Other Texts</h3>
+                <h3 class="card-title">Andre tekster</h3>
                 <ul>
-                @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") != 121))
+                @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") != 10))
                 {
                     <li><a href="@articleItem.Url">@articleItem.Title</a></li>
                 }
