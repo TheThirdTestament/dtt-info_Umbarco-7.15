@@ -71,6 +71,10 @@ h1.contact-form-header {
     margin-bottom: 1em;
 }
 
+div.registration-form {
+    margin-bottom: 4em;
+}
+
 div.card {
     background-color: #F5F8FA;
     width: 90%;
