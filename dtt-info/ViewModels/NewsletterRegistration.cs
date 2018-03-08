@@ -8,14 +8,16 @@ namespace DttInfo.ViewModels
 {
     public class NewsletterRegistration
     {
-        [Required(ErrorMessage = "Please enter your first name")]
+        [Display(Name = "Fornavn")]
+        [Required(ErrorMessage = "Vær venlig at indtaste dit fornavn")]
         public string Firstname { get; set; }
-        [Required(ErrorMessage = "Please enter your last name")]
+        [Display(Name = "Efternavn")]
+        [Required(ErrorMessage = "Vær venlig at indtaste dit efternavn")]
         public string Lastname { get; set; }
-        [Required(ErrorMessage = "Please enter email address")]
         [Display(Name = "Email")]
+        [Required(ErrorMessage = "Vær venlig at indtaste din emailadresse")]
         [RegularExpression(@"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$", 
-            ErrorMessage = "Please enter correct email address")]
+            ErrorMessage = "Indtast venligst en korrekt emailadresse")]
         public string Email { get; set; }
     }
 }

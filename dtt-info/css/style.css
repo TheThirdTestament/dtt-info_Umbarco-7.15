@@ -61,6 +61,20 @@ h2 {
     font-size: 140%;
 }
 
+h2.paragraph {
+    font-family: Times, 'Times New Roman', serif;
+    font-size: 130%;
+    font-weight:bold;
+    margin-top: 2rem;
+}
+
+h3.paragraph {
+    font-family: Times, 'Times New Roman', serif;
+    font-size: 110%;
+    font-weight: bold;
+}
+
+
 h3 {
     font-family: Times, 'Times New Roman', serif;
     font-size: 120%;
@@ -223,7 +237,7 @@ div#symbol-image div {
 }
 
 div#simple-grid-page-header div {
-    margin-bottom: 4rem;
+    margin-bottom: 1rem;
 }
 
 

@@ -6,9 +6,9 @@
 
 <div class="row" id="simple-grid-page-header">
     <div class="col-12">
-        <h1>@Html.Raw(Model.Content.Title.Replace("\\n", "<br />"))</h1>
+        <h1>@Html.Raw(Model.Title.Replace("\\n", "<br />"))</h1>
     </div>
 </div>
 
 
-@Html.GetGridHtml(Model.Content, "mainContent", "bootstrap3")
+@Html.GetGridHtml(Model, "mainContent", "bootstrap3")

@@ -8,16 +8,19 @@ namespace DttInfo.ViewModels
 {
     public class ContactMessage
     {
-        [Required(ErrorMessage = "Please enter your name")]
+        [Display(Name = "Navn")]
+        [Required(ErrorMessage = "Vær venlig at indtaste dit navn")]
         public string Name { get; set; }
-        [Required(ErrorMessage = "Please enter email address")]
         [Display(Name = "Email")]
+        [Required(ErrorMessage = "Vær venlig at indtaste din email adresse")]
         [RegularExpression(@"^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$", 
-            ErrorMessage = "Please enter correct email address")]
+            ErrorMessage = "Indtast venligt korrekt email adresse")]
         public string Email { get; set; }
-        [Required(ErrorMessage = "Please enter a subject")]
+        [Display(Name = "Emne")]
+        [Required(ErrorMessage = "Vær venlig at indtaste et emne")]
         public string Subject { get; set; }
-        [Required(ErrorMessage = "Please enter a  message")]
+        [Display(Name = "Besked")]
+        [Required(ErrorMessage = "Vær venlig at indtaste en besked")]
         public string Message { get; set; }
     }
 }
