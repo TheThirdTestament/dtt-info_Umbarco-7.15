@@ -9,7 +9,7 @@
     <div class="col-sm-4">       
     </div>
     <div class="col-sm-8">
-        <h1>@Model.Name</h1>
+        <h1>@Model.Title</h1>
         <div class="author">af <span>@Model.Author</span></div>
     </div>
 </div>
@@ -22,7 +22,7 @@
                 <ul>
                     @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") == 10))
                     {
-                    <li><a href="@articleItem.Url">@articleItem.Title</a> </li>
+                    <li><a href="@articleItem.Url">@articleItem.Name</a> </li>
                     }
                 </ul>
                 <h3 class="card-title">Andre tekster</h3>
