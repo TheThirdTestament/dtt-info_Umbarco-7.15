@@ -55,18 +55,21 @@ h1 {
     font-family: Times, 'Times New Roman', serif;
     margin-top: 2rem;
     font-size: 180%;
+    font-weight: bold;
 }
 h2 {
     font-family: Times, 'Times New Roman', serif;
     font-size: 140%;
+    font-weight: bold;
 }
 
-h2.paragraph {
-    font-family: Times, 'Times New Roman', serif;
-    font-size: 130%;
-    font-weight:bold;
-    margin-top: 2rem;
-}
+    h2.paragraph {
+        font-family: Times, 'Times New Roman', serif;
+        font-size: 130%;
+        font-weight: bold;
+        margin-top: 2rem;
+        font-weight: bold;
+    }
 
 h3.paragraph {
     font-family: Times, 'Times New Roman', serif;
