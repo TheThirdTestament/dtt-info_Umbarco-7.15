@@ -29,7 +29,7 @@
                 <ul>
                 @foreach (ArticleItem articleItem in Model.Parent.Children.Where(x => x.GetPropertyValue<int>("category") != 10))
                 {
-                    <li><a href="@articleItem.Url">@articleItem.Title</a></li>
+                    <li><a href="@articleItem.Url">@articleItem.Name</a></li>
                 }
                 </ul>
             </div>

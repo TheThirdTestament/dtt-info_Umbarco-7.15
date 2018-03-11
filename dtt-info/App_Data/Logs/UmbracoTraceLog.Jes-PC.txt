@@ -1,358 +1,806 @@
-﻿ 2018-03-10 14:58:13,572 [P1132/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.8.1 application starting on JES-PC
- 2018-03-10 14:58:13,639 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
- 2018-03-10 14:58:13,715 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 76ms)
- 2018-03-10 14:58:13,780 [P1132/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
- 2018-03-10 14:58:13,781 [P1132/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
- 2018-03-10 14:58:13,783 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:14,741 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 958ms)
- 2018-03-10 14:58:14,741 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
- 2018-03-10 14:58:14,742 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 0ms)
- 2018-03-10 14:58:14,923 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:14,927 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 3ms)
- 2018-03-10 14:58:14,928 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
- 2018-03-10 14:58:14,928 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 0ms)
- 2018-03-10 14:58:14,929 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:14,936 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 7ms)
- 2018-03-10 14:58:14,937 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
- 2018-03-10 14:58:14,939 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 2ms)
- 2018-03-10 14:58:14,988 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:14,988 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:14,988 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
- 2018-03-10 14:58:14,989 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 0ms)
- 2018-03-10 14:58:14,990 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:14,990 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:14,990 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
- 2018-03-10 14:58:14,991 [P1132/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 0ms)
- 2018-03-10 14:58:22,339 [P1132/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
- 2018-03-10 14:58:23,792 [P1132/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
- 2018-03-10 14:58:24,994 [P1132/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
- 2018-03-10 14:58:24,994 [P1132/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
- 2018-03-10 14:58:25,021 [P1132/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 11692ms)
- 2018-03-10 14:58:27,170 [P1132/D2/T12] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://localhost:52326/umbraco
- 2018-03-10 14:58:27,173 [P1132/D2/T12] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:52326/umbraco (UmbracoModule request)
- 2018-03-10 14:58:47,274 [P1132/D2/T12] INFO  umbraco.content - Load Xml from file...
- 2018-03-10 14:58:47,328 [P1132/D2/T12] INFO  umbraco.content - Loaded Xml from file.
- 2018-03-10 14:58:47,931 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:47,931 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:47,931 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
- 2018-03-10 14:58:47,932 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 0ms)
- 2018-03-10 14:58:54,450 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:54,450 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:54,450 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
- 2018-03-10 14:58:54,465 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 14ms)
- 2018-03-10 14:58:54,630 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:54,631 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:54,631 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
- 2018-03-10 14:58:54,632 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 0ms)
- 2018-03-10 14:58:59,471 [P1132/D2/T8] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
- 2018-03-10 14:58:59,473 [P1132/D2/T8] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
- 2018-03-10 14:58:59,915 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:59,915 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:59,915 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
- 2018-03-10 14:58:59,947 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 31ms)
- 2018-03-10 14:58:59,960 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:59,960 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:59,960 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
- 2018-03-10 14:58:59,960 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
- 2018-03-10 14:58:59,962 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:58:59,963 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:58:59,963 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
- 2018-03-10 14:58:59,985 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 22ms)
- 2018-03-10 14:59:00,022 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:59:00,022 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:59:00,022 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
- 2018-03-10 14:59:00,028 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 5ms)
- 2018-03-10 14:59:00,211 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:59:00,211 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:59:00,212 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
- 2018-03-10 14:59:00,212 [P1132/D2/T12] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 0ms)
- 2018-03-10 14:59:04,991 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:59:04,991 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:59:04,991 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving umbraco.cms.businesslogic.macro.IMacroEngine
- 2018-03-10 14:59:04,992 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved umbraco.cms.businesslogic.macro.IMacroEngine (took 0ms)
- 2018-03-10 14:59:05,196 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 14:59:05,196 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 14:59:05,196 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
- 2018-03-10 14:59:05,196 [P1132/D2/T10] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 0ms)
- 2018-03-10 14:59:47,456 [P1132/D2/T10] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-03-09 14:59:47
- 2018-03-10 15:00:36,944 [P1132/D2/T20] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:00:37,098 [P1132/D2/T20] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
- 2018-03-10 15:00:37,098 [P1132/D2/T20] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
- 2018-03-10 15:00:37,099 [P1132/D2/T20] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
- 2018-03-10 15:00:37,099 [P1132/D2/T20] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 0ms)
- 2018-03-10 15:00:41,232 [P1132/D2/T20] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:00:41,244 [P1132/D2/T20] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:02:49,822 [P1132/D2/T42] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:02:53,869 [P1132/D2/T50] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:02:53,877 [P1132/D2/T50] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:03:37,143 [P1132/D2/T28] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:03:41,200 [P1132/D2/T41] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:03:41,217 [P1132/D2/T41] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:03:55,132 [P1132/D2/T31] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:03:59,182 [P1132/D2/T31] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:03:59,190 [P1132/D2/T31] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:06:06,317 [P1132/D2/T12] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:06:10,370 [P1132/D2/T56] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:06:10,378 [P1132/D2/T56] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:07:10,248 [P1132/D2/T26] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:07:14,279 [P1132/D2/T53] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:07:14,287 [P1132/D2/T53] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:09:49,258 [P1132/D2/T29] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:09:53,301 [P1132/D2/T29] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:09:53,309 [P1132/D2/T29] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:10:04,204 [P1132/D2/T95] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:10:08,248 [P1132/D2/T86] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:10:08,254 [P1132/D2/T86] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:11:35,975 [P1132/D2/T105] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:11:40,011 [P1132/D2/T80] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:11:40,019 [P1132/D2/T80] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:13:11,470 [P1132/D2/T110] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:13:15,544 [P1132/D2/T99] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:13:15,553 [P1132/D2/T99] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:13:26,474 [P1132/D2/T99] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:13:30,513 [P1132/D2/T93] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:13:30,521 [P1132/D2/T93] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:14:13,456 [P1132/D2/T118] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:14:17,495 [P1132/D2/T116] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:14:17,536 [P1132/D2/T116] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:18:15,903 [P1132/D2/T111] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:18:19,952 [P1132/D2/T112] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:18:19,963 [P1132/D2/T112] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:19:11,291 [P1132/D2/T113] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:19:15,328 [P1132/D2/T118] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:19:15,337 [P1132/D2/T118] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:20:06,026 [P1132/D2/T69] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:20:10,072 [P1132/D2/T104] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:20:10,080 [P1132/D2/T104] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:22:52,940 [P1132/D2/T69] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:22:56,982 [P1132/D2/T92] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:22:56,990 [P1132/D2/T92] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:23:18,390 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:23:22,452 [P1132/D2/T84] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:23:22,460 [P1132/D2/T84] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:25:33,956 [P1132/D2/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:25:38,019 [P1132/D2/T92] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:25:38,028 [P1132/D2/T92] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:26:17,201 [P1132/D2/T104] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:26:21,245 [P1132/D2/T92] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:26:21,253 [P1132/D2/T92] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:28:00,743 [P1132/D2/T104] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:28:04,776 [P1132/D2/T104] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:28:04,784 [P1132/D2/T104] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:28:34,312 [P1132/D2/T92] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:28:38,776 [P1132/D2/T83] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:28:38,784 [P1132/D2/T83] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:29:11,898 [P1132/D2/T104] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:29:15,934 [P1132/D2/T83] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:29:15,942 [P1132/D2/T83] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:29:46,183 [P1132/D2/T56] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:29:50,232 [P1132/D2/T104] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:29:50,240 [P1132/D2/T104] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:32:03,716 [P1132/D2/T104] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:32:07,760 [P1132/D2/T56] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:32:07,769 [P1132/D2/T56] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:37:53,445 [P1132/D2/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:37:57,488 [P1132/D2/T94] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:37:57,496 [P1132/D2/T94] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:39:42,739 [P1132/D2/T94] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:39:46,781 [P1132/D2/T84] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:39:46,790 [P1132/D2/T84] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:39:58,635 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:40:02,666 [P1132/D2/T78] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:40:02,674 [P1132/D2/T78] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:41:16,896 [P1132/D2/T101] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:41:20,958 [P1132/D2/T101] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:41:20,966 [P1132/D2/T101] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:42:33,667 [P1132/D2/T101] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:42:37,714 [P1132/D2/T102] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:42:37,723 [P1132/D2/T102] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:43:40,350 [P1132/D2/T93] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:43:44,402 [P1132/D2/T119] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:43:44,410 [P1132/D2/T119] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:44:10,497 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:44:14,543 [P1132/D2/T115] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:44:14,564 [P1132/D2/T115] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:44:40,271 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:44:44,325 [P1132/D2/T115] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:44:44,344 [P1132/D2/T115] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:47:10,133 [P1132/D2/T11] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:47:14,184 [P1132/D2/T115] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:47:14,191 [P1132/D2/T115] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:48:17,403 [P1132/D2/T105] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:48:21,448 [P1132/D2/T105] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:48:21,457 [P1132/D2/T105] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:50:24,048 [P1132/D2/T114] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:50:28,123 [P1132/D2/T119] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:50:28,131 [P1132/D2/T119] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:50:57,528 [P1132/D2/T23] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:51:01,556 [P1132/D2/T119] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:51:01,566 [P1132/D2/T119] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:52:33,577 [P1132/D2/T115] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:52:37,653 [P1132/D2/T115] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:52:37,661 [P1132/D2/T115] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:54:57,177 [P1132/D2/T115] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:55:01,261 [P1132/D2/T114] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:55:01,269 [P1132/D2/T114] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:55:45,932 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:55:50,010 [P1132/D2/T95] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:55:50,024 [P1132/D2/T95] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:56:13,820 [P1132/D2/T103] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:56:17,905 [P1132/D2/T115] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:56:17,915 [P1132/D2/T115] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 15:57:51,989 [P1132/D2/T100] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 15:57:56,065 [P1132/D2/T76] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 15:57:56,072 [P1132/D2/T76] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:00:13,628 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:00:17,707 [P1132/D2/T76] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:00:17,715 [P1132/D2/T76] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:00:52,151 [P1132/D2/T63] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:00:56,212 [P1132/D2/T76] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:00:56,231 [P1132/D2/T76] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:02:05,121 [P1132/D2/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:02:09,197 [P1132/D2/T61] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:02:09,206 [P1132/D2/T61] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:02:32,601 [P1132/D2/T63] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:02:36,669 [P1132/D2/T61] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:02:36,679 [P1132/D2/T61] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:03:39,505 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:03:43,589 [P1132/D2/T90] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:03:43,597 [P1132/D2/T90] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:05:22,710 [P1132/D2/T61] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:05:26,809 [P1132/D2/T61] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:05:26,818 [P1132/D2/T61] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:07:39,772 [P1132/D2/T63] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:07:43,856 [P1132/D2/T63] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:07:43,864 [P1132/D2/T63] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:08:29,484 [P1132/D2/T61] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:08:33,540 [P1132/D2/T76] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:08:33,547 [P1132/D2/T76] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:09:09,291 [P1132/D2/T71] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:09:13,366 [P1132/D2/T100] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:09:13,374 [P1132/D2/T100] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:11:18,330 [P1132/D2/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:11:22,408 [P1132/D2/T63] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:11:22,418 [P1132/D2/T63] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:12:52,849 [P1132/D2/T63] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:12:56,928 [P1132/D2/T63] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:12:56,935 [P1132/D2/T63] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:13:27,941 [P1132/D2/T63] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:13:32,026 [P1132/D2/T63] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:13:32,034 [P1132/D2/T63] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:14:14,877 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:14:18,947 [P1132/D2/T63] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:14:18,955 [P1132/D2/T63] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:15:11,687 [P1132/D2/T100] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:15:15,795 [P1132/D2/T71] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:15:15,803 [P1132/D2/T71] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:15:39,686 [P1132/D2/T63] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:15:43,769 [P1132/D2/T100] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:15:43,777 [P1132/D2/T100] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:18:01,595 [P1132/D2/T89] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:18:05,682 [P1132/D2/T89] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:18:05,690 [P1132/D2/T89] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:18:38,333 [P1132/D2/T89] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:18:42,433 [P1132/D2/T100] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:18:42,443 [P1132/D2/T100] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:21:43,360 [P1132/D2/T76] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:21:47,427 [P1132/D2/T79] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:21:47,436 [P1132/D2/T79] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:22:59,138 [P1132/D2/T89] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:23:03,213 [P1132/D2/T63] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:23:03,220 [P1132/D2/T63] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:24:53,528 [P1132/D2/T100] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:24:57,605 [P1132/D2/T90] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:24:57,614 [P1132/D2/T90] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:25:20,517 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:25:25,089 [P1132/D2/T100] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:25:25,098 [P1132/D2/T100] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:26:26,616 [P1132/D2/T71] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:26:30,697 [P1132/D2/T89] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:26:30,705 [P1132/D2/T89] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:32:06,197 [P1132/D2/T89] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fra tro til viden' with Id '1152' has been published.
- 2018-03-10 16:32:10,323 [P1132/D2/T81] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:32:10,331 [P1132/D2/T81] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:39:53,049 [P1132/D2/T100] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Martinus' indvielse' with Id '1156' has been published.
- 2018-03-10 16:39:57,183 [P1132/D2/T65] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:39:57,191 [P1132/D2/T65] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:40:06,326 [P1132/D2/T71] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Martinus' indvielse' with Id '1156' has been published.
- 2018-03-10 16:40:10,384 [P1132/D2/T76] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:40:10,392 [P1132/D2/T76] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:40:59,863 [P1132/D2/T71] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Martinus' indvielse' with Id '1156' has been published.
- 2018-03-10 16:41:03,948 [P1132/D2/T79] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:41:03,957 [P1132/D2/T79] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:41:22,716 [P1132/D2/T63] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Om forfatteren' with Id '1155' has been published.
- 2018-03-10 16:41:26,777 [P1132/D2/T76] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:41:26,786 [P1132/D2/T76] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:42:06,047 [P1132/D2/T61] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Site' with Id '1174' has been published.
- 2018-03-10 16:42:10,144 [P1132/D2/T71] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 16:42:10,152 [P1132/D2/T71] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 16:59:05,913 [P1132/D2/T79] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: jesarbov@gmail.com, IP Address: ::1
- 2018-03-10 17:10:34,252 [P1132/D2/T63] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
- 2018-03-10 17:10:34,253 [P1132/D2/T63] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
- 2018-03-10 17:13:32,307 [P1132/D2/T71] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 17:13:36,420 [P1132/D2/T89] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 17:13:36,453 [P1132/D2/T89] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 17:30:09,917 [P1132/D2/T67] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: jesarbov@gmail.com, IP Address: ::1
- 2018-03-10 18:59:47,617 [P1132/D2/T67] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-03-09 18:59:47
- 2018-03-10 19:32:11,430 [P1132/D2/T81] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
- 2018-03-10 19:32:11,431 [P1132/D2/T81] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
- 2018-03-10 19:34:29,483 [P1132/D2/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 19:34:33,578 [P1132/D2/T90] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 19:34:33,625 [P1132/D2/T90] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 19:47:16,270 [P1132/D2/T76] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 19:47:20,378 [P1132/D2/T61] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 19:47:20,385 [P1132/D2/T61] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 19:55:49,240 [P1132/D2/T59] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 19:55:53,732 [P1132/D2/T71] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 19:55:53,746 [P1132/D2/T71] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 20:03:45,477 [P1132/D2/T76] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 20:03:49,588 [P1132/D2/T71] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 20:03:49,604 [P1132/D2/T71] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 20:04:14,618 [P1132/D2/T71] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 20:04:19,190 [P1132/D2/T67] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 20:04:19,219 [P1132/D2/T67] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 20:23:19,030 [P1132/D2/T76] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: jesarbov@gmail.com, IP Address: ::1
- 2018-03-10 21:22:08,732 [P1132/D2/T67] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
- 2018-03-10 21:22:08,732 [P1132/D2/T67] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
- 2018-03-10 21:41:39,348 [P1132/D2/T90] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: jesarbov@gmail.com, IP Address: ::1
- 2018-03-10 21:41:41,872 [P1132/D2/T108] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
- 2018-03-10 21:41:41,872 [P1132/D2/T108] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
- 2018-03-10 21:58:48,084 [P1132/D2/T65] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 21:58:52,189 [P1132/D2/T65] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 21:58:52,263 [P1132/D2/T65] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:00:57,520 [P1132/D2/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:01:01,629 [P1132/D2/T81] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:01:01,653 [P1132/D2/T81] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:01:49,343 [P1132/D2/T71] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:01:53,402 [P1132/D2/T81] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:01:53,414 [P1132/D2/T81] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:02:48,386 [P1132/D2/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:02:52,491 [P1132/D2/T117] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:02:52,501 [P1132/D2/T117] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:03:19,642 [P1132/D2/T89] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:03:23,730 [P1132/D2/T90] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:03:23,738 [P1132/D2/T90] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:04:29,904 [P1132/D2/T72] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:04:33,994 [P1132/D2/T71] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:04:34,008 [P1132/D2/T71] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:05:53,217 [P1132/D2/T72] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:05:57,308 [P1132/D2/T108] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:05:57,315 [P1132/D2/T108] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:06:27,353 [P1132/D2/T117] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:06:31,463 [P1132/D2/T108] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:06:31,471 [P1132/D2/T108] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:07:03,933 [P1132/D2/T67] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:07:07,979 [P1132/D2/T81] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:07:08,021 [P1132/D2/T81] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:10:09,730 [P1132/D2/T90] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:10:13,826 [P1132/D2/T100] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:10:13,835 [P1132/D2/T100] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:10:36,373 [P1132/D2/T89] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:10:40,450 [P1132/D2/T71] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:10:40,465 [P1132/D2/T71] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:12:29,300 [P1132/D2/T72] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:12:33,396 [P1132/D2/T108] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:12:33,436 [P1132/D2/T108] INFO  umbraco.content - Saved Xml to file.
- 2018-03-10 22:16:13,459 [P1132/D2/T65] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Fortale til Livets Bog' with Id '1161' has been published.
- 2018-03-10 22:16:17,620 [P1132/D2/T59] INFO  umbraco.content - Save Xml to file...
- 2018-03-10 22:16:17,630 [P1132/D2/T59] INFO  umbraco.content - Saved Xml to file.
+﻿ 2018-03-11 08:43:10,958 [P536/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.8.1 application starting on JES-PC
+ 2018-03-11 08:43:10,990 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2018-03-11 08:43:11,027 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Hash determined (took 37ms)
+ 2018-03-11 08:43:11,099 [P536/D2/T1] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2018-03-11 08:43:11,100 [P536/D2/T1] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2018-03-11 08:43:11,102 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:43:12,064 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 961ms)
+ 2018-03-11 08:43:12,064 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2018-03-11 08:43:12,070 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 5ms)
+ 2018-03-11 08:43:12,090 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:43:12,090 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:43:12,090 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2018-03-11 08:43:12,095 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 4ms)
+ 2018-03-11 08:43:12,096 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:43:12,096 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:43:12,096 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2018-03-11 08:43:12,101 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 4ms)
+ 2018-03-11 08:43:12,116 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:43:12,116 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:43:12,116 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2018-03-11 08:43:12,120 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 4ms)
+ 2018-03-11 08:43:12,121 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:43:12,121 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:43:12,121 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2018-03-11 08:43:12,125 [P536/D2/T1] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 4ms)
+ 2018-03-11 08:43:15,128 [P536/D2/T1] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2018-03-11 08:43:15,780 [P536/D2/T1] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2018-03-11 08:43:19,043 [P536/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2018-03-11 08:43:19,047 [P536/D2/T1] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2018-03-11 08:43:19,231 [P536/D2/T1] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 8402ms)
+ 2018-03-11 08:43:19,234 [P536/D2/T1] INFO  Umbraco.Web.ExamineStartup - Forcing index InternalIndexSet to be unlocked since it was left in a locked state
+ 2018-03-11 08:43:19,235 [P536/D2/T1] INFO  Umbraco.Web.ExamineStartup - Forcing index ExternalIndexSet to be unlocked since it was left in a locked state
+ 2018-03-11 08:43:19,511 [P536/D2/T5] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://localhost:52326/umbraco
+ 2018-03-11 08:43:19,513 [P536/D2/T5] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:52326/umbraco (UmbracoModule request)
+ 2018-03-11 08:43:20,597 [P536/D2/T5] INFO  umbraco.content - Load Xml from file...
+ 2018-03-11 08:43:20,599 [P536/D2/T5] INFO  umbraco.content - Loaded Xml from file.
+ 2018-03-11 08:43:22,493 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:43:22,493 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:43:22,494 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2018-03-11 08:43:22,502 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 7ms)
+ 2018-03-11 08:44:20,651 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:20,651 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:20,652 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2018-03-11 08:44:20,658 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 6ms)
+ 2018-03-11 08:44:20,711 [P536/D2/T13] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-03-10 08:44:20
+ 2018-03-11 08:44:32,029 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:32,030 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:32,030 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2018-03-11 08:44:32,036 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 5ms)
+ 2018-03-11 08:44:32,177 [P536/D2/T8] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:32,184 [P536/D2/T8] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 6ms)
+ 2018-03-11 08:44:32,184 [P536/D2/T8] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2018-03-11 08:44:32,190 [P536/D2/T8] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 5ms)
+ 2018-03-11 08:44:44,108 [P536/D2/T13] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
+ 2018-03-11 08:44:44,110 [P536/D2/T13] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
+ 2018-03-11 08:44:44,380 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:44,380 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:44,380 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
+ 2018-03-11 08:44:44,389 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 8ms)
+ 2018-03-11 08:44:44,400 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:44,401 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:44,401 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2018-03-11 08:44:44,401 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2018-03-11 08:44:44,404 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:44,404 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:44,404 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
+ 2018-03-11 08:44:44,410 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 6ms)
+ 2018-03-11 08:44:44,441 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:44,442 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:44,442 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
+ 2018-03-11 08:44:44,447 [P536/D2/T13] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 5ms)
+ 2018-03-11 08:44:44,652 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:44,652 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:44,653 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving umbraco.cms.businesslogic.macro.IMacroEngine
+ 2018-03-11 08:44:44,659 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved umbraco.cms.businesslogic.macro.IMacroEngine (took 6ms)
+ 2018-03-11 08:44:45,958 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:44:45,958 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:44:45,958 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
+ 2018-03-11 08:44:45,963 [P536/D2/T5] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 4ms)
+ 2018-03-11 08:46:33,325 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2018-03-11 08:46:33,326 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2018-03-11 08:46:33,329 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2018-03-11 08:46:33,329 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2018-03-11 08:46:33,343 [P536/D2/T16] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2018-03-11 08:46:33,343 [P536/D2/T16] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2018-03-11 08:46:33,347 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2018-03-11 08:46:33,348 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2018-03-11 08:46:33,349 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Terminating
+ 2018-03-11 08:46:33,349 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Waiting for tasks to complete
+ 2018-03-11 08:46:33,349 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Tasks completed, terminated
+ 2018-03-11 08:46:33,350 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2018-03-11 08:46:33,350 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2018-03-11 08:46:33,354 [P536/D2/T22] INFO  Umbraco.Core.MainDom - Stopping...
+ 2018-03-11 08:46:33,364 [P536/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2018-03-11 08:46:33,365 [P536/D2/T13] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2018-03-11 08:46:33,369 [P536/D2/T22] INFO  Umbraco.Web.ExamineStartup - Examine shutting down
+ 2018-03-11 08:46:33,370 [P536/D2/T22] INFO  Umbraco.Web.ExamineStartup - Complete (took 1ms)
+ 2018-03-11 08:46:33,371 [P536/D2/T22] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2018-03-11 08:46:33,371 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2018-03-11 08:46:33,371 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2018-03-11 08:46:33,371 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Terminating
+ 2018-03-11 08:46:33,371 [P536/D2/T22] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Waiting for tasks to complete
+ 2018-03-11 08:46:33,390 [P536/D2/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [InstructionProcessing] Tasks completed, terminated
+ 2018-03-11 08:46:33,390 [P536/D2/T5] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2018-03-11 08:47:03,429 [P536/D2/T22] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: ConfigurationChange
+
+_shutDownMessage=IIS configuration change
+HostingEnvironment initiated shutdown
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+CONFIG change
+HostingEnvironment forårsagede nedlukning
+
+_shutDownStack=   ved System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   ved System.Environment.get_StackTrace()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   ved System.Web.Hosting.PipelineRuntime.StopProcessing()
+ 2018-03-11 08:47:07,717 [P536/D3/T29] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.8.1 application starting on JES-PC
+ 2018-03-11 08:47:07,734 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2018-03-11 08:47:07,740 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Hash determined (took 6ms)
+ 2018-03-11 08:47:07,776 [P536/D3/T29] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2018-03-11 08:47:07,777 [P536/D3/T29] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2018-03-11 08:47:07,778 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:47:08,081 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 302ms)
+ 2018-03-11 08:47:08,081 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2018-03-11 08:47:08,082 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 0ms)
+ 2018-03-11 08:47:08,131 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:47:08,131 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:47:08,131 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2018-03-11 08:47:08,132 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 0ms)
+ 2018-03-11 08:47:08,132 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:47:08,132 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:47:08,132 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2018-03-11 08:47:08,133 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 1ms)
+ 2018-03-11 08:47:08,145 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:47:08,145 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:47:08,145 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2018-03-11 08:47:08,146 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 0ms)
+ 2018-03-11 08:47:08,146 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 08:47:08,146 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 08:47:08,146 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2018-03-11 08:47:08,147 [P536/D3/T29] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 0ms)
+ 2018-03-11 08:47:09,636 [P536/D3/T29] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2018-03-11 08:47:10,196 [P536/D3/T29] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2018-03-11 08:47:10,917 [P536/D3/T29] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2018-03-11 08:47:10,918 [P536/D3/T29] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2018-03-11 08:47:11,134 [P536/D3/T29] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 3495ms)
+ 2018-03-11 08:47:12,124 [P536/D3/T13] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://localhost:52326/umbraco
+ 2018-03-11 08:47:12,126 [P536/D3/T13] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:52326/umbraco (UmbracoModule request)
+ 2018-03-11 09:04:14,593 [P536/D3/T28] INFO  Umbraco.Core.Logging.OwinLogger - Event Id: 0, state: User logged will be logged out due to timeout: jesarbov@gmail.com, IP Address: ::1
+ 2018-03-11 09:04:44,817 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Terminating
+ 2018-03-11 09:04:44,818 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Waiting for tasks to complete
+ 2018-03-11 09:04:44,819 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [Umbraco.Web.Scheduling.IBackgroundTask] Tasks completed, terminated
+ 2018-03-11 09:04:44,819 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Terminating
+ 2018-03-11 09:04:44,819 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Waiting for tasks to complete
+ 2018-03-11 09:04:44,819 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledTasks] Tasks completed, terminated
+ 2018-03-11 09:04:44,822 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Terminating
+ 2018-03-11 09:04:44,822 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Waiting for tasks to complete
+ 2018-03-11 09:04:44,822 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [ScheduledPublishing] Tasks completed, terminated
+ 2018-03-11 09:04:44,823 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Terminating
+ 2018-03-11 09:04:44,823 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Waiting for tasks to complete
+ 2018-03-11 09:04:44,823 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [HealthCheckNotifier] Tasks completed, terminated
+ 2018-03-11 09:04:44,824 [P536/D3/T23] INFO  Umbraco.Core.MainDom - Stopping...
+ 2018-03-11 09:04:44,825 [P536/D3/T23] INFO  Umbraco.Web.ExamineStartup - Examine shutting down
+ 2018-03-11 09:04:44,826 [P536/D3/T23] INFO  Umbraco.Web.ExamineStartup - Complete (took 1ms)
+ 2018-03-11 09:04:44,827 [P536/D3/T23] INFO  Umbraco.Core.MainDom - Released MainDom.
+ 2018-03-11 09:04:44,827 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Terminating
+ 2018-03-11 09:04:44,827 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Waiting for tasks to complete
+ 2018-03-11 09:04:44,827 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [LogScrubber] Tasks completed, terminated
+ 2018-03-11 09:04:44,827 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Terminating
+ 2018-03-11 09:04:44,827 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Waiting for tasks to complete
+ 2018-03-11 09:04:44,828 [P536/D3/T23] INFO  Umbraco.Web.Scheduling.BackgroundTaskRunner - [KeepAlive] Tasks completed, terminated
+ 2018-03-11 09:05:14,882 [P536/D3/T20] INFO  Umbraco.Core.UmbracoApplicationBase - Application shutdown. Details: BinDirChangeOrDirectoryRename
+
+_shutDownMessage=Ændringsbeskeder for kritiske mapper.
+bin dir change or directory rename
+HostingEnvironment initiated shutdown
+Ændringsbeskeder for kritiske mapper.
+bin dir change or directory rename
+Ændringsbeskeder for kritiske mapper.
+bin dir change or directory rename
+Ændringsbeskeder for kritiske mapper.
+bin dir change or directory rename
+Ændringsbeskeder for kritiske mapper.
+bin dir change or directory rename
+Ændringsbeskeder for kritiske mapper.
+bin dir change or directory rename
+HostingEnvironment forårsagede nedlukning
+
+_shutDownStack=   ved System.Environment.GetStackTrace(Exception e, Boolean needFileInfo)
+   ved System.Environment.get_StackTrace()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownInternal()
+   ved System.Web.Hosting.HostingEnvironment.InitiateShutdownWithoutDemand()
+   ved System.Web.HttpRuntime.ShutdownAppDomain(String stackTrace)
+   ved System.Web.HttpRuntime.OnCriticalDirectoryChange(Object sender, FileChangeEvent e)
+   ved System.Web.FileChangesMonitor.OnCriticaldirChange(Object sender, FileChangeEvent e)
+   ved System.Web.DirectoryMonitor.FireNotifications()
+   ved System.Web.Util.WorkItem.CallCallbackWithAssert(WorkItemCallback callback)
+   ved System.Web.Util.WorkItem.OnQueueUserWorkItemCompletion(Object state)
+   ved System.Threading.QueueUserWorkItemCallback.WaitCallback_Context(Object state)
+   ved System.Threading.ExecutionContext.RunInternal(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   ved System.Threading.ExecutionContext.Run(ExecutionContext executionContext, ContextCallback callback, Object state, Boolean preserveSyncCtx)
+   ved System.Threading.QueueUserWorkItemCallback.System.Threading.IThreadPoolWorkItem.ExecuteWorkItem()
+   ved System.Threading.ThreadPoolWorkQueue.Dispatch()
+   ved System.Threading._ThreadPoolWaitCallback.PerformWaitCallback()
+ 2018-03-11 09:21:40,215 [P536/D4/T43] INFO  Umbraco.Core.CoreBootManager - Umbraco 7.8.1 application starting on JES-PC
+ 2018-03-11 09:21:40,232 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Determining hash of code files on disk
+ 2018-03-11 09:21:40,250 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Hash determined (took 17ms)
+ 2018-03-11 09:21:40,327 [P536/D4/T43] INFO  Umbraco.Core.MainDom - Acquiring MainDom...
+ 2018-03-11 09:21:40,328 [P536/D4/T43] INFO  Umbraco.Core.MainDom - Acquired MainDom.
+ 2018-03-11 09:21:40,330 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:40,615 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 285ms)
+ 2018-03-11 09:21:40,615 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IApplicationStartupHandler
+ 2018-03-11 09:21:40,621 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IApplicationStartupHandler (took 5ms)
+ 2018-03-11 09:21:40,640 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:40,641 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:40,641 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter
+ 2018-03-11 09:21:40,645 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyEditorValueConverter (took 4ms)
+ 2018-03-11 09:21:40,646 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:40,646 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:40,646 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IPropertyValueConverter
+ 2018-03-11 09:21:40,656 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IPropertyValueConverter (took 9ms)
+ 2018-03-11 09:21:40,670 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:40,670 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:40,670 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Mvc.SurfaceController
+ 2018-03-11 09:21:40,675 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Mvc.SurfaceController (took 4ms)
+ 2018-03-11 09:21:40,676 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:40,676 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:40,676 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.WebApi.UmbracoApiController
+ 2018-03-11 09:21:40,681 [P536/D4/T43] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.WebApi.UmbracoApiController (took 5ms)
+ 2018-03-11 09:21:43,510 [P536/D4/T43] INFO  Umbraco.Core.DatabaseContext - CanConnect = True
+ 2018-03-11 09:21:43,777 [P536/D4/T43] INFO  Umbraco.Web.Cache.CacheRefresherEventHandler - Initializing Umbraco internal event handlers for cache refreshing
+ 2018-03-11 09:21:44,740 [P536/D4/T43] INFO  Umbraco.Web.Search.ExamineEvents - Initializing Examine and binding to business logic events
+ 2018-03-11 09:21:44,741 [P536/D4/T43] INFO  Umbraco.Web.Search.ExamineEvents - Adding examine event handlers for index providers: 3
+ 2018-03-11 09:21:44,746 [P536/D4/T43] INFO  Umbraco.Core.CoreBootManager - Umbraco application startup complete (took 4594ms)
+ 2018-03-11 09:21:44,926 [P536/D4/T40] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - New ApplicationUrl detected: http://localhost:52326/umbraco
+ 2018-03-11 09:21:44,929 [P536/D4/T40] INFO  Umbraco.Core.Sync.ApplicationUrlHelper - ApplicationUrl: http://localhost:52326/umbraco (UmbracoModule request)
+ 2018-03-11 09:21:45,980 [P536/D4/T41] ERROR Umbraco.Core.Persistence.UmbracoDatabase - Exception (f4e931cd).
+System.IndexOutOfRangeException: Indekset lå uden for matrixens grænser.
+   ved System.Collections.Generic.List`1.Add(T item)
+   ved StackExchange.Profiling.Timing.AddSqlTiming(SqlTiming sqlTiming) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\Timing.cs:linje 361
+   ved StackExchange.Profiling.MiniProfiler.AddSqlTiming(SqlTiming stats) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MiniProfiler.IDbProfiler.cs:linje 97
+   ved StackExchange.Profiling.SqlTiming..ctor(IDbCommand command, ExecuteType type, MiniProfiler profiler) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\SqlTiming.cs:linje 71
+   ved StackExchange.Profiling.SqlProfiler.ExecuteStartImpl(IDbCommand command, ExecuteType type) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\SqlProfiler.cs:linje 50
+   ved StackExchange.Profiling.MiniProfiler.StackExchange.Profiling.Data.IDbProfiler.ExecuteStart(IDbCommand profiledDbCommand, ExecuteType executeType) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MiniProfiler.IDbProfiler.cs:linje 116
+   ved StackExchange.Profiling.Data.ProfiledDbCommand.ExecuteDbDataReader(CommandBehavior behavior) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\Data\ProfiledDbCommand.cs:linje 239
+   ved System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.<>c__DisplayClass5_0.<ExecuteReaderWithRetry>b__0()
+   ved Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction[TResult](Func`1 func)
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.ExecuteReaderWithRetry(IDbCommand command, RetryPolicy cmdRetryPolicy, RetryPolicy conRetryPolicy)
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.ExecuteReaderWithRetry(IDbCommand command, RetryPolicy retryPolicy)
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.ExecuteReaderWithRetry(IDbCommand command)
+   ved Umbraco.Core.Persistence.Database.<Query>d__74`1.MoveNext()
+ 2018-03-11 09:21:45,982 [P536/D4/T40] ERROR Umbraco.Core.Persistence.UmbracoDatabase - Exception (7a90ea62).
+System.IndexOutOfRangeException: Indekset lå uden for matrixens grænser.
+   ved System.Collections.Generic.List`1.Add(T item)
+   ved StackExchange.Profiling.Timing.AddSqlTiming(SqlTiming sqlTiming) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\Timing.cs:linje 361
+   ved StackExchange.Profiling.MiniProfiler.AddSqlTiming(SqlTiming stats) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MiniProfiler.IDbProfiler.cs:linje 97
+   ved StackExchange.Profiling.SqlTiming..ctor(IDbCommand command, ExecuteType type, MiniProfiler profiler) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\SqlTiming.cs:linje 71
+   ved StackExchange.Profiling.SqlProfiler.ExecuteStartImpl(IDbCommand command, ExecuteType type) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\SqlProfiler.cs:linje 50
+   ved StackExchange.Profiling.MiniProfiler.StackExchange.Profiling.Data.IDbProfiler.ExecuteStart(IDbCommand profiledDbCommand, ExecuteType executeType) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\MiniProfiler.IDbProfiler.cs:linje 116
+   ved StackExchange.Profiling.Data.ProfiledDbCommand.ExecuteDbDataReader(CommandBehavior behavior) i c:\Code\github\SamSaffron\MiniProfiler\StackExchange.Profiling\Data\ProfiledDbCommand.cs:linje 239
+   ved System.Data.Common.DbCommand.System.Data.IDbCommand.ExecuteReader()
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.<>c__DisplayClass5_0.<ExecuteReaderWithRetry>b__0()
+   ved Umbraco.Core.Persistence.FaultHandling.RetryPolicy.ExecuteAction[TResult](Func`1 func)
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.ExecuteReaderWithRetry(IDbCommand command, RetryPolicy cmdRetryPolicy, RetryPolicy conRetryPolicy)
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.ExecuteReaderWithRetry(IDbCommand command, RetryPolicy retryPolicy)
+   ved Umbraco.Core.Persistence.PetaPocoCommandExtensions.ExecuteReaderWithRetry(IDbCommand command)
+   ved Umbraco.Core.Persistence.Database.<Query>d__74`1.MoveNext()
+ 2018-03-11 09:21:46,366 [P536/D4/T42] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
+ 2018-03-11 09:21:46,368 [P536/D4/T42] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
+ 2018-03-11 09:21:46,915 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:46,916 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:46,916 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
+ 2018-03-11 09:21:46,992 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 75ms)
+ 2018-03-11 09:21:47,192 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:47,192 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:47,192 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2018-03-11 09:21:47,200 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 7ms)
+ 2018-03-11 09:21:47,203 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:47,203 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:47,203 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
+ 2018-03-11 09:21:47,209 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 6ms)
+ 2018-03-11 09:21:51,512 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:51,512 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:51,512 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper
+ 2018-03-11 09:21:51,517 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Core.Persistence.Mappers.MapperForAttribute]Umbraco.Core.Persistence.Mappers.BaseMapper (took 5ms)
+ 2018-03-11 09:21:51,703 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:51,704 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:51,704 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2018-03-11 09:21:51,709 [P536/D4/T42] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 5ms)
+ 2018-03-11 09:21:52,410 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:21:52,410 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:21:52,410 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.PropertyEditors.IParameterEditor
+ 2018-03-11 09:21:52,415 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.PropertyEditors.IParameterEditor (took 4ms)
+ 2018-03-11 09:22:45,220 [P536/D4/T34] INFO  umbraco.content - Load Xml from file...
+ 2018-03-11 09:22:45,223 [P536/D4/T34] INFO  umbraco.content - Loaded Xml from file.
+ 2018-03-11 09:22:45,293 [P536/D4/T40] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-03-10 09:22:45
+ 2018-03-11 09:22:46,524 [P536/D4/T34] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:22:46,525 [P536/D4/T34] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:22:46,526 [P536/D4/T34] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ICacheRefresher
+ 2018-03-11 09:22:46,549 [P536/D4/T34] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ICacheRefresher (took 23ms)
+ 2018-03-11 09:23:05,130 [P536/D4/T44] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:23:05,130 [P536/D4/T44] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:23:05,130 [P536/D4/T44] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2018-03-11 09:23:05,130 [P536/D4/T44] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2018-03-11 09:23:06,215 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:23:06,215 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:23:06,215 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
+ 2018-03-11 09:23:06,220 [P536/D4/T40] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 4ms)
+ 2018-03-11 09:24:03,546 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:24:03,546 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:24:03,546 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Core.Deploy.IServiceConnector
+ 2018-03-11 09:24:03,553 [P536/D4/T41] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Core.Deploy.IServiceConnector (took 7ms)
+ 2018-03-11 09:27:49,101 [P536/D4/T48] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home' with Id '1148' has been published.
+ 2018-03-11 09:27:53,359 [P536/D4/T17] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:27:53,372 [P536/D4/T17] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 09:28:06,349 [P536/D4/T48] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home' with Id '1148' has been published.
+ 2018-03-11 09:28:10,434 [P536/D4/T46] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:28:10,452 [P536/D4/T46] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 09:29:05,550 [P536/D4/T57] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home' with Id '1148' has been published.
+ 2018-03-11 09:29:09,604 [P536/D4/T33] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:29:09,619 [P536/D4/T33] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 09:29:20,466 [P536/D4/T56] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:20,470 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field default
+ 2018-03-11 09:29:20,526 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:20,531 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:20,535 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:20,542 [P536/D4/T56] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:30,636 [P536/D4/T56] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field default
+ 2018-03-11 09:29:30,636 [P536/D4/T33] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:30,655 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field multiPicker
+ 2018-03-11 09:29:30,655 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field onlyImages
+ 2018-03-11 09:29:30,655 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field disableFolderSelect
+ 2018-03-11 09:29:30,655 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field startNodeId
+ 2018-03-11 09:29:30,660 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:30,696 [P536/D4/T56] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:30,697 [P536/D4/T46] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:30,711 [P536/D4/T33] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:29:43,020 [P536/D4/T17] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:29:43,021 [P536/D4/T17] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:29:43,021 [P536/D4/T17] INFO  Umbraco.Core.PluginManager - Resolving Umbraco.Web.Editors.IEditorValidator
+ 2018-03-11 09:29:43,026 [P536/D4/T17] INFO  Umbraco.Core.PluginManager - Resolved Umbraco.Web.Editors.IEditorValidator (took 4ms)
+ 2018-03-11 09:29:55,234 [P536/D4/T36] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2018-03-11 09:29:55,234 [P536/D4/T36] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2018-03-11 09:29:55,234 [P536/D4/T36] INFO  Umbraco.Core.PluginManager - Resolving umbraco.cms.businesslogic.macro.IMacroEngine
+ 2018-03-11 09:29:55,239 [P536/D4/T36] INFO  Umbraco.Core.PluginManager - Resolved umbraco.cms.businesslogic.macro.IMacroEngine (took 4ms)
+ 2018-03-11 09:35:07,114 [P536/D4/T30] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field default
+ 2018-03-11 09:35:07,114 [P536/D4/T64] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:07,213 [P536/D4/T73] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:07,263 [P536/D4/T64] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:07,278 [P536/D4/T30] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:07,290 [P536/D4/T73] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:07,359 [P536/D4/T64] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field tabName
+ 2018-03-11 09:35:08,469 [P536/D4/T64] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:08,486 [P536/D4/T73] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field values
+ 2018-03-11 09:35:08,550 [P536/D4/T30] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field default
+ 2018-03-11 09:35:08,634 [P536/D4/T64] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:08,648 [P536/D4/T73] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:08,661 [P536/D4/T30] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:08,680 [P536/D4/T71] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:10,067 [P536/D4/T71] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:10,256 [P536/D4/T79] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field default
+ 2018-03-11 09:35:10,263 [P536/D4/T30] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:10,386 [P536/D4/T71] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:10,444 [P536/D4/T79] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:10,455 [P536/D4/T78] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:35:10,455 [P536/D4/T80] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 09:44:43,013 [P536/D4/T78] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home' with Id '1148' has been published.
+ 2018-03-11 09:44:47,204 [P536/D4/T64] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:44:47,223 [P536/D4/T64] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 09:45:52,378 [P536/D4/T80] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home' with Id '1148' has been published.
+ 2018-03-11 09:45:56,476 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:45:56,505 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 09:46:53,246 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home' with Id '1148' has been published.
+ 2018-03-11 09:46:57,309 [P536/D4/T73] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:46:57,317 [P536/D4/T73] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 09:47:22,156 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Home' with Id '1148' has been published.
+ 2018-03-11 09:47:26,217 [P536/D4/T80] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:47:26,227 [P536/D4/T80] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 09:48:10,256 [P536/D4/T80] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Om forfatteren' with Id '1155' has been published.
+ 2018-03-11 09:48:14,354 [P536/D4/T78] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 09:48:14,384 [P536/D4/T78] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:16:33,409 [P536/D4/T69] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:16:37,666 [P536/D4/T75] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:16:37,694 [P536/D4/T75] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:16:56,885 [P536/D4/T73] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:17:01,477 [P536/D4/T77] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:17:01,506 [P536/D4/T77] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:17:37,245 [P536/D4/T75] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:17:41,305 [P536/D4/T85] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:17:41,315 [P536/D4/T85] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:18:00,121 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:18:04,322 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:18:04,330 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:24:44,890 [P536/D4/T73] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:24:48,964 [P536/D4/T81] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:24:48,984 [P536/D4/T81] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:25:54,299 [P536/D4/T77] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:25:58,396 [P536/D4/T69] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:25:58,410 [P536/D4/T69] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:29:52,573 [P536/D4/T78] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:29:56,651 [P536/D4/T64] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:29:56,683 [P536/D4/T64] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:31:59,052 [P536/D4/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:32:03,153 [P536/D4/T78] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:32:03,174 [P536/D4/T78] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:33:57,627 [P536/D4/T75] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:34:01,697 [P536/D4/T69] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:34:01,705 [P536/D4/T69] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:34:32,352 [P536/D4/T77] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:34:36,396 [P536/D4/T69] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:34:36,413 [P536/D4/T69] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:36:15,838 [P536/D4/T64] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:36:19,917 [P536/D4/T81] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:36:19,938 [P536/D4/T81] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:36:33,449 [P536/D4/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:36:37,533 [P536/D4/T78] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:36:37,551 [P536/D4/T78] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:40:35,791 [P536/D4/T85] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:40:39,870 [P536/D4/T80] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:40:39,894 [P536/D4/T80] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:42:04,167 [P536/D4/T64] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:42:08,264 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:42:08,281 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:42:41,231 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:42:45,325 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:42:45,347 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 12:47:58,275 [P536/D4/T69] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 12:48:02,378 [P536/D4/T77] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 12:48:02,390 [P536/D4/T77] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:22:45,902 [P536/D4/T64] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-03-10 13:22:45
+ 2018-03-11 13:41:52,547 [P536/D4/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 13:41:56,760 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:41:56,786 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:42:01,142 [P536/D4/T64] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Retfærdiggørelse af mørket' with Id '1170' has been published.
+ 2018-03-11 13:42:05,354 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:42:05,366 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:43:15,941 [P536/D4/T69] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Retfærdiggørelse af mørket' with Id '1170' has been published.
+ 2018-03-11 13:43:20,063 [P536/D4/T73] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:43:20,080 [P536/D4/T73] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:45:46,297 [P536/D4/T75] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Falske profeter og falske Kristus' with Id '1160' has been published.
+ 2018-03-11 13:45:50,440 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:45:50,460 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:48:03,019 [P536/D4/T64] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Falske profeter og falske Kristus' with Id '1160' has been published.
+ 2018-03-11 13:48:07,119 [P536/D4/T73] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:48:07,135 [P536/D4/T73] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:50:10,480 [P536/D4/T64] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Falske profeter og falske Kristus' with Id '1160' has been published.
+ 2018-03-11 13:50:14,656 [P536/D4/T79] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:50:14,667 [P536/D4/T79] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:53:52,114 [P536/D4/T85] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Falske profeter og falske Kristus' with Id '1160' has been published.
+ 2018-03-11 13:53:56,277 [P536/D4/T75] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:53:56,298 [P536/D4/T75] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:57:12,734 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Falske profeter og falske Kristus' with Id '1160' has been published.
+ 2018-03-11 13:57:16,951 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:57:16,960 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:58:41,521 [P536/D4/T78] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Falske profeter og falske Kristus' with Id '1160' has been published.
+ 2018-03-11 13:58:45,665 [P536/D4/T64] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:58:45,687 [P536/D4/T64] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 13:59:12,496 [P536/D4/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Falske profeter og falske Kristus' with Id '1160' has been published.
+ 2018-03-11 13:59:16,578 [P536/D4/T77] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 13:59:16,600 [P536/D4/T77] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 14:05:13,089 [P536/D4/T64] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Retfærdiggørelse af mørket' with Id '1170' has been published.
+ 2018-03-11 14:05:17,260 [P536/D4/T69] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 14:05:17,270 [P536/D4/T69] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 14:06:48,444 [P536/D4/T80] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 14:06:52,563 [P536/D4/T77] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 14:06:52,619 [P536/D4/T77] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 14:07:02,880 [P536/D4/T78] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Opfyldelse af Kristi profetier' with Id '1162' has been published.
+ 2018-03-11 14:07:06,931 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 14:07:06,944 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:21:21,665 [P536/D4/T78] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol nr. 11' with Id '0' has been published.
+ 2018-03-11 15:21:26,181 [P536/D4/T80] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:21:26,203 [P536/D4/T80] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:21:39,051 [P536/D4/T78] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Web.Mvc.ModelBindingException: Cannot bind source content type Umbraco.Web.PublishedContentModels.SymbolItem to model type Umbraco.Web.PublishedContentModels.SimpleGridLayout. Both view and content models are PureLive, with same version. The application is in an unstable state and should be restarted.
+   at Umbraco.Web.Mvc.RenderModelBinder.ThrowModelBindingException(Boolean sourceContent, Boolean modelContent, Type sourceType, Type modelType)
+   at Umbraco.Web.Mvc.RenderModelBinder.BindModel(Object source, Type modelType, CultureInfo culture)
+   at Umbraco.Web.Mvc.UmbracoViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2018-03-11 15:22:29,315 [P536/D4/T81] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Web.Mvc.ModelBindingException: Cannot bind source content type Umbraco.Web.PublishedContentModels.SymbolItem to model type Umbraco.Web.PublishedContentModels.SimpleGridLayout. Both view and content models are PureLive, with same version. The application is in an unstable state and should be restarted.
+   at Umbraco.Web.Mvc.RenderModelBinder.ThrowModelBindingException(Boolean sourceContent, Boolean modelContent, Type sourceType, Type modelType)
+   at Umbraco.Web.Mvc.RenderModelBinder.BindModel(Object source, Type modelType, CultureInfo culture)
+   at Umbraco.Web.Mvc.UmbracoViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2018-03-11 15:23:30,743 [P536/D4/T81] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field multiPicker
+ 2018-03-11 15:23:30,743 [P536/D4/T81] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field onlyImages
+ 2018-03-11 15:23:30,743 [P536/D4/T81] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field disableFolderSelect
+ 2018-03-11 15:23:30,744 [P536/D4/T81] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field startNodeId
+ 2018-03-11 15:23:30,744 [P536/D4/T85] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field default
+ 2018-03-11 15:23:30,745 [P536/D4/T75] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 15:23:30,747 [P536/D4/T79] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field min
+ 2018-03-11 15:23:30,747 [P536/D4/T79] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field step
+ 2018-03-11 15:23:30,747 [P536/D4/T79] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field max
+ 2018-03-11 15:23:30,945 [P536/D4/T85] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 15:23:30,950 [P536/D4/T81] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 15:23:30,958 [P536/D4/T73] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field min
+ 2018-03-11 15:23:30,959 [P536/D4/T73] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field step
+ 2018-03-11 15:23:30,959 [P536/D4/T73] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field max
+ 2018-03-11 15:23:30,975 [P536/D4/T77] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 15:23:31,130 [P536/D4/T75] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 15:23:31,177 [P536/D4/T69] WARN  Umbraco.Web.Models.Mapping.PreValueDisplayResolver - Could not find persisted pre-value for field maxChars
+ 2018-03-11 15:23:57,816 [P536/D4/T81] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Web.Mvc.ModelBindingException: Cannot bind source content type Umbraco.Web.PublishedContentModels.SymbolItem to model type Umbraco.Web.PublishedContentModels.SimpleGridLayout. Both view and content models are PureLive, with same version. The application is in an unstable state and should be restarted.
+   at Umbraco.Web.Mvc.RenderModelBinder.ThrowModelBindingException(Boolean sourceContent, Boolean modelContent, Type sourceType, Type modelType)
+   at Umbraco.Web.Mvc.RenderModelBinder.BindModel(Object source, Type modelType, CultureInfo culture)
+   at Umbraco.Web.Mvc.UmbracoViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2018-03-11 15:24:01,530 [P536/D4/T80] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Web.Mvc.ModelBindingException: Cannot bind source content type Umbraco.Web.PublishedContentModels.SymbolItem to model type Umbraco.Web.PublishedContentModels.SimpleGridLayout. Both view and content models are PureLive, with same version. The application is in an unstable state and should be restarted.
+   at Umbraco.Web.Mvc.RenderModelBinder.ThrowModelBindingException(Boolean sourceContent, Boolean modelContent, Type sourceType, Type modelType)
+   at Umbraco.Web.Mvc.RenderModelBinder.BindModel(Object source, Type modelType, CultureInfo culture)
+   at Umbraco.Web.Mvc.UmbracoViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2018-03-11 15:24:15,881 [P536/D4/T85] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+Umbraco.Web.Mvc.ModelBindingException: Cannot bind source content type Umbraco.Web.PublishedContentModels.SymbolItem to model type Umbraco.Web.PublishedContentModels.SimpleGridLayout. Both view and content models are PureLive, with same version. The application is in an unstable state and should be restarted.
+   at Umbraco.Web.Mvc.RenderModelBinder.ThrowModelBindingException(Boolean sourceContent, Boolean modelContent, Type sourceType, Type modelType)
+   at Umbraco.Web.Mvc.RenderModelBinder.BindModel(Object source, Type modelType, CultureInfo culture)
+   at Umbraco.Web.Mvc.UmbracoViewPage`1.SetViewData(ViewDataDictionary viewData)
+   at System.Web.Mvc.RazorView.RenderView(ViewContext viewContext, TextWriter writer, Object instance)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2018-03-11 15:24:34,391 [P536/D4/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol nr. 11' with Id '1177' has been published.
+ 2018-03-11 15:24:38,484 [P536/D4/T78] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:24:38,492 [P536/D4/T78] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:27:47,331 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 13' with Id '0' has been published.
+ 2018-03-11 15:27:51,431 [P536/D4/T82] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:27:51,479 [P536/D4/T82] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:35:12,750 [P536/D4/T73] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 13' with Id '1178' has been published.
+ 2018-03-11 15:35:16,967 [P536/D4/T79] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:35:16,976 [P536/D4/T79] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:36:26,168 [P536/D4/T52] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 13' with Id '1178' has been published.
+ 2018-03-11 15:36:30,324 [P536/D4/T73] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:36:30,363 [P536/D4/T73] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:39:05,812 [P536/D4/T86] ERROR Umbraco.Core.UmbracoApplicationBase - An unhandled exception occurred
+System.Web.HttpCompileException (0x80004005): d:\Dropbox\Webprojekter\dtt-info\dtt-info\Views\SymbolsOverview.cshtml(57): error CS0103: Navnet 'Name' findes ikke i den aktuelle sammenhæng
+   at System.Web.Compilation.AssemblyBuilder.Compile()
+   at System.Web.Compilation.BuildProvidersCompiler.PerformBuild()
+   at System.Web.Compilation.BuildManager.CompileWebFile(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultInternal(VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVPathBuildResultWithNoAssert(HttpContext context, VirtualPath virtualPath, Boolean noBuild, Boolean allowCrossApp, Boolean allowBuildInPrecompile, Boolean throwIfNotFound, Boolean ensureIsUpToDate)
+   at System.Web.Compilation.BuildManager.GetVirtualPathObjectFactory(VirtualPath virtualPath, HttpContext context, Boolean allowCrossApp, Boolean throwIfNotFound)
+   at System.Web.Compilation.BuildManager.GetCompiledType(VirtualPath virtualPath)
+   at System.Web.Compilation.BuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerWrapper.System.Web.Mvc.IBuildManager.GetCompiledType(String virtualPath)
+   at System.Web.Mvc.BuildManagerCompiledView.Render(ViewContext viewContext, TextWriter writer)
+   at Umbraco.Core.Profiling.ProfilingView.Render(ViewContext viewContext, TextWriter writer)
+   at System.Web.Mvc.ViewResultBase.ExecuteResult(ControllerContext context)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResult(ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultFilterRecursive(IList`1 filters, Int32 filterIndex, ResultExecutingContext preContext, ControllerContext controllerContext, ActionResult actionResult)
+   at System.Web.Mvc.ControllerActionInvoker.InvokeActionResultWithFilters(ControllerContext controllerContext, IList`1 filters, ActionResult actionResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeAction(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecuteCore>b__1d(IAsyncResult asyncResult, ExecuteCoreState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecuteCore(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.<BeginExecute>b__15(IAsyncResult asyncResult, Controller controller)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Controller.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Controller.System.Web.Mvc.Async.IAsyncController.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.<BeginProcessRequest>b__5(IAsyncResult asyncResult, ProcessRequestState innerState)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncVoid`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.MvcHandler.EndProcessRequest(IAsyncResult asyncResult)
+   at System.Web.Mvc.MvcHandler.System.Web.IHttpAsyncHandler.EndProcessRequest(IAsyncResult result)
+   at System.Web.HttpApplication.CallHandlerExecutionStep.System.Web.HttpApplication.IExecutionStep.Execute()
+   at System.Web.HttpApplication.ExecuteStepImpl(IExecutionStep step)
+   at System.Web.HttpApplication.ExecuteStep(IExecutionStep step, Boolean& completedSynchronously)
+ 2018-03-11 15:44:30,185 [P536/D4/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 13' with Id '1178' has been published.
+ 2018-03-11 15:44:34,384 [P536/D4/T80] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:44:34,398 [P536/D4/T80] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:45:46,965 [P536/D4/T82] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 4' with Id '0' has been published.
+ 2018-03-11 15:45:51,060 [P536/D4/T79] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:45:51,078 [P536/D4/T79] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:46:50,379 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 4' with Id '1179' has been published.
+ 2018-03-11 15:46:54,463 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:46:54,480 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:47:29,468 [P536/D4/T44] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symboler' with Id '1169' has been published.
+ 2018-03-11 15:47:33,578 [P536/D4/T82] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:47:33,599 [P536/D4/T82] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:49:56,594 [P536/D4/T80] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 20' with Id '0' has been published.
+ 2018-03-11 15:50:00,717 [P536/D4/T85] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:50:00,734 [P536/D4/T85] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:53:46,444 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 23' with Id '0' has been published.
+ 2018-03-11 15:53:50,555 [P536/D4/T82] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:53:50,585 [P536/D4/T82] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:54:31,199 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 23' with Id '1181' has been published.
+ 2018-03-11 15:54:35,259 [P536/D4/T52] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:54:35,274 [P536/D4/T52] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 15:57:12,641 [P536/D4/T78] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 19' with Id '0' has been published.
+ 2018-03-11 15:57:16,805 [P536/D4/T75] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 15:57:16,824 [P536/D4/T75] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:34:06,205 [P536/D4/T44] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 7' with Id '0' has been published.
+ 2018-03-11 16:34:10,284 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:34:10,300 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:34:33,852 [P536/D4/T75] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 7' with Id '1183' has been published.
+ 2018-03-11 16:34:37,938 [P536/D4/T52] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:34:37,979 [P536/D4/T52] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:37:41,375 [P536/D4/T52] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 14' with Id '0' has been published.
+ 2018-03-11 16:37:45,483 [P536/D4/T73] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:37:45,511 [P536/D4/T73] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:38:22,275 [P536/D4/T78] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 14' with Id '1184' has been published.
+ 2018-03-11 16:38:26,354 [P536/D4/T77] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:38:26,363 [P536/D4/T77] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:41:21,780 [P536/D4/T86] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 24' with Id '0' has been published.
+ 2018-03-11 16:41:25,918 [P536/D4/T85] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:41:25,969 [P536/D4/T85] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:45:43,365 [P536/D4/T85] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 26' with Id '0' has been published.
+ 2018-03-11 16:45:47,462 [P536/D4/T75] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:45:47,478 [P536/D4/T75] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:49:46,602 [P536/D4/T52] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol nr. 11' with Id '1177' has been published.
+ 2018-03-11 16:49:50,728 [P536/D4/T80] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:49:50,737 [P536/D4/T80] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:50:39,582 [P536/D4/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 13' with Id '1178' has been published.
+ 2018-03-11 16:50:43,713 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:50:43,731 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:51:48,825 [P536/D4/T79] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 4' with Id '1179' has been published.
+ 2018-03-11 16:51:52,905 [P536/D4/T77] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:51:52,934 [P536/D4/T77] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:53:33,640 [P536/D4/T85] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 19' with Id '1182' has been published.
+ 2018-03-11 16:53:37,736 [P536/D4/T85] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:53:37,829 [P536/D4/T85] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:54:38,968 [P536/D4/T77] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 7' with Id '1183' has been published.
+ 2018-03-11 16:54:43,058 [P536/D4/T86] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:54:43,088 [P536/D4/T86] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:56:05,076 [P536/D4/T75] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 14' with Id '1184' has been published.
+ 2018-03-11 16:56:09,151 [P536/D4/T75] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:56:09,170 [P536/D4/T75] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:58:07,514 [P536/D4/T85] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 14' with Id '1184' has been published.
+ 2018-03-11 16:58:11,602 [P536/D4/T78] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:58:11,615 [P536/D4/T78] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 16:58:21,487 [P536/D4/T81] INFO  Umbraco.Core.Publishing.PublishingStrategy - Content 'Symbol Nr. 14' with Id '1184' has been published.
+ 2018-03-11 16:58:25,516 [P536/D4/T75] INFO  umbraco.content - Save Xml to file...
+ 2018-03-11 16:58:25,524 [P536/D4/T75] INFO  umbraco.content - Saved Xml to file.
+ 2018-03-11 17:22:45,919 [P536/D4/T86] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-03-10 17:22:45
+ 2018-03-11 21:22:45,962 [P536/D4/T12] INFO  umbraco.BusinessLogic.Log - Log scrubbed.  Removed all items older than 2018-03-10 21:22:45
