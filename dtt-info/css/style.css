@@ -43,7 +43,7 @@ div.main {
 }
 
 .two-column-frontpage-image {
-    padding-top: 2em;
+    margin-top: -6em;
 }
 
 .article {
@@ -103,7 +103,16 @@ div.text-body {
 }
 
 
+div.right-panel-dtt-cover .container {
+    width: 80%
+}
+div.right-panel-dtt-cover img {
+    border: 1px solid;
+}
 
+div.right-panel-dtt-cover p.caption {
+    font-size: 0.8rem;
+}
 
 li {
     margin: 0 0 7px 0;
