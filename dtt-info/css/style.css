@@ -14,7 +14,7 @@ body {
 }
 
 #wrap {
-    padding-bottom: 4em;
+    padding-bottom: 6em;
 }
 
 div#logo {
@@ -38,6 +38,7 @@ div#site-sub-title {
     padding-bottom: 1rem;
 }
 
+/* bør formodentlig fjernes - ingen effekt - effekten ligger på wrap */
 div.main {
     padding-bottom: 4em;   
 }
@@ -369,6 +370,10 @@ footer {
     div#site-sub-title {
         font-size: 200%;
         margin-bottom: 1rem;
+    }
+
+    #wrap {
+        padding-bottom: 4em;
     }
 
     .form-horizontal .control-label {
