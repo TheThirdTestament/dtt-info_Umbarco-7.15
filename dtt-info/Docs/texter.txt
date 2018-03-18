@@ -7,4 +7,8 @@ Den evige verdensplan gælder for såvel store som små væsener. Det fysiske ve
 
 
 
-style="width: 80%; margin: 0 auto;"
+style="width: 80%; margin: 0 auto;"
+
+
+<p><span><em>Det Tredie Testamente</em> er titlen på Martinus' samtlige udgivne skrifter og symboler. Det besgår har hovedværkerne <em>Livets Bog og</em> <em>Det Evige Verdensbilelde</em> og dertil enkelte andre større bøger og en lang række mindre bøger.</span></p>
+

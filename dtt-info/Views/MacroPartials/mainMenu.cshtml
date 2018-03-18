@@ -1,16 +1,9 @@
 ﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
-
-@*
-    This snippet displays a list of links of the pages immediately under the top-most page in the content tree.
-    This is the home page for a standard website.
-    It also highlights the current active page/section in the navigation with the css class "current".
-*@
 @{
-    //var selection = CurrentPage.Site().Children.Where("Visible");
     var mainMenu = CurrentPage.AncestorOrSelf(1).Children.Where("Visible");
     var root = CurrentPage.Site();
-    //var projectDropdown = CurrentPage.Site().Children.Where("DocumentTypeAlias == \"projectsOverview\"").First().Children.Where("Visible").OrderBy("projectTitle");
 }
+
 <ul class="navbar-nav">
 
     @foreach (var menuItem in mainMenu)
@@ -21,14 +14,12 @@
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="Preview" role="button" aria-haspopup="true" aria-expanded="false" href="@menuItem.Url">@menuItem.Name</a>
 
                 <div class="dropdown-menu" aria-labelledby="Preview">
-                    @foreach (var subMenuItem in menuItem.Children())
+                    @foreach (var subMenuItem in menuItem.Children().Where("Visible"))
                     {
-                        <a class="nav-link @(menuItem.IsAncestorOrSelf(CurrentPage) ? "current" : null)" href="@subMenuItem.Url">@subMenuItem.Name</a>
+                    <a class="nav-link @(menuItem.IsAncestorOrSelf(CurrentPage) ? "current" : null)" href="@subMenuItem.Url">@subMenuItem.Name</a>
                     }
-
                 </div>
             </li>
-
         }
         else
         {
@@ -37,4 +28,5 @@
             </li>
         }
     }
+
 </ul>
