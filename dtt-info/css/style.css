@@ -115,6 +115,14 @@ div.right-panel-dtt-cover p.caption {
     font-size: 0.8rem;
 }
 
+div.book-list h2 {
+    padding-top: 2rem;
+    line-height: 0.5rem;
+}
+
+
+
+
 li {
     margin: 0 0 7px 0;
 }

@@ -1,12 +1,23 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<LiteratureOverview>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<LiteratureListViewModel>
+@using dtt_info.ViewModels;
 
-@using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
     Layout = "Master.cshtml";
 }
-<h1>Okay</h1>
+<h1>@Html.Raw(Model.Catagory)</h1>
 
-@*@foreach (IPublishedContent item in Model)
-{
-    <p>@item.Name</p>
-}*@
+
+<div class="row">
+
+    <div class="col-sm-8 book-list">
+       @foreach (Book item in Model.Books)
+        {
+            <h2><em>@item.Title</em></h2>
+            <p>@item.Description</p>
+        }
+    </div>
+
+    <div class="col-sm-4">
+      
+    </div>
+</div>

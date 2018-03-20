@@ -284,6 +284,8 @@
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
     <Content Include="App_Data\umbraco.config" />
+    <Content Include="App_Data\Models\all.dll.path" />
+    <Content Include="App_Data\Models\models.hash" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -392,6 +394,28 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="App_Data\Models\ArticleItem.generated.cs" />
+    <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
+    <Compile Include="App_Data\Models\Book.generated.cs" />
+    <Compile Include="App_Data\Models\ContactForm.generated.cs" />
+    <Compile Include="App_Data\Models\File.generated.cs" />
+    <Compile Include="App_Data\Models\Folder.generated.cs" />
+    <Compile Include="App_Data\Models\Global.generated.cs" />
+    <Compile Include="App_Data\Models\Home.generated.cs" />
+    <Compile Include="App_Data\Models\Image.generated.cs" />
+    <Compile Include="App_Data\Models\ImageWidget.generated.cs" />
+    <Compile Include="App_Data\Models\ImageWidgetOverview.generated.cs" />
+    <Compile Include="App_Data\Models\LiteratureOverview.generated.cs" />
+    <Compile Include="App_Data\Models\Master.generated.cs" />
+    <Compile Include="App_Data\Models\Member.generated.cs" />
+    <Compile Include="App_Data\Models\Message.generated.cs" />
+    <Compile Include="App_Data\Models\NewsletterForm.generated.cs" />
+    <Compile Include="App_Data\Models\NewsletterRegistration.generated.cs" />
+    <Compile Include="App_Data\Models\SimpleGridLayout.generated.cs" />
+    <Compile Include="App_Data\Models\SimplePage.generated.cs" />
+    <Compile Include="App_Data\Models\Site.generated.cs" />
+    <Compile Include="App_Data\Models\SymbolItem.generated.cs" />
+    <Compile Include="App_Data\Models\SymbolsOverview.generated.cs" />
     <Compile Include="Controllers\ContactFormSurfaceController.cs" />
     <Compile Include="Controllers\LiteratureOverviewController.cs" />
     <Compile Include="Controllers\NewsletterFormSurfaceController.cs" />
@@ -400,6 +424,7 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ViewModels\ContactMessage.cs" />
+    <Compile Include="ViewModels\LiteratureListViewModel.cs" />
     <Compile Include="ViewModels\NewsletterRegistration.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -413,7 +438,6 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\Models\" />
     <Folder Include="Views\LitteratureOverview\" />
   </ItemGroup>
   <PropertyGroup>
