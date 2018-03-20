@@ -4,13 +4,35 @@
 @{
     Layout = "Master.cshtml";
 }
-<h1>@Html.Raw(Model.Catagory)</h1>
 
 
 <div class="row">
+    <div class="col-sm-4">
+    </div>
+    <div class="col-sm-8">
+        <h1>@Html.Raw(Model.Catagory)</h1>
+    </div>
+</div>
 
-    <div class="col-sm-8 book-list">
-       @foreach (Book item in Model.Books)
+<div class="row">
+    <div class="col-sm-4">
+        <br />&nbsp;
+        <div class="card">
+            <div class="card-body">
+
+                <h3 class="card-title"><em>Det Tredie Testamente</em></h3>
+                <ul>
+                    <li><a href="/litteratur/livets-bog"><em>Livets Bog</em></a></li>
+                    <li><a href="/litteratur/det-evige-verdensbillede"><em>Det Evige Verdensbillede</em></a></li>
+                    <li><a href="/litteratur/andre-store-boeger">Øvrige store bøger</a></li>
+                    <li><a href="/litteratur/smaaboeger">Småbøger</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-sm-8 book-list text-body">
+        @foreach (Book item in Model.Books)
         {
             <h2><em>@item.Title</em></h2>
             <p>@item.Description</p>
@@ -18,6 +40,6 @@
     </div>
 
     <div class="col-sm-4">
-      
+
     </div>
 </div>

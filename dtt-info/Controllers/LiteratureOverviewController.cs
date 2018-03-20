@@ -36,7 +36,7 @@ namespace dtt_info.Controllers
                         viewModel.Books = Umbraco.TypedContentAtRoot().First().Descendants().Where(x => x.DocumentTypeAlias == "book").Where(x => x.GetPropertyValue<int>("sortNo") > 10 && x.GetPropertyValue<int>("sortNo") < 20).Select(x => (Book)x).ToList();
                         break;
                     case "andre-store-boeger":
-                        viewModel.Catagory = "Øvrige Store Boeger";
+                        viewModel.Catagory = "Øvrige store bøger";
                         viewModel.Books = Umbraco.TypedContentAtRoot().First().Descendants().Where(x => x.DocumentTypeAlias == "book").Where(x => x.GetPropertyValue<int>("sortNo") > 20 && x.GetPropertyValue<int>("sortNo") < 50).Select(x => (Book)x).ToList();
                         break;
                     case "smaaboeger":
