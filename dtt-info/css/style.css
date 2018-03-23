@@ -65,13 +65,17 @@ h2 {
     font-weight: bold;
 }
 
-    h2.paragraph {
+h2.paragraph {
         font-family: Times, 'Times New Roman', serif;
         font-size: 130%;
         font-weight: bold;
         margin-top: 2rem;
         font-weight: bold;
-    }
+}
+
+h2.blue-header {
+    color: #0056b3;
+}
 
 h3.paragraph {
     font-family: Times, 'Times New Roman', serif;
@@ -88,6 +92,12 @@ h3 {
 
 h1.contact-form-header {
     margin-bottom: 1em;
+}
+
+p.large-font-size {
+    /*color: #0056b3;*/
+    font-family: Georgia;
+    font-size: 130%;
 }
 
 div.registration-form {
