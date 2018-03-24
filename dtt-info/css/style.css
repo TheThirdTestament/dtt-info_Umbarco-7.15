@@ -1,17 +1,14 @@
 ﻿/* custom style */
-body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
-    /* font-family: 'Century Schoolbook', 'Times New Roman', Times, serif; */
-}
-
 html {
     position: relative;
     min-height: 100%;
 }
 
 body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 22em;
+    /* font-family: 'Century Schoolbook', 'Times New Roman', Times, serif; */
 }
 
 #wrap {
@@ -44,6 +41,18 @@ div.main {
     padding-bottom: 4em;   
 }
 
+div.top-image {
+    padding: 0;
+
+}
+
+div.top-image div.container {
+    padding-top: 4em;
+    text-align:center;
+    width: 60%;
+}
+    
+    
 .two-column-frontpage-image {
     margin-top: -6em;
 }
@@ -59,6 +68,12 @@ h1 {
     font-size: 180%;
     font-weight: bold;
 }
+
+div#ten-nuggets h1 {
+    padding-bottom: 0.5em;
+}
+
+
 h2 {
     font-family: Times, 'Times New Roman', serif;
     font-size: 140%;
@@ -77,6 +92,7 @@ h2.blue-header {
     color: #0056b3;
 }
 
+    
 h3.paragraph {
     font-family: Times, 'Times New Roman', serif;
     font-size: 110%;
@@ -114,10 +130,21 @@ div.text-body {
     padding-right: 5em;
 }
 
+div.ten-nuggets-large-portrait-symbol div.container {
+    width: 30%;
+}
+
+
+div.ten-nuggets-large-square-symbol div.container {
+    width: 40%;
+}
 
 div.right-panel-dtt-cover .container {
     width: 80%
 }
+
+
+
 div.right-panel-dtt-cover img {
     border: 1px solid;
 }

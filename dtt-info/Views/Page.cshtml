@@ -1,4 +1,4 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Umbraco.Web.PublishedContentModels.Page>
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<Umbraco.Web.PublishedContentModels.TopImagesPage>
 @{
 	Layout = "Master.cshtml";
 }
@@ -18,18 +18,9 @@
     <div class="col-sm-4">
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">10 guldkorn</h3>
-                <ol>
-                    @{
-                       
-                        var subPages = Umbraco.TypedContent(2280).Children();
-
-                        foreach (Umbraco.Web.PublishedContentModels.Page page in subPages.Where(x => x.IsVisible()))
-                        {
-                            <li><a href="@page.Url">@page.Name</a></li>
-}
-                        }
-                </ol>
+                <h3 class="card-title">Header</h3>
+                <ul>
+                </ul>
             </div>
         </div>
     </div>

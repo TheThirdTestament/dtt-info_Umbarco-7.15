@@ -345,6 +345,7 @@
     <Content Include="Views\DNV.cshtml" />
     <Content Include="Views\Global.cshtml" />
     <Content Include="Views\Page.cshtml" />
+    <Content Include="Views\TenNuggets.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -415,12 +416,12 @@
     <Compile Include="App_Data\Models\Message.generated.cs" />
     <Compile Include="App_Data\Models\NewsletterForm.generated.cs" />
     <Compile Include="App_Data\Models\NewsletterRegistration.generated.cs" />
-    <Compile Include="App_Data\Models\Page.generated.cs" />
     <Compile Include="App_Data\Models\SimpleGridLayout.generated.cs" />
     <Compile Include="App_Data\Models\SimplePage.generated.cs" />
     <Compile Include="App_Data\Models\Site.generated.cs" />
     <Compile Include="App_Data\Models\SymbolItem.generated.cs" />
     <Compile Include="App_Data\Models\SymbolsOverview.generated.cs" />
+    <Compile Include="App_Data\Models\TopImagesPage.generated.cs" />
     <Compile Include="Controllers\ContactFormSurfaceController.cs" />
     <Compile Include="Controllers\LiteratureOverviewController.cs" />
     <Compile Include="Controllers\NewsletterFormSurfaceController.cs" />
