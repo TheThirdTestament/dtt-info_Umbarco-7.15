@@ -1,25 +1,19 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @{
     Layout = null;
+    var logo = Umbraco.TypedMedia(Model.Content.GetPropertyValue<int>("logo", recurse: true));
 }
 <!doctype html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-
-    <title>@Umbraco.Field("siteTitle", recursive: true)</title>
     <meta name="description" content="@Umbraco.Field("metaDescription", recursive: true)">
-    <meta name="keywords" content="@Umbraco.Field("metaKeywords", recursive: true)">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
 
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
     <link href="~/css/style.css" rel="stylesheet" />
 
-    <script src="~/Scripts/jquery-3.0.0.min.js"></script>
-    <script src="~/Scripts/bootstrap.min.js"></script>
-
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+    <title>@Model.Content.GetPropertyValue("metaTitle", recurse: true)</title>
 
 </head>
 <body class="site">
@@ -27,7 +21,10 @@
         <header class="wrapper clearfix">
             <div class="row">
                 <div class="col-md-3 col-sm-3" id="logo">
-                    <a href="\"><img src="~/Content/Images/logo.jpg" alt="logo" /></a>
+                    @if (logo != null)
+                    {
+                        <a href="\"><img src="@logo.Url" alt="logo" /></a>
+                    }
                 </div>
                 <div class="col-md-6 col-sm-9 center-content">
                     <div id="site-title">@Umbraco.Field("siteTitle", recursive: true)</div>
@@ -53,7 +50,7 @@
         <div class="main-content">
             @RenderBody()
         </div>
-        
+
 
 
     </div> <!-- /.container -->
@@ -76,5 +73,8 @@
             </div>
         </div>
     </footer>
+    <script defer src="~/Scripts/jquery-3.0.0.min.js"></script>
+    <script defer src="~/Scripts/bootstrap.min.js"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
 </body>
 </html>

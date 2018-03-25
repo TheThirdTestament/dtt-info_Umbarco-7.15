@@ -47,8 +47,8 @@
                 <ul class="symbol-item-symbol-list">
                     @foreach (var symbolItem in selection)
                     {
-                    <li>
-                        <a href="@symbolItem.Url">@symbolItem.GetPropertyValue("Title")</a> (@symbolItem.Name)
+                    <li class="@(symbolItem.IsAncestorOrSelf(Model) ? "current " : null)">
+                        <a href="@symbolItem.Url">@symbolItem.GetPropertyValue("symbolTitle")</a> (@symbolItem.Name)
                     </li>
                     }
                 </ul>
@@ -57,7 +57,7 @@
     </div>
 
     <div class="col-md-8  order-1 order-md-2" id="symbol-explanation">
-        <h1>@Model.Title: En kort forklaring af @(WebUtility.HtmlDecode(Model.Name.Replace("Nr. ", "Nr.&nbsp;")))</h1>
+        <h1>@Model.Title: En kort forklaring af @(WebUtility.HtmlDecode(Model.Name.Replace("nr. ", "nr.&nbsp;")))</h1>
         @Model.Explanation
     </div>
 </div>

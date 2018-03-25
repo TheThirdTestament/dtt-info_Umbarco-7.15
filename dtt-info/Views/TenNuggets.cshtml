@@ -5,8 +5,7 @@
 
 
 <div class="row">
-
-    <div class="col-12 top-image">
+    <div class="col-12 top-image" id="ten-nuggets-image-container">
         @Html.GetGridHtml(@Model.Content, "topImageGrid")
     </div>
 </div>
@@ -29,13 +28,15 @@
                 <h3 class="card-title">10 guldkorn</h3>
                 <ol>
                     @{
-                        var subPages = Umbraco.TypedContent(2280).Children();
+        var subPages = Umbraco.TypedContent(2280).Children();
 
-                        foreach (Umbraco.Web.PublishedContentModels.TopImagesPage page in subPages.Where(x => x.IsVisible()))
-                        {
-                            <li><a href="@page.Url">@page.Name</a></li>
-                        }
-                    }
+        foreach (Umbraco.Web.PublishedContentModels.TopImagesPage page in subPages.Where(x => x.IsVisible()))
+        {
+                <li class="@(page.IsAncestorOrSelf(Model.Content) ? "current " : null)">
+                <a href="@page.Url">@page.Name</a>
+                    </li>
+                }
+                }
                 </ol>
             </div>
         </div>

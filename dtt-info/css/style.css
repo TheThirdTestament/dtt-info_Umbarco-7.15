@@ -20,7 +20,6 @@ div#logo {
     margin: 15px 0 15px 0;
 }
 
-
 div#site-title {
     font-family: Times, 'Times New Roman', serif;
     font-size: 175%;
@@ -41,6 +40,10 @@ div.main {
     padding-bottom: 4em;   
 }
 
+div.text-body {
+    padding-right: 1rem;
+}
+
 div.top-image {
     padding: 0;
 
@@ -52,7 +55,6 @@ div.top-image div.container {
     width: 60%;
 }
     
-    
 .two-column-frontpage-image {
     margin-top: -6em;
 }
@@ -60,7 +62,6 @@ div.top-image div.container {
 .article {
     padding-right: 0em;
 }
-
 
 h1 {
     font-family: Times, 'Times New Roman', serif;
@@ -72,7 +73,6 @@ h1 {
 div#ten-nuggets h1 {
     padding-bottom: 0.5em;
 }
-
 
 h2 {
     font-family: Times, 'Times New Roman', serif;
@@ -92,13 +92,11 @@ h2.blue-header {
     color: #0056b3;
 }
 
-    
 h3.paragraph {
     font-family: Times, 'Times New Roman', serif;
     font-size: 110%;
     font-weight: bold;
 }
-
 
 h3 {
     font-family: Times, 'Times New Roman', serif;
@@ -126,14 +124,13 @@ div.card {
     margin-bottom: 4em;
 }
 
-div.text-body {
-    padding-right: 5em;
+div#ten-nuggets-image-container img {
+    border: solid thin;
 }
 
 div.ten-nuggets-large-portrait-symbol div.container {
     width: 30%;
 }
-
 
 div.ten-nuggets-large-square-symbol div.container {
     width: 40%;
@@ -142,8 +139,6 @@ div.ten-nuggets-large-square-symbol div.container {
 div.right-panel-dtt-cover .container {
     width: 80%
 }
-
-
 
 div.right-panel-dtt-cover img {
     border: 1px solid;
@@ -156,9 +151,6 @@ div.right-panel-dtt-cover p.caption {
 div.book-list h2 {
     padding-top: 2rem;
 }
-
-
-
 
 li {
     margin: 0 0 7px 0;
@@ -189,7 +181,6 @@ figure.item img {
     border:solid 1px;
 }
         
-        
 .caption {
     /* Make the caption a block so it occupies its own line. */
     display: block;
@@ -218,7 +209,6 @@ div.dropdown-menu a {
     font-weight:normal;
 }
 
-
 a.nav-link:hover {
     text-decoration: underline;
 }
@@ -240,7 +230,6 @@ nav div#navbarSupportedContent {
     margin: 0;
     padding: 0;
 }
-
 
 .dropdown-menu > .nav-link {
     text-transform: initial;
@@ -272,7 +261,6 @@ div.center-content {
     text-align: center;
 }
 
-
 p.quote {
     margin: 0 2rem 1.5rem 2rem;
 }
@@ -298,8 +286,6 @@ div#simple-grid-page-header div {
     margin-bottom: 1rem;
 }
 
-
-
 div#symbol-explanation {
     padding: 0 2em 2em 2em;
 }
@@ -308,8 +294,6 @@ div#symbol-explanation h1 {
     margin-top: 0;
 }
 
-
- 
 ul.symbol-item-symbol-list {
     padding-left: 2em;
 }
@@ -319,18 +303,17 @@ div#logo img {
     max-width:100px;
 }
 
-
 div#symbol-overview {
     text-align: center;
     vertical-align: bottom;
 }
+
 div#symbol-overview img {
     width:auto;
     height:auto;
     max-width:100%;
     max-height:100%;
 }
-
 
 div#symbol-overview div {
     margin-top:10px;
@@ -349,6 +332,7 @@ footer {
     /* Set the fixed height of the footer here */
     height: 32em;
 }
+
 .social-media {
     color: darkgray;
     font-size: 2.5em;
@@ -358,13 +342,14 @@ footer {
 .social-media .fa-facebook:hover {
     color: #395692;
 }
+
 .social-media .fa-linkedin:hover {
     color: #007FB2;
 }
 
 .social-media .fa-youtube:hover {
-        color: #f00;
-    }
+    color: #f00;
+}
 
 /* Default breakpoints */
 /*Small devices (landscape phones, 576px and up)*/
@@ -401,7 +386,7 @@ footer {
         /* Margin bottom by footer height */
         margin-bottom: 10em;
     }
-
+    
     div#logo {
         text-align: left;
         margin: 20px 0 20px 0;
@@ -421,14 +406,17 @@ footer {
         padding-bottom: 4em;
     }
 
+    div.text-body {
+        padding-right: 5em;
+    }
+
     .form-horizontal .control-label {
         text-align: right;
     }
-
+    
     ul.symbol-item-symbol-list {
         padding-left: 2em;
     }
-
 
     /* Set the fixed height of the footer here */
     footer {

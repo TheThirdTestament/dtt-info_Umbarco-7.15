@@ -54,7 +54,7 @@
             </a>
             <div>
                 <span>
-                    @selection.ElementAt(i).GetPropertyValue("title") (@(WebUtility.HtmlDecode(selection.ElementAt(i).Name.Replace("Nr. ", "Nr.&nbsp;")))). <a href="@selection.ElementAt(i).Url">Introduktion</a>
+                    @selection.ElementAt(i).GetPropertyValue("symbolTitle") (@(WebUtility.HtmlDecode(selection.ElementAt(i).Name.Replace("nr. ", "nr.&nbsp;")))). <a href="@selection.ElementAt(i).Url">Introduktion</a>
                 </span>
             </div>
         </div>
