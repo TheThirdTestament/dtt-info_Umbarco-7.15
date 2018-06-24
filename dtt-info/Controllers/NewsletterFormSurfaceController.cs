@@ -22,11 +22,11 @@ namespace DttInfo.Controllers
 
             MailMessage message = new MailMessage();
             message.To.Add("info @thethirdtestament.info");
-            message.Bcc.Add("jan@langekaer.dk");
-            message.Bcc.Add("jesarbov@gmail.dk");
-            message.Subject = "thethirdtestament.info: Newsletter registration";
+            message.CC.Add("jan@langekaer.dk");
+            message.CC.Add("jesarbov@gmail.com");
+            message.Subject = "dettredietestamente.info: Tilmelding til nyhedsbrev";
             message.From = new MailAddress(model.Email, model.Firstname + " " + model.Lastname);
-            message.Body = model.Email + "<br />" +  model.Firstname + " " + model.Lastname;
+            message.Body = model.Firstname + " " + model.Lastname + ": " + model.Email;
 
             using (SmtpClient smtp = new SmtpClient())
             {
@@ -39,7 +39,7 @@ namespace DttInfo.Controllers
                 smtp.EnableSsl = true;
 
                 // send mail
-                //smtp.Send(message);
+                smtp.Send(message);
                 TempData["success"] = true;
             }
 

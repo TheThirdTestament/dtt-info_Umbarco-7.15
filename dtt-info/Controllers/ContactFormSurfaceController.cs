@@ -21,10 +21,10 @@ namespace DttInfo.Controllers
             if (!ModelState.IsValid) { return CurrentUmbracoPage(); }
 
             MailMessage message = new MailMessage();
-            message.To.Add("info @thethirdtestament.info");
-            message.Bcc.Add("jan@langekaer.dk");
-            message.Bcc.Add("jesarbov@gmail.dk");
-            message.Subject = "thethirdtestament.info: " + model.Subject;
+            message.To.Add("mail@dettredietestamente.info");
+            message.CC.Add("jan@langekaer.dk");
+            message.CC.Add("jesarbov@gmail.com");
+            message.Subject = "Mail fra dettredietestamente.info: " + model.Subject;
             message.From = new MailAddress(model.Email, model.Name);
             message.Body = model.Message;
 
@@ -39,7 +39,7 @@ namespace DttInfo.Controllers
                 smtp.EnableSsl = true;
 
                 // send mail
-                //smtp.Send(message);
+                smtp.Send(message);
                 TempData["success"] = true;
             }
 
