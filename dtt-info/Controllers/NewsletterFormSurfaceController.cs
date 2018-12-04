@@ -21,8 +21,8 @@ namespace DttInfo.Controllers
             if (!ModelState.IsValid) { return CurrentUmbracoPage(); }
 
             MailMessage message = new MailMessage();
-            message.To.Add("info @thethirdtestament.info");
-            message.CC.Add("jan@langekaer.dk");
+            message.To.Add("webmaster@dettredietestamente.info");
+            //message.CC.Add("jan@langekaer.dk");
             message.CC.Add("jesarbov@gmail.com");
             message.Subject = "dettredietestamente.info: Tilmelding til nyhedsbrev";
             message.From = new MailAddress(model.Email, model.Firstname + " " + model.Lastname);

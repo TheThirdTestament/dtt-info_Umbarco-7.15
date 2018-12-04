@@ -1,23 +1,26 @@
 ﻿@model DttInfo.ViewModels.ContactMessage
+@using reCAPTCHA.MVC
 @{
-                /**/
+    /**/
 
-                /**/
+    /**/
 
-                Layout = null;
+    /**/
+
+    Layout = null;
 }
 @if (TempData["success"] == null)
 {
-        <div class="row">
-            <div class="col-sm-2">
-            </div>
-            <div class="col-sm-8">
-                <h2>
-                    Har du spørgsmål eller kommentarer er du velkommen til at skrive til os.
-                </h2>
-                <br />
-            </div>
+    <div class="row">
+        <div class="col-sm-2">
         </div>
+        <div class="col-sm-8">
+            <h2>
+                Har du spørgsmål eller kommentarer er du velkommen til at skrive til os.
+            </h2>
+            <br />
+        </div>
+    </div>
 
     using (Html.BeginUmbracoForm("HandleFormSubmit", "ContactFormSurface", new object { }, new { @class = "form-horizontal" }))
     {
@@ -48,6 +51,12 @@
             <div class="col-sm-5">
                 @Html.TextAreaFor(m => m.Message, new { @class = "form-control", rows = "6", placeholder = "Din besked" })
                 @Html.ValidationMessageFor(m => m.Message)
+            </div>
+        </div>
+        <div class="form-group row">
+            @Html.Label(" ", new { @class = "col-sm-2 control-label" })
+            <div class="col-sm-5">
+                @Html.Recaptcha()
             </div>
         </div>
         <div class="form-group row">

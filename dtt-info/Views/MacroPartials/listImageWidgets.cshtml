@@ -5,7 +5,7 @@
 
 @{
 
-    IEnumerable<IPublishedContent> selection = Umbraco.TypedContent(2268).Children().Where(x => x.IsVisible()).OrderByDescending(x => x.SortOrder).Take(2);
+    IEnumerable<IPublishedContent> selection = Umbraco.TypedContent(2268).Children().Where(x => x.IsVisible()).OrderByDescending(x => x.SortOrder).Take(3);
 
     int i = 0;
     string titleText = "";

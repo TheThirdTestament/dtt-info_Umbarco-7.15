@@ -1,4 +1,5 @@
 ﻿using DttInfo.ViewModels;
+using reCAPTCHA.MVC;
 using System.Net.Mail;
 using System.Web.Mvc;
 using Umbraco.Core.Models;
@@ -16,13 +17,19 @@ namespace DttInfo.Controllers
         }
 
         [HttpPost]
-        public ActionResult HandleFormSubmit(ContactMessage model)
+        [CaptchaValidator]
+        public ActionResult HandleFormSubmit(ContactMessage model, bool captchaValid)
         {
+
+            //if (!captchaValid)
+            //{
+            //    ModelState.AddModelError("_FORM", "You did not type the verification word correctly. Please try again.");
+            //}
             if (!ModelState.IsValid) { return CurrentUmbracoPage(); }
 
             MailMessage message = new MailMessage();
-            message.To.Add("mail@dettredietestamente.info");
-            message.CC.Add("jan@langekaer.dk");
+            message.To.Add("webmaster@dettredietestamente.info");
+            //message.CC.Add("jan@langekaer.dk");
             message.CC.Add("jesarbov@gmail.com");
             message.Subject = "Mail fra dettredietestamente.info: " + model.Subject;
             message.From = new MailAddress(model.Email, model.Name);
