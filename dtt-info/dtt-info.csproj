@@ -265,6 +265,8 @@
     <Content Include="App_Data\dtt-info_log.ldf">
       <DependentUpon>dtt-info.mdf</DependentUpon>
     </Content>
+    <Content Include="App_Data\Models\all.dll.path" />
+    <Content Include="App_Data\Models\models.hash" />
     <Content Include="config\imageprocessor\security.config" />
     <Content Include="config\imageprocessor\processing.config" />
     <Content Include="config\imageprocessor\cache.config" />
@@ -293,8 +295,6 @@
     <Content Include="config\applications.config" />
     <Content Include="config\404handlers.config" />
     <Content Include="App_Data\umbraco.config" />
-    <Content Include="App_Data\Models\all.dll.path" />
-    <Content Include="App_Data\Models\models.hash" />
     <None Include="packages.config" />
     <Content Include="Scripts\bootstrap.bundle.js" />
     <Content Include="Scripts\bootstrap.bundle.min.js" />
@@ -322,6 +322,7 @@
     <Content Include="Views\ArticlesOverview.cshtml" />
     <Content Include="Views\ContactForm.cshtml" />
     <Content Include="Views\Home.cshtml" />
+    <Content Include="Views\LiteratureList.cshtml" />
     <Content Include="Views\LiteratureOverview.cshtml" />
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\NewsletterForm.cshtml" />
@@ -349,12 +350,14 @@
     <Content Include="Scripts\umd\popper.js.map" />
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Views\MacroPartials\listImageWidgets.cshtml" />
-    <Content Include="Views\LiteratureList.cshtml" />
     <Content Include="Views\Book.cshtml" />
     <Content Include="Views\DNV.cshtml" />
     <Content Include="Views\Global.cshtml" />
     <Content Include="Views\Page.cshtml" />
     <Content Include="Views\TenNuggets.cshtml" />
+    <Content Include="Views\Event.cshtml" />
+    <Content Include="Views\Events.cshtml" />
+    <Content Include="Views\MacroPartials\listEvents.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -412,6 +415,8 @@
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\Book.generated.cs" />
     <Compile Include="App_Data\Models\ContactForm.generated.cs" />
+    <Compile Include="App_Data\Models\Event.generated.cs" />
+    <Compile Include="App_Data\Models\Events.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
     <Compile Include="App_Data\Models\Folder.generated.cs" />
     <Compile Include="App_Data\Models\Global.generated.cs" />
@@ -425,6 +430,8 @@
     <Compile Include="App_Data\Models\Message.generated.cs" />
     <Compile Include="App_Data\Models\NewsletterForm.generated.cs" />
     <Compile Include="App_Data\Models\NewsletterRegistration.generated.cs" />
+    <Compile Include="App_Data\Models\QuoteItem.generated.cs" />
+    <Compile Include="App_Data\Models\Quotes.generated.cs" />
     <Compile Include="App_Data\Models\SimpleGridLayout.generated.cs" />
     <Compile Include="App_Data\Models\SimplePage.generated.cs" />
     <Compile Include="App_Data\Models\Site.generated.cs" />

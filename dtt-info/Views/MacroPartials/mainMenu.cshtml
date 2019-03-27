@@ -1,7 +1,8 @@
 ﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
 @{
     var mainMenu = CurrentPage.AncestorOrSelf(1).Children.Where("Visible");
-    var root = CurrentPage.Site();
+    // delete
+    //var root = CurrentPage.Site();
 }
 
 <ul class="navbar-nav">
