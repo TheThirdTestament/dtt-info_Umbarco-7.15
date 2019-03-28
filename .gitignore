@@ -291,7 +291,7 @@ __pycache__/
 **/App_Data/Models/ood.flag
 
 # Custom
-/Docs/Login.txt
+**/Docs/Login.txt
 
 # SQL Server files
 *.mdf
