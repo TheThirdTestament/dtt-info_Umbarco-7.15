@@ -324,6 +324,7 @@
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\LiteratureList.cshtml" />
     <Content Include="Views\LiteratureOverview.cshtml" />
+    <Content Include="Views\MacroPartials\eventForm.cshtml" />
     <Content Include="Views\Master.cshtml" />
     <Content Include="Views\NewsletterForm.cshtml" />
     <Content Include="Views\SimpleGridLayout.cshtml" />
@@ -411,6 +412,7 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Code\StringExtensions.cs" />
     <Compile Include="App_Data\Models\ArticleItem.generated.cs" />
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\Book.generated.cs" />
@@ -438,6 +440,7 @@
     <Compile Include="App_Data\Models\SymbolItem.generated.cs" />
     <Compile Include="App_Data\Models\SymbolsOverview.generated.cs" />
     <Compile Include="App_Data\Models\TopImagesPage.generated.cs" />
+    <Compile Include="Controllers\EventFormSurfaceController.cs" />
     <Compile Include="Controllers\ContactFormSurfaceController.cs" />
     <Compile Include="Controllers\LiteratureOverviewController.cs" />
     <Compile Include="Controllers\NewsletterFormSurfaceController.cs" />

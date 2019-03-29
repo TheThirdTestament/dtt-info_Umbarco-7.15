@@ -7,71 +7,96 @@
     Layout = "Master.cshtml";
 }
 
-
-<div class="row">
-    <div class="col-sm-8" style="margin-bottom:2em">
-        <h1>@Model.Title</h1>
-
-        @if (@Model.SubTitle != null)
-        {
-            <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
-            <p>
-                Afholdes fra @Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK")) til @Model.EndTime.ToString("dddd \\den d. MMMM yyyy", CultureInfo.CreateSpecificCulture("da-DK"))  på<br />
-                @Model.Location
-            </p>
-        }
-
-        @if (@Model.Organizer != null) {
-            @Model.Organizer
-        }
-
-    </div>
-    <div class="col-sm-4" style="margin-top:10em">
-        @{
-            var introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
-            int i = 1;
-            foreach (var imageItem in introImageItems)
+@if (TempData["success"] == null)
+{
+    <div class="row">
+        <div class="col-sm-8" style="margin-bottom:2em">
+            <h1>@Model.Title</h1>
+            @if (@Model.SubTitle != null)
             {
-                if (i == 1) { 
-                    <div style="margin-bottom:1em">
-                        <img src='@imageItem.Url'>
-                    </div>
-                    i++;
-                }
+                <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
+                <p>
+                    Afholdes fra @Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK")) til @Model.EndTime.ToString("dddd \\den d. MMMM yyyy", CultureInfo.CreateSpecificCulture("da-DK"))  på<br />
+                    @Model.Location
+                </p>
             }
-        }
-    </div>
-</div>
 
-<div class="row">
-    @if (Model.Details != null)
-    {
-        <div class="col-sm-8" style="margin:0;padding:0">
-            @Html.GetGridHtml(Model, "details")
+            @if (@Model.Organizer != null)
+            {
+                @Model.Organizer
+            }
+
+
         </div>
-        <div class="col-sm-4" style="margin-top:2em">
+        <div class="col-sm-4" style="margin-top:10em">
             @{
-
-                introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
+                var introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
+                int i = 1;
                 foreach (var imageItem in introImageItems)
                 {
-                    if (i > 2) { 
+                    if (i == 1)
+                    {
                         <div style="margin-bottom:1em">
                             <img src='@imageItem.Url'>
                         </div>
+                        i++;
                     }
-                    i++;
                 }
             }
         </div>
-    }
+    </div>
 
-    @if (Model.Prices != null)
-    {
-        <div class="col-sm-8">
-            @Model.Prices
+    <div class="row">
+        @if (Model.Details != null)
+        {
+            <div class="col-sm-8" style="margin:0;padding:0">
+                @Html.GetGridHtml(Model, "details")
+            </div>
+            <div class="col-sm-4" style="margin-top:2em">
+                @{
+
+                    introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
+                    foreach (var imageItem in introImageItems)
+                    {
+                        if (i > 2)
+                        {
+                            <div style="margin-bottom:1em">
+                                <img src='@imageItem.Url'>
+                            </div>
+                        }
+                        i++;
+                    }
+                }
+            </div>
+        }
+
+        @if (Model.Prices != null)
+        {
+            <div class="col-sm-8" style="margin-top:2em;">
+                @if (@Model.Prices != null)
+                {
+                    @Model.Prices
+                }
+
+                @if (@Model.Registration != null)
+                {
+                    @Model.Registration
+                    @Html.Action("Index", "EventFormSurface")
+                }
+            </div>
+        }
+
+
+
+    </div>
+
+}
+else
+{ 
+    <div class="row">
+        <div class="col-sm-8" style="margin-bottom:2em">
+            <h1>@Model.Title</h1>
+            <p>Tak for din tilmelding. Vi svarer snarest!</p>
         </div>
-    }
-</div>
-
-
+    </div>
+}

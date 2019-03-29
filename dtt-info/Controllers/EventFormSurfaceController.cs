@@ -1,4 +1,5 @@
 ﻿using DttInfo.ViewModels;
+using reCAPTCHA.MVC;
 using System.Net.Mail;
 using System.Web.Mvc;
 using Umbraco.Core.Models;
@@ -7,26 +8,32 @@ using Umbraco.Web.Mvc;
 
 namespace DttInfo.Controllers
 {
-    public class NewsletterFormSurfaceController : SurfaceController
+    public class EventFormSurfaceController : SurfaceController
     {
         // GET: ContactFormSurface
         public ActionResult Index()
         {
-            return PartialView("newsletterForm", new NewsletterRegistration());
+            return PartialView("eventForm", new ContactMessage());
         }
 
         [HttpPost]
-        public ActionResult HandleFormSubmit(NewsletterRegistration model)
+        [CaptchaValidator]
+        public ActionResult HandleFormSubmit(ContactMessage model, bool captchaValid)
         {
+
+            //if (!captchaValid)
+            //{
+            //    ModelState.AddModelError("_FORM", "You did not type the verification word correctly. Please try again.");
+            //}
             if (!ModelState.IsValid) { return CurrentUmbracoPage(); }
 
             MailMessage message = new MailMessage();
             message.To.Add("webmaster@dettredietestamente.info");
             message.CC.Add("jan@langekaer.dk");
             message.CC.Add("jesarbov@gmail.com");
-            message.Subject = "dettredietestamente.info: Tilmelding til nyhedsbrev";
-            message.From = new MailAddress(model.Email, model.Firstname + " " + model.Lastname);
-            message.Body = model.Firstname + " " + model.Lastname + ": " + model.Email;
+            message.Subject = "Mail fra dettredietestamente.info: " + model.Subject;
+            message.From = new MailAddress(model.Email, model.Name);
+            message.Body = model.Message;
 
             using (SmtpClient smtp = new SmtpClient())
             {
@@ -43,11 +50,12 @@ namespace DttInfo.Controllers
                 TempData["success"] = true;
             }
 
-            IContent msg = Services.ContentService.CreateContent(model.Firstname + " " + model.Lastname, CurrentPage.Id, "newsletterRegistration");
-            msg.SetValue("firstname", model.Firstname);
-            msg.SetValue("lastname", model.Lastname);
+            IContent msg = Services.ContentService.CreateContent(model.Subject, CurrentPage.Id, "message");
+            msg.SetValue("messageName", model.Name);
             msg.SetValue("email", model.Email);
-            
+            msg.SetValue("subject", model.Subject);
+            msg.SetValue("messageText", model.Message);
+         
             Services.ContentService.Save(msg);
 
             return RedirectToCurrentUmbracoPage();

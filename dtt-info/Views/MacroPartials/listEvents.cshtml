@@ -18,14 +18,18 @@
                         .OrderByDescending(x => x.CreateDate);
 }
 
-<div class="card">
-    <div class="card-body">
-        <h5 class="card-title">Kommende begivenheder</h5>
-        <ul>
-            @foreach (var item in selection)
-            {
-                <li><a href="@item.Url">@item.Name</a></li>
-            }
-        </ul>
+@if (selection.Count() > 0) { 
+
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Kommende begivenheder</h5>
+            <ul>
+                @foreach (var item in selection)
+                {
+                    <li><a href="@item.Url">@item.Name</a></li>
+                }
+            </ul>
+        </div>
     </div>
-</div>
+
+}
