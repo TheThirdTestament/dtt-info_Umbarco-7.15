@@ -412,7 +412,6 @@
     </Content>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Code\StringExtensions.cs" />
     <Compile Include="App_Data\Models\ArticleItem.generated.cs" />
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\Book.generated.cs" />
