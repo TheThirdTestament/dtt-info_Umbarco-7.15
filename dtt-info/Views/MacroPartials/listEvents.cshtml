@@ -26,9 +26,14 @@
             <ul>
                 @foreach (var item in selection)
                 {
-                    <li><a href="@item.Url">@item.Name</a></li>
+                <li>
+                    <span><b>@item.Name</b></span><br />
+                    @Html.Raw(item.GetPropertyValue("shortDescription"))
+                    <a href="@item.Url">Program og tilmelding</a>.
+                </li>
                 }
             </ul>
+
         </div>
     </div>
 

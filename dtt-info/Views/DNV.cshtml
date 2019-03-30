@@ -52,18 +52,24 @@
                 <h2><i>Den ny Verdensipuls</i> @captionText</h2>
 
                 <div style="margin-top:1em">
-                
-                        @foreach (var article in item.Children().OrderBy(x => x.SortOrder))
-                        {
+
+                    @foreach (var article in item.Children().OrderBy(x => x.SortOrder))
+                    {
                         <p>
-                            <a href="@article.Url">@article.GetPropertyValue("headline")</a><br />
+                            @if (Html.GetGridHtml(article, "bodyText").ToString().Length > 200)
+                            {
+                                <a href="@article.Url">@article.GetPropertyValue("headline")</a><br />
+                            }
+                            else
+                            {
+                                @article.GetPropertyValue("headline")<br />
+                            }
                             Af @article.GetPropertyValue("author")
                         </p>
-                        }
-                 
+                    }
+
                 </div>
             </div>
-
         </div>
     }
 </div>

@@ -1,5 +1,77 @@
-﻿@{
-	Layout = "Master.cshtml";
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<DnvArticle>
+@using Umbraco.Core.Models
+@using Umbraco.Web
+@using System.Text.RegularExpressions;
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+
+@{
+    Layout = "Master.cshtml";
+
 }
 
-                
+<div class="container">
+    <div class="row">
+        <div class="col-sm-8">
+            @if (@Model.Headline != null)
+            {
+                <h1>@Model.Headline</h1>
+            }
+
+            @if (@Model.Author != null)
+            {
+                <div class="author">af @Model.Author</div>
+            }
+
+            @if (@Model.Intro != null)
+            {
+                Regex rgx = new Regex("<p>|</p>");
+                string outputString = rgx.Replace(Model.Intro.ToString(), "", 2);
+
+                <p class="article-intro">@Html.Raw(outputString)</p>
+            }
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+</div>
+
+
+
+
+@if (Html.GetGridHtml(Model, "bodyText").ToString().Length > 0)
+{
+    @Html.GetGridHtml(Model, "bodyText")
+}
+
+
+<div class="container">
+
+    @if (@Model.Source != null)
+    {
+    <div class="row">
+        <div class="col-sm-8">
+            <span class="small">
+                <em>
+                    @Model.Source
+                </em>
+            </span>
+        </div>
+        <div class="col-sm-4">
+        </div>
+    </div>
+    }
+
+    @if (@Model.Footnotes.ToString().Length > 10)
+    {
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Noter</h2>
+                <span class="small">
+                    @Model.Footnotes
+                </span>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+    </div>

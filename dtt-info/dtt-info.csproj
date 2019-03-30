@@ -352,13 +352,14 @@
     <Content Include="Scripts\umd\popper.min.js.map" />
     <Content Include="Views\MacroPartials\listImageWidgets.cshtml" />
     <Content Include="Views\Book.cshtml" />
-    <Content Include="Views\DNV.cshtml" />
+    <Content Include="Views\Dnv.cshtml" />
     <Content Include="Views\Global.cshtml" />
     <Content Include="Views\Page.cshtml" />
     <Content Include="Views\TenNuggets.cshtml" />
     <Content Include="Views\Event.cshtml" />
     <Content Include="Views\Events.cshtml" />
     <Content Include="Views\MacroPartials\listEvents.cshtml" />
+    <Content Include="Views\DnvArticle.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -416,6 +417,7 @@
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\Book.generated.cs" />
     <Compile Include="App_Data\Models\ContactForm.generated.cs" />
+    <Compile Include="App_Data\Models\DnvArticle.generated.cs" />
     <Compile Include="App_Data\Models\Event.generated.cs" />
     <Compile Include="App_Data\Models\Events.generated.cs" />
     <Compile Include="App_Data\Models\File.generated.cs" />
@@ -425,6 +427,7 @@
     <Compile Include="App_Data\Models\Image.generated.cs" />
     <Compile Include="App_Data\Models\ImageWidget.generated.cs" />
     <Compile Include="App_Data\Models\ImageWidgetOverview.generated.cs" />
+    <Compile Include="App_Data\Models\Issue.generated.cs" />
     <Compile Include="App_Data\Models\LiteratureOverview.generated.cs" />
     <Compile Include="App_Data\Models\Master.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />

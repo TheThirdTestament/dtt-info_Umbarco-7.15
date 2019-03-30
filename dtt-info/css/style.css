@@ -191,6 +191,16 @@ figure.item img {
     font-size: 0.9em;
 }
 
+
+
+
+
+p.article-intro {
+    font-size: 120%;
+    color: #898989;
+    font-style:italic;
+}
+
 a {
     color: #0060AC;
 }
@@ -259,10 +269,6 @@ div.author span {
 
 div.center-content {
     text-align: center;
-}
-
-p.quote {
-    margin: 0 2rem 1.5rem 2rem;
 }
 
 .form-horizontal .control-label {

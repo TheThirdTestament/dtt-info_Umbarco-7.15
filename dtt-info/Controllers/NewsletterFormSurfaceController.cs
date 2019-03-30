@@ -21,7 +21,7 @@ namespace DttInfo.Controllers
             if (!ModelState.IsValid) { return CurrentUmbracoPage(); }
 
             MailMessage message = new MailMessage();
-            message.To.Add("webmaster@dettredietestamente.info");
+            message.To.Add("mail@dettredietestamente.info");
             message.CC.Add("jan@langekaer.dk");
             message.CC.Add("jesarbov@gmail.com");
             message.Subject = "dettredietestamente.info: Tilmelding til nyhedsbrev";
