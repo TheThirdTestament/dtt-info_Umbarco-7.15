@@ -10,7 +10,7 @@
 <div style="margin-top:4em">
     @{
 
-        IEnumerable<IPublishedContent> selection = Model.Children().Where(x => x.IsVisible()).OrderByDescending(x => x.SortOrder);
+        IEnumerable<IPublishedContent> selection = Model.Children().OrderByDescending(x => x.SortOrder);
 
         string titleText = "";
         string captionText = "";
@@ -18,43 +18,45 @@
         int grid = 4;
         double gridCol = 12 / grid;
         var intGridCol = (int)Math.Ceiling(gridCol);
+
+        int i = 0;
     }
 
     @foreach (var item in selection)
     {
 
-        <div class="row">
-            <div class="col-sm-4">
-                <!-- covers -->
+    <div class="row">
+        <div class="col-sm-4">
+            <!-- covers -->
 
-                @{
-                    var pdf = item.GetPropertyValue<IPublishedContent>
-                        ("eCopy");
-                    var imageUrl = item.GetPropertyValue<IPublishedContent>
-                        ("cover").Url;
+            @{
+                var pdf = item.GetPropertyValue<IPublishedContent>
+                    ("eCopy");
+                var imageUrl = item.GetPropertyValue<IPublishedContent>
+                    ("cover").Url;
 
-                    titleText = "Den ny Verdensimpuls nr. " + item.GetPropertyValue("issue") + " " + item.GetPropertyValue("volume");
-                    captionText = "nr. " + item.GetPropertyValue("issue") + " " + item.GetPropertyValue("volume");
-                }
-                <div style="width: 60%; margin: 0 auto; text-align:center; margin-top:5em">
-                    <a rel="noopener" href="@pdf.Url" target="_blank" title="@titleText">
-                        <img style="border: solid 1px;" sizes="(min-width: 1200px) calc(1120px / @intGridCol), (min-width: 992px) calc(920px / @intGridCol), (min-width: 768px) calc(700px / @intGridCol), 100vw" srcset="@imageUrl?width=200 200w,@imageUrl?width=200 200w,@imageUrl?width=340 340w,@imageUrl?width=447 447w,@imageUrl?width=541 541w,@imageUrl?width=628 628w,@imageUrl?width=703 703w,@imageUrl?width=775 775w,@imageUrl?width=843 843w, @imageUrl?width=908 908w,@imageUrl?width=967 967w,@imageUrl?width=1023 1023w,@imageUrl?width=1082 1082w,@imageUrl?width=1135 1135w,@imageUrl?width=1188 1188w,@imageUrl?width=1242 1242w,@imageUrl?width=1291 1291w,@imageUrl?width=1340 1340w, @imageUrl?width=1387 1387w,@imageUrl?width=1431 1431w,@imageUrl?width=1476 1476w,@imageUrl?width=1520 1520w,@imageUrl?width=1565 1565w,@imageUrl?width=1605 1605w,@imageUrl?width=1650 1650w,@imageUrl?width=1690 1690w, @imageUrl?width=1729 1729w,@imageUrl?width=1765 1765w,@imageUrl?width=1805 1805w,@imageUrl?width=1847 1847w,@imageUrl?width=1885 1885w,@imageUrl?width=1923 1923w,@imageUrl?width=1956 1956w,@imageUrl?width=1995 1995w,@imageUrl?width=2031 2031w,@imageUrl?width=2069 2069w,@imageUrl?width=2101 2101w,@imageUrl?width=2137 2137w,@imageUrl?width=2170 2170w,@imageUrl?width=2206 2206w,@imageUrl?width=2240 2240w" src="@imageUrl" alt="@titleText" />
-                    </a>
+                titleText = "Den ny Verdensimpuls nr. " + item.GetPropertyValue("issue") + " " + item.GetPropertyValue("volume");
+                captionText = "nr. " + item.GetPropertyValue("issue") + " " + item.GetPropertyValue("volume");
+            }
+            <div style="width: 60%; margin: 0 auto; text-align:center; margin-top:5em">
+                <a rel="noopener" href="@pdf.Url" target="_blank" title="@titleText">
+                    <img style="border: solid 1px;" sizes="(min-width: 1200px) calc(1120px / @intGridCol), (min-width: 992px) calc(920px / @intGridCol), (min-width: 768px) calc(700px / @intGridCol), 100vw" srcset="@imageUrl?width=200 200w,@imageUrl?width=200 200w,@imageUrl?width=340 340w,@imageUrl?width=447 447w,@imageUrl?width=541 541w,@imageUrl?width=628 628w,@imageUrl?width=703 703w,@imageUrl?width=775 775w,@imageUrl?width=843 843w, @imageUrl?width=908 908w,@imageUrl?width=967 967w,@imageUrl?width=1023 1023w,@imageUrl?width=1082 1082w,@imageUrl?width=1135 1135w,@imageUrl?width=1188 1188w,@imageUrl?width=1242 1242w,@imageUrl?width=1291 1291w,@imageUrl?width=1340 1340w, @imageUrl?width=1387 1387w,@imageUrl?width=1431 1431w,@imageUrl?width=1476 1476w,@imageUrl?width=1520 1520w,@imageUrl?width=1565 1565w,@imageUrl?width=1605 1605w,@imageUrl?width=1650 1650w,@imageUrl?width=1690 1690w, @imageUrl?width=1729 1729w,@imageUrl?width=1765 1765w,@imageUrl?width=1805 1805w,@imageUrl?width=1847 1847w,@imageUrl?width=1885 1885w,@imageUrl?width=1923 1923w,@imageUrl?width=1956 1956w,@imageUrl?width=1995 1995w,@imageUrl?width=2031 2031w,@imageUrl?width=2069 2069w,@imageUrl?width=2101 2101w,@imageUrl?width=2137 2137w,@imageUrl?width=2170 2170w,@imageUrl?width=2206 2206w,@imageUrl?width=2240 2240w" src="@imageUrl" alt="@titleText" />
+                </a>
 
 
-                    <p class="caption" style="text-decoration:none;font-style:normal"><a rel="noopener" href="@pdf.Url" target="_blank" title="DNV_2017-02.pdf">Download @captionText </a> (.pdf)</p>
-                </div>
-
+                <p class="caption" style="text-decoration:none;font-style:normal"><a rel="noopener" href="@pdf.Url" target="_blank" title="DNV_2017-02.pdf">Download @captionText </a> (.pdf)</p>
             </div>
 
-            <div class="col-sm-8" style="margin-top:2em">
+        </div>
 
-                <h2><i>Den ny Verdensimpuls</i> @captionText</h2>
+        <div class="col-sm-4" style="margin-top:2em">
 
-                <div style="margin-top:1em">
+            <h2><i>Den ny Verdensimpuls</i> @captionText</h2>
 
-                    @foreach (var article in item.Children().OrderBy(x => x.SortOrder))
-                    {
+            <div style="margin-top:1em">
+
+                @foreach (var article in item.Children().OrderBy(x => x.SortOrder))
+                {
                     <p>
                         @if (Html.GetGridHtml(article, "bodyText").ToString().Length > 200)
                         {
@@ -80,12 +82,26 @@
                         }
                         Af @article.GetPropertyValue("author")
                     </p>
-                    }
+                }
 
-                </div>
             </div>
         </div>
+        @if (i == 0)
+        {
+            <div class="col-sm-4" style="margin-top:2em;">
+                <div class="card">
+                    <div class="card-body" style="text-align:center">
+                        <h5 class="card-title"><span style="font-size:120%; font-family:'Times New Roman', Times, serif;font-style:italic;font-weight:600">Den ny Verdensimpuls</span></h5>
+                        <div style="text-align:left">
+                            @Model.Intro
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+        @{ 
+            i++;
+        }
+    </div>
     }
 </div>
-
-

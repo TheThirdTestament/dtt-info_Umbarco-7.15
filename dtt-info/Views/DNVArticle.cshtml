@@ -29,10 +29,8 @@
 
             @if (@Model.Intro != null)
             {
-                Regex rgx = new Regex("<p>|</p>");
-                string outputString = rgx.Replace(Model.Intro.ToString(), "", 2);
 
-                <p class="article-intro">@Html.Raw(outputString)</p>
+                <div class="article-intro">@Model.Intro</div>
             }
         </div>
         <div class="col-md-4">

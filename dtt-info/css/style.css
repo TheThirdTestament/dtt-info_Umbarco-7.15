@@ -191,7 +191,7 @@ figure.item img {
     font-size: 0.9em;
 }
 
-p.article-intro {
+div.article-intro {
     font-size: 120%;
     color: #898989;
     font-style:italic;
