@@ -11,8 +11,13 @@
 
 <div class="container">
     <div class="row">
-        <div class="col-sm-8">
-            @if (@Model.Headline != null)
+        <div class="col-md-8">
+            @if (@Model.Headline != null && @Model.SubHeadline!= null)
+            {
+                <h1>@Model.Headline</h1>
+                <p style="font-size:130%">@Model.SubHeadline</p>
+            }
+            else if (@Model.Headline != null)
             {
                 <h1>@Model.Headline</h1>
             }
@@ -30,7 +35,7 @@
                 <p class="article-intro">@Html.Raw(outputString)</p>
             }
         </div>
-        <div class="col-sm-4">
+        <div class="col-md-4">
         </div>
     </div>
 </div>
@@ -48,30 +53,41 @@
 
     @if (@Model.Source != null)
     {
-    <div class="row">
-        <div class="col-sm-8">
-            <span class="small">
-                <em>
-                    @Model.Source
-                </em>
-            </span>
-        </div>
-        <div class="col-sm-4">
-        </div>
-    </div>
-    }
-
-    @if (@Model.Footnotes.ToString().Length > 10)
-    {
         <div class="row">
             <div class="col-sm-8">
-                <h2>Noter</h2>
                 <span class="small">
-                    @Model.Footnotes
+                    <em>
+                        @Model.Source
+                    </em>
                 </span>
             </div>
             <div class="col-sm-4">
             </div>
         </div>
     }
-    </div>
+
+    @if (@Model.Footnotes.ToString().Length > 10)
+    {
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Noter</h2>
+                <span class="small">
+                    @Model.Footnotes
+                </span>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    }
+    @if (@Model.ReadMore.ToString().Length > 10)
+    {
+        <div class="row">
+            <div class="col-md-8">
+                <h2>Læs mere</h2>
+                <span class="small">
+                    @Model.ReadMore
+                </span>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    }
+</div>
