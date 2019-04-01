@@ -32,7 +32,7 @@ namespace dtt_info.Controllers
                         
                         break;
                     case "det-evige-verdensbillede":
-                        viewModel.Catagory = "<em>Det Evige Verdensbillede</em>";
+                        viewModel.Catagory = "<em>Det evige verdensbillede</em>";
                         viewModel.Books = Umbraco.TypedContentAtRoot().First().Descendants().Where(x => x.DocumentTypeAlias == "book").Where(x => x.GetPropertyValue<int>("sortNo") > 10 && x.GetPropertyValue<int>("sortNo") < 20).Select(x => (Book)x).ToList();
                         break;
                     case "andre-store-boeger":
