@@ -108,6 +108,11 @@ h1.contact-form-header {
     margin-bottom: 1em;
 }
 
+.card-title {
+    font-family: 'Times New Roman', Times, serif;
+    
+}
+
 p.large-font-size {
     /*color: #0056b3;*/
     font-family: Georgia;

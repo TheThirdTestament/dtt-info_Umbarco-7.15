@@ -24,7 +24,18 @@
     <link href="~/css/style.css" rel="stylesheet" />
     <link href="~/css/RTE.css" rel="stylesheet" />
 
-    <title>@Model.Content.GetPropertyValue("metaTitle", recurse: true)</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    @if (@Umbraco.Field("metaTitle", recursive: true).ToString().Length > 4)
+    {
+        <title>@Umbraco.Field("metaTitle", recursive: true) | Det Tredie Testamente</title>
+    }
+    else if (Umbraco.Field("pageName").ToString().Length > 4)
+    {
+        <title>@Umbraco.Field("pageName") | Det Tredie Testamente</title>
+    }
+
+    
 
 </head>
 <body class="site">
