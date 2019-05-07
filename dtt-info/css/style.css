@@ -211,7 +211,7 @@ a:hover {
 }
 
 a.nav-link, a:visited.nav-link, a:link.nav-linkactive {
-    font-size: 16px;
+    font-size: 90%;
     color: #000 !important;
     text-transform: uppercase;
 }

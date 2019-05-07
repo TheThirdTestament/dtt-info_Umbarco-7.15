@@ -11,7 +11,7 @@
 {
     <div class="row">
         <div class="col-sm-8" style="margin-bottom:2em">
-            <h1>@Model.Title</h1>
+            <h1>@Html.Raw(@Model.Title)</h1>
             @if (@Model.SubTitle != null)
             {
                 <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
