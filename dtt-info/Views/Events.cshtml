@@ -1,5 +1,38 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.Events>
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Events>
+@using Umbraco.Core.Models
+@using Umbraco.Web
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "Master.cshtml";
+    Layout = "Master.cshtml";
 }
+
+    <div class="row">
+        <div class="col-12">
+            <h1>@Model.Name</h1>
+            <br />
+        </div>
+    </div>
+
+        @{
+            IEnumerable<IPublishedContent> events = Model.Children.Where(x => x.IsVisible()).OrderByDescending(x => x.GetPropertyValue<DateTime>("StartTime"));
+
+        }
+
+
+<div class="row">
+    @foreach (Event item in Model.Children.Where(x => x.IsVisible()).OrderByDescending(x => x.GetPropertyValue<DateTime>("StartTime")))
+    {
+
+        <div class="col-sm-8">
+            <div style="margin-bottom:2em">
+                <a href="@item.Url"><b>@item.Name</b></a><br />
+                @Html.Raw(item.GetPropertyValue("shortDescription"))
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+
+        </div>
+
+    }
+</div>

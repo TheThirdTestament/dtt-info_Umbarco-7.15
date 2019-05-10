@@ -1,84 +1,132 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Event>
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @using System.Globalization;
+@using dtt_info.App_Code
 @{
     /**/
 
     Layout = "Master.cshtml";
 }
 
+
+@*
+    our.umbraco.com/forum/umbraco-7/using-umbraco-7/73346-check-if-umbraco-grid-is-empty
+    @{GridDataModel json = Model.Content.GetPropertyValue<GridDataModel>("bodyGrid");
+
+        if (json.HasData())
+        {
+            Do stuff if the grid has content
+        }
+*@
+
+
+
 @if (TempData["success"] == null)
 {
     <div class="row">
-        <div class="col-sm-8" style="margin-bottom:2em">
+        <div class="col-sm-12" >
             <h1>@Html.Raw(@Model.Title)</h1>
-            @if (@Model.SubTitle != null)
-            {
-                <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
-                <p>
-                    Afholdes fra @Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK")) til @Model.EndTime.ToString("dddd \\den d. MMMM yyyy", CultureInfo.CreateSpecificCulture("da-DK"))  på<br />
-                    @Model.Location
-                </p>
-            }
-
-            @if (@Model.Organizer != null)
-            {
-                @Model.Organizer
-            }
-
-
-        </div>
-        <div class="col-sm-4" style="margin-top:10em">
-            @{
-                var introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
-                int i = 1;
-                foreach (var imageItem in introImageItems)
-                {
-                    if (i == 1)
-                    {
-                        <div style="margin-bottom:1em">
-                            <img src='@imageItem.Url'>
-                        </div>
-                        i++;
-                    }
-                }
-            }
         </div>
     </div>
 
     <div class="row">
-        @if (Model.Details != null)
-        {
-            <div class="col-sm-8" style="margin:0;padding:0">
-                @Html.GetGridHtml(Model, "details")
-            </div>
-            <div class="col-sm-4" style="margin-top:2em">
-                @{
+        <div class="col-sm-8" style="margin-bottom:0em">
 
-                    introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
+            @if (@Model.SubTitle != null)
+            {
+                <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
+                <p>
+                    Afholdes fra @Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK")) til @Model.EndTime.ToString("dddd \\den d. MMMM yyyy", CultureInfo.CreateSpecificCulture("da-DK")) <br />
+                    @Model.Location
+                </p>
+            }
+
+            @if (@Model.Organizer != null && @Model.Organizer.ToString().Length > 8)
+            {
+                @Model.Organizer
+            }
+        </div>
+
+        @{
+
+            var introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
+            var relatedLinkItems = Model.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("videoLinks");
+
+            int i = 1;
+            if (introImageItems != null || relatedLinkItems != null)
+            {
+                @Html.Raw("<div class=\"col-sm-4\" style=\"margin-top:2em\">")
+
+
+                if (introImageItems != null && introImageItems.Any())
+                {
                     foreach (var imageItem in introImageItems)
                     {
-                        if (i > 2)
+                        if (i == 1)
                         {
                             <div style="margin-bottom:1em">
                                 <img src='@imageItem.Url'>
                             </div>
+                            i++;
                         }
-                        i++;
                     }
                 }
+
+
+
+                if (relatedLinkItems != null && relatedLinkItems.Any())
+                {
+                    <div>
+                        @foreach (var item in relatedLinkItems)
+                        {
+                            var linkTarget = (item.NewWindow) ? "_blank" : null;
+                            <p><a href="@item.Link" target="@linkTarget">@item.Caption</a></p>
+                        }
+                    </div>
+                }
+
+                @Html.Raw("</div>")
+
+            }
+        }
+    </div>
+
+    <div class="row">
+
+
+        @if (Model.HasGridValue("details"))
+        {
+            <div class="col-sm-8" style="margin-bottom:2em;padding:0">
+                @Html.GetGridHtml(Model, "details")
             </div>
+
+            introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
+            if (introImageItems != null)
+            {
+                @Html.Raw("<div class=\"col-sm-4\" style=\"margin-top:2em; \">")
+
+                foreach (var imageItem in introImageItems)
+                {
+                    if (i > 2)
+                    {
+                        <div style="margin-bottom:1em">
+                            <img src="@imageItem.Url">
+                        </div>
+                    }
+                    i++;
+                }
+            }
+            @Html.Raw("</div>")
         }
 
-        @if (Model.Prices != null)
+        @if (@Model.Prices != null && Model.Prices.ToString().Length > 8 || @Model.Registration != null && Model.Registration.ToString().Length > 8)
         {
-            <div class="col-sm-8" style="margin-top:2em;">
-                @if (@Model.Prices != null)
+            <div class="col-sm-8">
+                @if (Model.Prices != null && @Model.Prices.ToString().Length > 8)
                 {
                     @Model.Prices
                 }
-
-                @if (@Model.Registration != null)
+                @if (Model.Registration != null && Model.Registration.ToString().Length > 8)
                 {
                     @Model.Registration
                     @Html.Action("Index", "EventFormSurface")
@@ -86,17 +134,15 @@
             </div>
         }
 
-
-
     </div>
 
-}
-else
-{ 
+    }
+    else
+    {
     <div class="row">
         <div class="col-sm-8" style="margin-bottom:2em">
             <h1>@Model.Title</h1>
             <p>Tak for din tilmelding. Vi svarer snarest!</p>
         </div>
     </div>
-}
+    }

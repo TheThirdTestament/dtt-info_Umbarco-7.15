@@ -211,7 +211,7 @@ a:hover {
 }
 
 a.nav-link, a:visited.nav-link, a:link.nav-linkactive {
-    font-size: 90%;
+    font-size: 80%;
     color: #000 !important;
     text-transform: uppercase;
 }
@@ -227,8 +227,8 @@ a.nav-link:hover {
 nav.navbar {
     background-color: #fff;
     padding: 0;
-    border-top: solid 2px;
-    border-bottom: solid 2px;
+    border-top: solid 1px;
+    border-bottom: solid 1px;
 }
 
 nav ul.navbar-nav > li.nav-item {

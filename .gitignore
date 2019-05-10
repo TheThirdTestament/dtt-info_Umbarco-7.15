@@ -293,7 +293,7 @@ __pycache__/
 # Custom
 # Security
 **/Docs/Login.txt
-web.config
+Web.config
 Web.Release.config
 Web.Debug.config
 
