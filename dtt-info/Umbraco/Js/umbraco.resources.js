@@ -299,7 +299,7 @@
     * @name umbraco.resources.codefileResource
     * @description Loads in data for files that contain code such as js scripts, partial views and partial view macros
     **/
-    function codefileResource($q, $http, umbDataFormatter, umbRequestHelper) {
+    function codefileResource($q, $http, umbDataFormatter, umbRequestHelper, localizationService) {
         return {
             /**
          * @ngdoc method
@@ -387,10 +387,11 @@
          *
          */
             deleteByPath: function (type, virtualpath) {
+                var promise = localizationService.localize('codefile_deleteItemFailed', [virtualpath]);
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('codeFileApiBaseUrl', 'Delete', [
                     { type: type },
                     { virtualPath: virtualpath }
-                ])), 'Failed to delete item: ' + virtualpath);
+                ])), promise);
             },
             /**
          * @ngdoc method
@@ -491,11 +492,14 @@
          *
          */
             createContainer: function (type, parentId, name) {
+                // Is the parent ID numeric?
+                var key = 'codefile_createFolderFailedBy' + (isNaN(parseInt(parentId)) ? 'Name' : 'Id');
+                var promise = localizationService.localize(key, [parentId]);
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('codeFileApiBaseUrl', 'PostCreateContainer', {
                     type: type,
                     parentId: parentId,
                     name: encodeURIComponent(name)
-                })), 'Failed to create a folder under parent id ' + parentId);
+                })), promise);
             }
         };
     }
@@ -766,6 +770,18 @@
             getBlueprintById: function (id) {
                 return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('contentApiBaseUrl', 'GetBlueprintById', [{ id: id }])), 'Failed to retrieve data for content id ' + id);
             },
+            getNotifySettingsById: function (id) {
+                return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('contentApiBaseUrl', 'GetNotificationOptions', [{ contentId: id }])), 'Failed to retrieve data for content id ' + id);
+            },
+            setNotifySettingsById: function (id, options) {
+                if (!id) {
+                    throw 'contentId cannot be null';
+                }
+                return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('contentApiBaseUrl', 'PostNotificationOptions', {
+                    contentId: id,
+                    notifyOptions: options
+                })), 'Failed to set notify settings for content id ' + id);
+            },
             /**
           * @ngdoc method
           * @name umbraco.resources.contentResource#getByIds
@@ -890,6 +906,7 @@
           */
             getChildren: function (parentId, options) {
                 var defaults = {
+                    includeProperties: [],
                     pageSize: 0,
                     pageNumber: 0,
                     filter: '',
@@ -925,6 +942,7 @@
                 }
                 return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('contentApiBaseUrl', 'GetChildren', {
                     id: parentId,
+                    includeProperties: _.pluck(options.includeProperties, 'alias').join(','),
                     pageNumber: options.pageNumber,
                     pageSize: options.pageSize,
                     orderBy: options.orderBy,
@@ -1126,6 +1144,29 @@
             },
             /**
          * @ngdoc method
+         * @name umbraco.resources.contentTypeResource#getWhereCompositionIsUsedInContentTypes
+         * @methodOf umbraco.resources.contentTypeResource
+         *
+         * @description
+         * Returns a list of content types which use a specific composition with a given id
+         *
+         * ##usage
+         * <pre>
+         * contentTypeResource.getWhereCompositionIsUsedInContentTypes(1234)
+         *    .then(function(contentTypeList) {
+         *        console.log(contentTypeList);
+         *    });
+         * </pre>
+         * @param {Int} contentTypeId id of the composition content type to retrieve the list of the content types where it has been used
+         * @returns {Promise} resourcePromise object.
+         *
+         */
+            getWhereCompositionIsUsedInContentTypes: function (contentTypeId) {
+                var query = { contentTypeId: contentTypeId };
+                return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('contentTypeApiBaseUrl', 'GetWhereCompositionIsUsedInContentTypes'), query), 'Failed to retrieve data for content type id ' + contentTypeId);
+            },
+            /**
+         * @ngdoc method
          * @name umbraco.resources.contentTypeResource#getAllowedTypes
          * @methodOf umbraco.resources.contentTypeResource
          *
@@ -1264,8 +1305,19 @@
             createContainer: function (parentId, name) {
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('contentTypeApiBaseUrl', 'PostCreateContainer', {
                     parentId: parentId,
-                    name: name
+                    name: encodeURIComponent(name)
                 })), 'Failed to create a folder under parent id ' + parentId);
+            },
+            createCollection: function (parentId, collectionName, collectionCreateTemplate, collectionItemName, collectionItemCreateTemplate, collectionIcon, collectionItemIcon) {
+                return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('contentTypeApiBaseUrl', 'PostCreateCollection', {
+                    parentId: parentId,
+                    collectionName: collectionName,
+                    collectionCreateTemplate: collectionCreateTemplate,
+                    collectionItemName: collectionItemName,
+                    collectionItemCreateTemplate: collectionItemCreateTemplate,
+                    collectionIcon: collectionIcon,
+                    collectionItemIcon: collectionItemIcon
+                })), 'Failed to create collection under ' + parentId);
             },
             renameContainer: function (id, name) {
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('contentTypeApiBaseUrl', 'PostRenameContainer', {
@@ -1629,7 +1681,7 @@
             createContainer: function (parentId, name) {
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('dataTypeApiBaseUrl', 'PostCreateContainer', {
                     parentId: parentId,
-                    name: name
+                    name: encodeURIComponent(name)
                 })), 'Failed to create a folder under parent id ' + parentId);
             },
             renameContainer: function (id, name) {
@@ -1641,6 +1693,134 @@
         };
     }
     angular.module('umbraco.resources').factory('dataTypeResource', dataTypeResource);
+    /**
+    * @ngdoc service
+    * @name umbraco.resources.dictionaryResource
+    * @description Loads in data for dictionary items
+**/
+    function dictionaryResource($q, $http, $location, umbRequestHelper, umbDataFormatter) {
+        /**
+         * @ngdoc method
+         * @name umbraco.resources.dictionaryResource#deleteById
+         * @methodOf umbraco.resources.dictionaryResource
+         *
+         * @description
+         * Deletes a dictionary item with a given id
+         *
+         * ##usage
+         * <pre>
+         * dictionaryResource.deleteById(1234)
+         *    .then(function() {
+         *        alert('its gone!');
+         *    });
+         * </pre>
+         *
+         * @param {Int} id id of dictionary item to delete
+         * @returns {Promise} resourcePromise object.
+         *
+  **/
+        function deleteById(id) {
+            return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('dictionaryApiBaseUrl', 'DeleteById', [{ id: id }])), 'Failed to delete item ' + id);
+        }
+        /**
+         * @ngdoc method
+         * @name umbraco.resources.dictionaryResource#create
+         * @methodOf umbraco.resources.dictionaryResource
+         *
+         * @description
+         * Creates a dictionary item with the gieven key and parent id
+         *
+         * ##usage
+         * <pre>
+         * dictionaryResource.create(1234,"Item key")
+         *    .then(function() {
+         *        alert('its created!');
+         *    });
+         * </pre>
+         *
+         * @param {Int} parentid the parentid of the new dictionary item
+         * @param {String} key the key of the new dictionary item
+         * @returns {Promise} resourcePromise object.
+         *
+  **/
+        function create(parentid, key) {
+            return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('dictionaryApiBaseUrl', 'Create', {
+                parentId: parentid,
+                key: key
+            })), 'Failed to create item ');
+        }
+        /**
+         * @ngdoc method
+         * @name umbraco.resources.dictionaryResource#deleteById
+         * @methodOf umbraco.resources.dictionaryResource
+         *
+         * @description
+         * Gets a dictionary item with a given id
+         *
+         * ##usage
+         * <pre>
+         * dictionaryResource.getById(1234)
+         *    .then(function() {
+         *        alert('Found it!');
+         *    });
+         * </pre>
+         *
+         * @param {Int} id id of dictionary item to get
+         * @returns {Promise} resourcePromise object.
+         *
+  **/
+        function getById(id) {
+            return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('dictionaryApiBaseUrl', 'GetById', [{ id: id }])), 'Failed to get item ' + id);
+        }
+        /**
+        * @ngdoc method
+        * @name umbraco.resources.dictionaryResource#save
+        * @methodOf umbraco.resources.dictionaryResource
+        *
+        * @description
+        * Updates a dictionary
+        *
+        * @param {Object} dictionary  dictionary object to update     
+        * @param {Bool} nameIsDirty set to true if the name has been changed
+        * @returns {Promise} resourcePromise object.
+        *
+        */
+        function save(dictionary, nameIsDirty) {
+            var saveModel = umbDataFormatter.formatDictionaryPostData(dictionary, nameIsDirty);
+            return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('dictionaryApiBaseUrl', 'PostSave'), saveModel), 'Failed to save data for dictionary id ' + dictionary.id);
+        }
+        /**
+         * @ngdoc method
+         * @name umbraco.resources.dictionaryResource#getList
+         * @methodOf umbraco.resources.dictionaryResource
+         *
+         * @description
+         * Gets a list of all dictionary items
+         *
+         * ##usage
+         * <pre>
+         * dictionaryResource.getList()
+         *    .then(function() {
+         *        alert('Found it!');
+         *    });
+         * </pre>
+         *         
+         * @returns {Promise} resourcePromise object.
+         *
+  **/
+        function getList() {
+            return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('dictionaryApiBaseUrl', 'getList')), 'Failed to get list');
+        }
+        var resource = {
+            deleteById: deleteById,
+            create: create,
+            getById: getById,
+            save: save,
+            getList: getList
+        };
+        return resource;
+    }
+    angular.module('umbraco.resources').factory('dictionaryResource', dictionaryResource);
     /**
     * @ngdoc service
     * @name umbraco.resources.entityResource
@@ -1981,7 +2161,7 @@
           *
           * ##usage
           * <pre>
-          * entityResource.getPagedDescendants(1234, "Content", {pageSize: 10, pageNumber: 2})
+          * entityResource.getPagedDescendants(1234, "Document", {pageSize: 10, pageNumber: 2})
           *    .then(function(contentArray) {
           *        var children = contentArray; 
           *        alert('they are here!');
@@ -1991,8 +2171,8 @@
           * @param {Int} parentid id of content item to return descendants of
           * @param {string} type Object type name
           * @param {Object} options optional options object
-          * @param {Int} options.pageSize if paging data, number of nodes per page, default = 1
-          * @param {Int} options.pageNumber if paging data, current page index, default = 100
+          * @param {Int} options.pageSize if paging data, number of nodes per page, default = 100
+          * @param {Int} options.pageNumber if paging data, current page index, default = 1
           * @param {String} options.filter if provided, query will only return those with names matching the filter
           * @param {String} options.orderDirection can be `Ascending` or `Descending` - Default: `Ascending`
           * @param {String} options.orderBy property to order items by, default: `SortOrder`
@@ -2001,8 +2181,8 @@
           */
             getPagedDescendants: function (parentId, type, options) {
                 var defaults = {
-                    pageSize: 1,
-                    pageNumber: 100,
+                    pageSize: 100,
+                    pageNumber: 1,
                     filter: '',
                     orderDirection: 'Ascending',
                     orderBy: 'SortOrder'
@@ -2183,8 +2363,56 @@
     *
     **/
     function logResource($q, $http, umbRequestHelper) {
+        function isValidDate(input) {
+            if (input) {
+                if (Object.prototype.toString.call(input) === '[object Date]' && !isNaN(input.getTime())) {
+                    return true;
+                }
+            }
+            return false;
+        }
+        ;
+        function dateToValidIsoString(input) {
+            if (isValidDate(input)) {
+                return input.toISOString();
+            }
+            return '';
+        }
+        ;
         //the factory object returned
         return {
+            /**
+        * @ngdoc method
+        * @name umbraco.resources.logResource#getPagedEntityLog
+        * @methodOf umbraco.resources.logResource
+        *
+        * @description
+        * Gets a paginated log history for a entity
+        *
+        * ##usage
+        * <pre>
+        * var options = {
+        *      id : 1234
+        *      pageSize : 10,
+        *      pageNumber : 1,
+        *      orderDirection : "Descending",
+        *      sinceDate : new Date(2018,0,1)
+        * };
+        * logResource.getPagedEntityLog(options)
+        *    .then(function(log) {
+        *        alert('its here!');
+        *    });
+        * </pre> 
+        * 
+        * @param {Object} options options object
+        * @param {Int} options.id the id of the entity
+        * @param {Int} options.pageSize if paging data, number of nodes per page, default = 10, set to 0 to disable paging
+        * @param {Int} options.pageNumber if paging data, current page index, default = 1
+        * @param {String} options.orderDirection can be `Ascending` or `Descending` - Default: `Descending`
+        * @param {Date} options.sinceDate if provided this will only get log entries going back to this date
+        * @returns {Promise} resourcePromise object containing the log.
+        *
+        */
             getPagedEntityLog: function (options) {
                 var defaults = {
                     pageSize: 10,
@@ -2198,6 +2426,9 @@
                 angular.extend(defaults, options);
                 //now copy back to the options we will use
                 options = defaults;
+                if (options.hasOwnProperty('sinceDate')) {
+                    options.sinceDate = dateToValidIsoString(options.sinceDate);
+                }
                 //change asc/desct
                 if (options.orderDirection === 'asc') {
                     options.orderDirection = 'Ascending';
@@ -2209,6 +2440,36 @@
                 }
                 return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('logApiBaseUrl', 'GetPagedEntityLog', options)), 'Failed to retrieve log data for id');
             },
+            /**
+         * @ngdoc method
+         * @name umbraco.resources.logResource#getPagedUserLog
+         * @methodOf umbraco.resources.logResource
+         *
+         * @description
+         * Gets a paginated log history for the current user
+         *
+         * ##usage
+         * <pre>
+         * var options = {
+         *      pageSize : 10,
+         *      pageNumber : 1,
+         *      orderDirection : "Descending",
+         *      sinceDate : new Date(2018,0,1)
+         * };
+         * logResource.getPagedUserLog(options)
+         *    .then(function(log) {
+         *        alert('its here!');
+         *    });
+         * </pre> 
+         * 
+         * @param {Object} options options object
+         * @param {Int} options.pageSize if paging data, number of nodes per page, default = 10, set to 0 to disable paging
+         * @param {Int} options.pageNumber if paging data, current page index, default = 1
+         * @param {String} options.orderDirection can be `Ascending` or `Descending` - Default: `Descending`
+         * @param {Date} options.sinceDate if provided this will only get log entries going back to this date
+         * @returns {Promise} resourcePromise object containing the log.
+         *
+         */
             getPagedUserLog: function (options) {
                 var defaults = {
                     pageSize: 10,
@@ -2222,13 +2483,16 @@
                 angular.extend(defaults, options);
                 //now copy back to the options we will use
                 options = defaults;
+                if (options.hasOwnProperty('sinceDate')) {
+                    options.sinceDate = dateToValidIsoString(options.sinceDate);
+                }
                 //change asc/desct
                 if (options.orderDirection === 'asc') {
                     options.orderDirection = 'Ascending';
                 } else if (options.orderDirection === 'desc') {
                     options.orderDirection = 'Descending';
                 }
-                return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('logApiBaseUrl', 'GetPagedEntityLog', options)), 'Failed to retrieve log data for id');
+                return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('logApiBaseUrl', 'GetPagedCurrentUserLog', options)), 'Failed to retrieve log data for id');
             },
             /**
          * @ngdoc method
@@ -2236,6 +2500,7 @@
          * @methodOf umbraco.resources.logResource
          *
          * @description
+         *  <strong>[OBSOLETE] use getPagedEntityLog instead</strong><br />
          * Gets the log history for a give entity id
          *
          * ##usage
@@ -2259,7 +2524,8 @@
          * @methodOf umbraco.resources.logResource
          *
          * @description
-         * Gets the current users' log history for a given type of log entry
+         * <strong>[OBSOLETE] use getPagedUserLog instead</strong><br />
+         * Gets the current user's log history for a given type of log entry
          *
          * ##usage
          * <pre>
@@ -2277,7 +2543,7 @@
             getUserLog: function (type, since) {
                 return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('logApiBaseUrl', 'GetCurrentUserLog', [
                     { logtype: type },
-                    { sinceDate: since }
+                    { sinceDate: dateToValidIsoString(since) }
                 ])), 'Failed to retrieve log data for current user of type ' + type + ' since ' + since);
             },
             /**
@@ -2304,7 +2570,7 @@
             getLog: function (type, since) {
                 return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('logApiBaseUrl', 'GetLog', [
                     { logtype: type },
-                    { sinceDate: since }
+                    { sinceDate: dateToValidIsoString(since) }
                 ])), 'Failed to retrieve log data of type ' + type + ' since ' + since);
             }
         };
@@ -2404,7 +2670,7 @@
           *    .then(function() {
           *        $scope.complete = true;
           *    });
-          * </pre> 
+          * </pre>
           * @param {Object} args arguments object
           * @param {Int} args.parentId the ID of the parent node
           * @param {Array} options.sortedIds array of node IDs as they should be sorted
@@ -2440,9 +2706,9 @@
           *    .then(function() {
           *        alert("node was moved");
           *    }, function(err){
-          *      alert("node didnt move:" + err.data.Message); 
+          *      alert("node didnt move:" + err.data.Message);
           *    });
-          * </pre> 
+          * </pre>
           * @param {Object} args arguments object
           * @param {Int} args.idd the ID of the node to move
           * @param {Int} args.parentId the ID of the parent node to move to
@@ -2462,7 +2728,26 @@
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaApiBaseUrl', 'PostMove'), {
                     parentId: args.parentId,
                     id: args.id
-                }), 'Failed to move media');
+                }), {
+                    error: function (data) {
+                        var errorMsg = 'Failed to move media';
+                        if (data.id !== undefined && data.parentId !== undefined) {
+                            if (data.id === data.parentId) {
+                                errorMsg = 'Media can\'t be moved into itself';
+                            }
+                        } else if (data.notifications !== undefined) {
+                            if (data.notifications.length > 0) {
+                                if (data.notifications[0].header.length > 0) {
+                                    errorMsg = data.notifications[0].header;
+                                }
+                                if (data.notifications[0].message.length > 0) {
+                                    errorMsg = errorMsg + ': ' + data.notifications[0].message;
+                                }
+                            }
+                        }
+                        return { errorMsg: errorMsg };
+                    }
+                });
             },
             /**
           * @ngdoc method
@@ -2476,12 +2761,12 @@
           * <pre>
           * mediaResource.getById(1234)
           *    .then(function(media) {
-          *        var myMedia = media; 
+          *        var myMedia = media;
           *        alert('its here!');
           *    });
-          * </pre> 
-          * 
-          * @param {Int} id id of media item to return        
+          * </pre>
+          *
+          * @param {Int} id id of media item to return
           * @returns {Promise} resourcePromise object containing the media item.
           *
           */
@@ -2502,9 +2787,9 @@
           *    .then(function() {
           *        alert('its gone!');
           *    });
-          * </pre> 
-          * 
-          * @param {Int} id id of media item to delete        
+          * </pre>
+          *
+          * @param {Int} id id of media item to delete
           * @returns {Promise} resourcePromise object.
           *
           */
@@ -2523,12 +2808,12 @@
           * <pre>
           * mediaResource.getByIds( [1234,2526,28262])
           *    .then(function(mediaArray) {
-          *        var myDoc = contentArray; 
+          *        var myDoc = contentArray;
           *        alert('they are here!');
           *    });
-          * </pre> 
-          * 
-          * @param {Array} ids ids of media items to return as an array        
+          * </pre>
+          *
+          * @param {Array} ids ids of media items to return as an array
           * @returns {Promise} resourcePromise object containing the media items array.
           *
           */
@@ -2546,28 +2831,28 @@
           *
           * @description
           * Returns a scaffold of an empty media item, given the id of the media item to place it underneath and the media type alias.
-          * 
+          *
           * - Parent Id must be provided so umbraco knows where to store the media
-          * - Media Type alias must be provided so umbraco knows which properties to put on the media scaffold 
-          * 
+          * - Media Type alias must be provided so umbraco knows which properties to put on the media scaffold
+          *
           * The scaffold is used to build editors for media that has not yet been populated with data.
-          * 
+          *
           * ##usage
           * <pre>
           * mediaResource.getScaffold(1234, 'folder')
           *    .then(function(scaffold) {
           *        var myDoc = scaffold;
-          *        myDoc.name = "My new media item"; 
+          *        myDoc.name = "My new media item";
           *
           *        mediaResource.save(myDoc, true)
           *            .then(function(media){
           *                alert("Retrieved, updated and saved again");
           *            });
           *    });
-          * </pre> 
-          * 
+          * </pre>
+          *
           * @param {Int} parentId id of media item to return
-          * @param {String} alias mediatype alias to base the scaffold on        
+          * @param {String} alias mediatype alias to base the scaffold on
           * @returns {Promise} resourcePromise object containing the media scaffold.
           *
           */
@@ -2592,11 +2877,11 @@
           * <pre>
           * mediaResource.getChildren(1234, {pageSize: 10, pageNumber: 2})
           *    .then(function(contentArray) {
-          *        var children = contentArray; 
+          *        var children = contentArray;
           *        alert('they are here!');
           *    });
-          * </pre> 
-          * 
+          * </pre>
+          *
           * @param {Int} parentid id of content item to return children of
           * @param {Object} options optional options object
           * @param {Int} options.pageSize if paging data, number of nodes per page, default = 0
@@ -2659,9 +2944,9 @@
           *
           * @description
           * Saves changes made to a media item, if the media item is new, the isNew paramater must be passed to force creation
-          * if the media item needs to have files attached, they must be provided as the files param and passed separately 
-          * 
-          * 
+          * if the media item needs to have files attached, they must be provided as the files param and passed separately
+          *
+          *
           * ##usage
           * <pre>
           * mediaResource.getById(1234)
@@ -2672,11 +2957,11 @@
           *                alert("Retrieved, updated and saved again");
           *            });
           *    });
-          * </pre> 
-          * 
+          * </pre>
+          *
           * @param {Object} media The media item object with changes applied
-          * @param {Bool} isNew set to true to create a new item or to update an existing 
-          * @param {Array} files collection of files for the media item      
+          * @param {Bool} isNew set to true to create a new item or to update an existing
+          * @param {Array} files collection of files for the media item
           * @returns {Promise} resourcePromise object containing the saved media item.
           *
           */
@@ -2697,10 +2982,10 @@
           *    .then(function(folder) {
           *        alert('New folder');
           *    });
-          * </pre> 
+          * </pre>
           *
           * @param {string} name Name of the folder to create
-          * @param {int} parentId Id of the media item to create the folder underneath         
+          * @param {int} parentId Id of the media item to create the folder underneath
           * @returns {Promise} resourcePromise object.
           *
           */
@@ -2719,18 +3004,18 @@
           * Retrieves all media children with types used as folders.
           * Uses the convention of looking for media items with mediaTypes ending in
           * *Folder so will match "Folder", "bannerFolder", "secureFolder" etc,
-          * 
+          *
           * NOTE: This will return a max of 500 folders, if more is required it needs to be paged
-          * 
+          *
           * ##usage
           * <pre>
           * mediaResource.getChildFolders(1234)
           *    .then(function(data) {
           *        alert('folders');
           *    });
-          * </pre> 
+          * </pre>
           *
-          * @param {int} parentId Id of the media item to query for child folders    
+          * @param {int} parentId Id of the media item to query for child folders
           * @returns {Promise} resourcePromise object.
           *
           */
@@ -2755,8 +3040,8 @@
           *    .then(function() {
           *        alert('its empty!');
           *    });
-          * </pre> 
-          *         
+          * </pre>
+          *
           * @returns {Promise} resourcePromise object.
           *
           */
@@ -2769,7 +3054,7 @@
           * @methodOf umbraco.resources.mediaResource
           *
           * @description
-          * Empties the media recycle bin
+          * Paginated search for media items starting on the supplied nodeId
           *
           * ##usage
           * <pre>
@@ -2777,12 +3062,12 @@
           *    .then(function(searchResult) {
           *        alert('it's here!');
           *    });
-          * </pre> 
-          *           
+          * </pre>
+          *
           * @param {string} query The search query
           * @param {int} pageNumber The page number
           * @param {int} pageSize The number of media items on a page
-          * @param {int} searchFrom Id to search from
+          * @param {int} searchFrom NodeId to search from (-1 for root)
           * @returns {Promise} resourcePromise object.
           *
           */
@@ -2803,7 +3088,7 @@
     * @name umbraco.resources.mediaTypeResource
     * @description Loads in data for media types
     **/
-    function mediaTypeResource($q, $http, umbRequestHelper, umbDataFormatter) {
+    function mediaTypeResource($q, $http, umbRequestHelper, umbDataFormatter, localizationService) {
         return {
             getCount: function () {
                 return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'GetCount')), 'Failed to retrieve count');
@@ -2821,6 +3106,29 @@
                     filterPropertyTypes: filterPropertyTypes
                 };
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'GetAvailableCompositeMediaTypes'), query), 'Failed to retrieve data for content type id ' + contentTypeId);
+            },
+            /**
+         * @ngdoc method
+         * @name umbraco.resources.mediaTypeResource#getWhereCompositionIsUsedInContentTypes
+         * @methodOf umbraco.resources.mediaTypeResource
+         *
+         * @description
+         * Returns a list of media types which use a specific composition with a given id
+         *
+         * ##usage
+         * <pre>
+         * mediaTypeResource.getWhereCompositionIsUsedInContentTypes(1234)
+         *    .then(function(mediaTypeList) {
+         *        console.log(mediaTypeList);
+         *    });
+         * </pre>
+         * @param {Int} contentTypeId id of the composition content type to retrieve the list of the media types where it has been used
+         * @returns {Promise} resourcePromise object.
+         *
+         */
+            getWhereCompositionIsUsedInContentTypes: function (contentTypeId) {
+                var query = { contentTypeId: contentTypeId };
+                return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'GetWhereCompositionIsUsedInContentTypes'), query), 'Failed to retrieve data for content type id ' + contentTypeId);
             },
             /**
          * @ngdoc method
@@ -2859,6 +3167,18 @@
             deleteContainerById: function (id) {
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'DeleteContainer', [{ id: id }])), 'Failed to delete content type contaier');
             },
+            /**
+         * @ngdoc method
+         * @name umbraco.resources.mediaTypeResource#save
+         * @methodOf umbraco.resources.mediaTypeResource
+         *
+         * @description
+         * Saves or update a media type
+         *
+         * @param {Object} content data type object to create/update
+         * @returns {Promise} resourcePromise object.
+         *
+         */
             save: function (contentType) {
                 var saveModel = umbDataFormatter.formatContentTypePostData(contentType);
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'PostSave'), saveModel), 'Failed to save data for content type id ' + contentType.id);
@@ -2896,10 +3216,11 @@
                 if (!args.id) {
                     throw 'args.id cannot be null';
                 }
+                var promise = localizationService.localize('media_moveFailed');
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'PostMove'), {
                     parentId: args.parentId,
                     id: args.id
-                }), 'Failed to move content');
+                }), promise);
             },
             copy: function (args) {
                 if (!args) {
@@ -2911,22 +3232,25 @@
                 if (!args.id) {
                     throw 'args.id cannot be null';
                 }
+                var promise = localizationService.localize('media_copyFailed');
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'PostCopy'), {
                     parentId: args.parentId,
                     id: args.id
-                }), 'Failed to copy content');
+                }), promise);
             },
             createContainer: function (parentId, name) {
+                var promise = localizationService.localize('media_createFolderFailed', [parentId]);
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'PostCreateContainer', {
                     parentId: parentId,
-                    name: name
-                })), 'Failed to create a folder under parent id ' + parentId);
+                    name: encodeURIComponent(name)
+                })), promise);
             },
             renameContainer: function (id, name) {
+                var promise = localizationService.localize('media_renameFolderFailed', [id]);
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('mediaTypeApiBaseUrl', 'PostRenameContainer', {
                     id: id,
                     name: name
-                })), 'Failed to rename the folder with id ' + id);
+                })), promise);
             }
         };
     }
@@ -3169,8 +3493,8 @@
             },
             /**
          * @ngdoc method
-         * @name umbraco.resources.contentTypeResource#save
-         * @methodOf umbraco.resources.contentTypeResource
+         * @name umbraco.resources.memberTypeResource#save
+         * @methodOf umbraco.resources.memberTypeResource
          *
          * @description
          * Saves or update a member type
@@ -3271,7 +3595,7 @@
          * @methodOf umbraco.resources.packageInstallResource
          *
          * @description
-         * Downloads a package file from our.umbraco.org to the website server.
+         * Downloads a package file from our.umbraco.com to the website server.
          * 
          * ##usage
          * <pre>
@@ -3366,6 +3690,26 @@
                     pageSize: pageSize
                 })), 'Failed to retrieve data for searching redirect urls');
             }
+            /**
+   * @ngdoc function
+   * @name umbraco.resources.redirectUrlResource#getRedirectsForContentItem
+   * @methodOf umbraco.resources.redirectUrlResource
+   * @function
+   *
+   * @description
+   * Used to retrieve RedirectUrls for a specific item of content for Information tab
+   * ##usage
+   * <pre>
+   * redirectUrlsResource.getRedirectsForContentItem("udi:123456")
+   *    .then(function(response) {
+   *
+   *    });
+   * </pre>
+   * @param {String} contentUdi identifier for the content item to retrieve redirects for
+   */
+            function getRedirectsForContentItem(contentUdi) {
+                return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('redirectUrlManagementApiBaseUrl', 'RedirectUrlsForContentItem', { contentUdi: contentUdi })), 'Failed to retrieve redirects for content: ' + contentUdi);
+            }
             function getEnableState() {
                 return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('redirectUrlManagementApiBaseUrl', 'GetEnableState')), 'Failed to retrieve data to check if the 301 redirect is enabled');
             }
@@ -3413,7 +3757,8 @@
                 searchRedirectUrls: searchRedirectUrls,
                 deleteRedirectUrl: deleteRedirectUrl,
                 toggleUrlTracker: toggleUrlTracker,
-                getEnableState: getEnableState
+                getEnableState: getEnableState,
+                getRedirectsForContentItem: getRedirectsForContentItem
             };
             return resource;
         }
@@ -3440,10 +3785,10 @@
          *
          */
             getByChildId: function (id, alias) {
-                return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('relationApiBaseUrl', 'GetByChildId', [{
-                        childId: id,
-                        relationTypeAlias: alias
-                    }])), 'Failed to get relation by child ID ' + id + ' and type of ' + alias);
+                return umbRequestHelper.resourcePromise($http.get(umbRequestHelper.getApiUrl('relationApiBaseUrl', 'GetByChildId', {
+                    childId: id,
+                    relationTypeAlias: alias
+                })), 'Failed to get relation by child ID ' + id + ' and type of ' + alias);
             },
             /**
          * @ngdoc method
@@ -3556,7 +3901,7 @@
     * @name umbraco.resources.templateResource
     * @description Loads in data for templates
     **/
-    function templateResource($q, $http, umbDataFormatter, umbRequestHelper) {
+    function templateResource($q, $http, umbDataFormatter, umbRequestHelper, localizationService) {
         return {
             /**
          * @ngdoc method
@@ -3671,7 +4016,8 @@
          *
          */
             deleteById: function (id) {
-                return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('templateApiBaseUrl', 'DeleteById', [{ id: id }])), 'Failed to delete item ' + id);
+                var promise = localizationService.localize('template_deleteByIdFailed', [id]);
+                return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('templateApiBaseUrl', 'DeleteById', [{ id: id }])), promise);
             },
             /**
          * @ngdoc method
@@ -4183,7 +4529,7 @@
           *    });
           * </pre>
           * 
-          * @param {Array} id user id.
+          * @param {Int} userId user id.
           * @returns {Promise} resourcePromise object containing the user.
           *
           */
@@ -4274,6 +4620,29 @@
                 var formattedSaveData = umbDataFormatter.formatUserPostData(user);
                 return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('userApiBaseUrl', 'PostSaveUser'), formattedSaveData), 'Failed to save user');
             }
+            /**
+          * @ngdoc method
+          * @name umbraco.resources.usersResource#deleteNonLoggedInUser
+          * @methodOf umbraco.resources.usersResource
+          *
+          * @description
+          * Deletes a user that hasn't already logged in (and hence we know has made no content updates that would create related records)
+          *
+          * ##usage
+          * <pre>
+          * usersResource.deleteNonLoggedInUser(1)
+          *    .then(function() {
+          *        alert("user was deleted");
+          *    });
+          * </pre>
+          * 
+          * @param {Int} userId user id.
+          * @returns {Promise} resourcePromise object.
+          *
+          */
+            function deleteNonLoggedInUser(userId) {
+                return umbRequestHelper.resourcePromise($http.post(umbRequestHelper.getApiUrl('userApiBaseUrl', 'PostDeleteNonLoggedInUser', { id: userId })), 'Failed to delete the user ' + userId);
+            }
             var resource = {
                 disableUsers: disableUsers,
                 enableUsers: enableUsers,
@@ -4284,6 +4653,7 @@
                 createUser: createUser,
                 inviteUser: inviteUser,
                 saveUser: saveUser,
+                deleteNonLoggedInUser: deleteNonLoggedInUser,
                 clearAvatar: clearAvatar
             };
             return resource;

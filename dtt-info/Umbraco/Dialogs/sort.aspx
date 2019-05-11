@@ -30,12 +30,10 @@
             </div>
 
             <div id="sortingDone" style="display: none;" class="success">
-                <p>
+                <div class="alert alert-success">
                     <asp:Literal runat="server" ID="sortDone"></asp:Literal>
-                </p>
-                <p>
-                    <a href="#" onclick="UmbClientMgr.closeModalWindow()"><%= umbraco.ui.Text("defaultdialogs", "closeThisWindow")%></a>
-                </p>
+                </div>
+                <button class="btn btn-primary" onclick="UmbClientMgr.closeModalWindow()"><%= umbraco.ui.Text("general", "ok")%></button>
             </div>
 
             <div id="sortArea">
@@ -75,7 +73,7 @@
                 closeWindowButton: jQuery("#closeWindowButton"),
                 dateTimeFormat: "<%=CultureInfo.CurrentCulture.DateTimeFormat.ShortDatePattern%> <%=CultureInfo.CurrentCulture.DateTimeFormat.ShortTimePattern%>",
                 currentId: "<%=Request.CleanForXss("ID")%>",
-                serviceUrl: "<%= IOHelper.ResolveUrl(SystemDirectories.Umbraco)%>/WebServices/nodesorter.asmx/UpdateSortOrder?app=<%=Request.CleanForXss("app")%>"
+                serviceUrl: "<%= IOHelper.ResolveUrl(SystemDirectories.Umbraco)%>/WebServices/NodeSorter.asmx/UpdateSortOrder?app=<%=Request.CleanForXss("app")%>"
             });
 
             sortDialog.init();
