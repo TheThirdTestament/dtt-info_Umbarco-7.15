@@ -177,3 +177,29 @@ _shutDownStack=   at System.Environment.GetStackTrace(Exception e, Boolean needF
  2019-05-17 12:02:52,700 [P12260/D3/T18] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
  2019-05-17 12:02:52,700 [P12260/D3/T18] INFO  Umbraco.Core.PluginManager - Resolving umbraco.cms.businesslogic.macro.IMacroEngine
  2019-05-17 12:02:52,701 [P12260/D3/T18] INFO  Umbraco.Core.PluginManager - Resolved umbraco.cms.businesslogic.macro.IMacroEngine (took 0ms)
+ 2019-05-17 12:42:24,017 [P12260/D3/T56] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-17 12:42:24,018 [P12260/D3/T56] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 1ms)
+ 2019-05-17 12:42:24,019 [P12260/D3/T56] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2019-05-17 12:42:24,041 [P12260/D3/T56] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 22ms)
+ 2019-05-17 12:42:24,190 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-17 12:42:24,190 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2019-05-17 12:42:24,190 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IAction
+ 2019-05-17 12:42:24,204 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IAction (took 13ms)
+ 2019-05-17 12:42:31,065 [P12260/D3/T55] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: Login attempt succeeded for username jesarbov@gmail.com from IP address ::1
+ 2019-05-17 12:42:31,067 [P12260/D3/T55] INFO  Umbraco.Core.Security.BackOfficeSignInManager - Event Id: 0, state: User: jesarbov@gmail.com logged in from IP address ::1
+ 2019-05-17 12:42:32,119 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-17 12:42:32,122 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 3ms)
+ 2019-05-17 12:42:32,122 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.ITree
+ 2019-05-17 12:42:32,131 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.ITree (took 8ms)
+ 2019-05-17 12:42:32,153 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-17 12:42:32,153 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2019-05-17 12:42:32,154 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController
+ 2019-05-17 12:42:32,154 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved [Umbraco.Web.Trees.TreeAttribute]Umbraco.Web.Trees.TreeController (took 0ms)
+ 2019-05-17 12:42:32,157 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-17 12:42:32,157 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2019-05-17 12:42:32,158 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree
+ 2019-05-17 12:42:32,166 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.TreeAttribute]umbraco.interfaces.ITree (took 7ms)
+ 2019-05-17 12:42:32,193 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving umbraco.interfaces.IDiscoverable
+ 2019-05-17 12:42:32,193 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved umbraco.interfaces.IDiscoverable (took 0ms)
+ 2019-05-17 12:42:32,194 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolving [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication
+ 2019-05-17 12:42:32,202 [P12260/D3/T61] INFO  Umbraco.Core.PluginManager - Resolved [umbraco.businesslogic.ApplicationAttribute]umbraco.interfaces.IApplication (took 7ms)
