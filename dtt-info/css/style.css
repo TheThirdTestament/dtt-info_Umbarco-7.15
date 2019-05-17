@@ -216,8 +216,12 @@ a.nav-link, a:visited.nav-link, a:link.nav-linkactive {
     text-transform: uppercase;
 }
 
+a:hover#header {
+    text-decoration: none;
+}
+
 div.dropdown-menu a {
-    font-weight:normal;
+    font-weight: normal;
 }
 
 a.nav-link:hover {
@@ -228,7 +232,9 @@ nav.navbar {
     background-color: #fff;
     padding: 0;
     border-top: solid 1px;
-    border-bottom: solid 1px;
+    border-top-color: #ddd;
+    border-bottom: solid 2px;
+    border-bottom-color: #ddd;
 }
 
 nav ul.navbar-nav > li.nav-item {
@@ -245,6 +251,7 @@ nav div#navbarSupportedContent {
 .dropdown-menu > .nav-link {
     text-transform: initial;
 }
+
 
 .current {
     font-weight: bold;
