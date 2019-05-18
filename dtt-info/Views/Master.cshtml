@@ -11,7 +11,6 @@
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
         gtag('js', new Date());
-
         gtag('config', 'UA-120736505-1');
     </script>
 
@@ -20,9 +19,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="description" content="@Umbraco.Field("metaDescription", recursive: true)">
 
+    <link href="https://fonts.googleapis.com/css?family=Lato|Merriweather|Montserrat&display=swap" rel="stylesheet">
+    @*@Styles.Render("~/bundles/style")*@
+
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
-    <link href="~/css/style.css" rel="stylesheet" />
-    <link href="~/css/RTE.css" rel="stylesheet" />
+    <link href="~/Content/css/style.css" rel="stylesheet" />
+    <link href="~/Content/css/RTE.css" rel="stylesheet" />
 
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -35,7 +37,7 @@
         <title>@Umbraco.Field("pageName") | Det Tredie Testamente</title>
     }
 
-    
+
 
 </head>
 <body class="site">

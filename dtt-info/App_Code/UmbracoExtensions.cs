@@ -22,9 +22,6 @@ namespace dtt_info.App_Code
                     var stringValue = contentItem.GetPropertyValue<string>(alias);
                     if (!string.IsNullOrWhiteSpace(stringValue))
                     {
-
-
-
                         //var grid = contentItem.GetGridHtml("grid");
                         //// Strip html-tags
                         //Regex regex = new Regex("\\<[^\\>]*\\>");

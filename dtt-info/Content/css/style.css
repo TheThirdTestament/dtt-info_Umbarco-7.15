@@ -6,9 +6,9 @@ html {
 
 body {
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Merriweather, Times, 'Times New Roman', serif;
     margin-bottom: 22em;
-    /* font-family: 'Century Schoolbook', 'Times New Roman', Times, serif; */
+    /* font-family: 'Open Sans', 'Times New Roman', Times, serif; */
 }
 
 #wrap {
@@ -35,9 +35,12 @@ div#site-sub-title {
     padding-bottom: 1rem;
 }
 
+nav {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
 /* bør formodentlig fjernes - ingen effekt - effekten ligger på wrap */
 div.main {
-    padding-bottom: 4em;   
+    padding-bottom: 4em;
 }
 
 div.text-body {
@@ -64,7 +67,7 @@ div.top-image div.container {
 }
 
 h1 {
-    font-family: Times, 'Times New Roman', serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     margin-top: 2rem;
     font-size: 180%;
     font-weight: bold;
@@ -75,13 +78,13 @@ div#ten-nuggets h1 {
 }
 
 h2 {
-    font-family: Times, 'Times New Roman', serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 140%;
     font-weight: bold;
 }
 
 h2.paragraph {
-        font-family: Times, 'Times New Roman', serif;
+        font-family: 'Open Sans', Arial, Helvetica, sans-serif;
         font-size: 130%;
         font-weight: bold;
         margin-top: 2rem;
@@ -93,13 +96,13 @@ h2.blue-header {
 }
 
 h3.paragraph {
-    font-family: Times, 'Times New Roman', serif;
-    font-size: 110%;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 120%;
     font-weight: bold;
 }
 
 h3 {
-    font-family: Times, 'Times New Roman', serif;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 120%;
     font-weight: bold;
 }
@@ -108,9 +111,13 @@ h1.contact-form-header {
     margin-bottom: 1em;
 }
 
+.headline, .sub-headline, .author {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 110%;
+}
+
 .card-title {
-    font-family: 'Times New Roman', Times, serif;
-    
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 p.large-font-size {
@@ -127,6 +134,7 @@ div.card {
     background-color: #F5F8FA;
     width: 90%;
     margin-bottom: 4em;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
 }
 
 div#ten-nuggets-image-container img {
@@ -185,21 +193,22 @@ figure.item img {
     max-height:100%;
     border:solid 1px;
 }
-        
+
 .caption {
     /* Make the caption a block so it occupies its own line. */
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
     display: block;
     margin-left: auto;
     margin-right: auto;
     padding-bottom: 2em;
-    font-style: italic;
     font-size: 0.9em;
+    color: #777;
 }
 
-div.article-intro {
-    font-size: 120%;
-    color: #898989;
-    font-style:italic;
+div.article-intro, .intro {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-size: 105%;
+    color: #777;
 }
 
 a {
@@ -345,6 +354,7 @@ table.prices td {
 }
 
 footer {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     padding-top: 2em;
     font-size: 0.9rem;
     position: absolute;
