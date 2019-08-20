@@ -1,0 +1,23 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<StudyGroups>
+@using Umbraco.Web.PublishedContentModels;
+@{
+    Layout = "Master.cshtml";
+}
+
+@{
+    IEnumerable<StudyGroup> selection = Umbraco.TypedContent(2815).Children<StudyGroup>().Where(x => x.IsVisible());
+}
+
+@foreach (var item in selection)
+{
+    <h2>@item.Name</h2>
+    <p>@item.Description</p>
+    <p>@item.Address</p>
+    <p>
+        Phone: @item.Phone<br />
+        Email: @item.Email
+    </p>
+}
+
+
+

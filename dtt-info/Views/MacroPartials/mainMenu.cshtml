@@ -12,7 +12,7 @@
 
     @foreach (var menuItem in mainMenu)
     {
-        if (menuItem.Children().Where(x => x.IsVisible()).Count() > 0 && menuItem.Name != "Artikler" && menuItem.Name != "Symboler" && menuItem.Name != "Begivenheder")
+        if (menuItem.Children().Where(x => x.IsVisible()).Count() > 0 && menuItem.Name != "Artikler" && menuItem.Name != "Symboler" && menuItem.Name != "Arrangementer" && menuItem.Name != "Studiegrupper")
         {
             <li class="nav-item dropdown @(menuItem.IsAncestorOrSelf(Model.Content) ? "current" : null)">
                 <a class="nav-link dropdown-toggle" data-toggle="dropdown" id="Preview" role="button" aria-haspopup="true" aria-expanded="false" href="@menuItem.Url">@menuItem.Name</a>

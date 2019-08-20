@@ -30,8 +30,8 @@
         <h2>Andre tekster</h2>
         @foreach (ArticleItem articleItem in Model.Children.Where(x => x.GetPropertyValue<int>("category") != 10))
         {
-            <div class="headline">
-                <a href="@articleItem.Url">@articleItem.Title</a>
+            <div>
+                <a  class="headline" href="@articleItem.Url">@articleItem.Title</a>
                 <br />
                 @articleItem.Appetizer
             </div>
