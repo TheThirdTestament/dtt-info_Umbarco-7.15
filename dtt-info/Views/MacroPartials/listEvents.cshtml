@@ -1,7 +1,6 @@
 ﻿@inherits Umbraco.Web.Macros.PartialViewMacroPage
 @using Umbraco.Web
 
-
 @*
     This snippet makes a list of links to the of children of the current page using an unordered HTML list.
 
@@ -19,19 +18,16 @@
 }
 
 @if (selection.Count() > 0) { 
-
     <div class="card">
         <div class="card-body">
-            <h5 class="card-title" style="font-size:130%;font-weight:600">Kommende begivenheder</h5>
+            <h5 class="card-title" style="font-size:130%;font-weight:600">Kommende arrangementer</h5>
             <ul style="list-style:none;padding:1em 1em 0 1em">
                 @foreach (var item in selection)
                 {
                 <li>
-                    <span><b>@item.Name</b></span><br />
+                    <a class="headline" href="@item.Url">@item.Name</a><br />
                     @Html.Raw(item.GetPropertyValue("shortDescription"))
                     @*<a href="@item.Url">Program og tilmelding</a>.*@
-                <li>
-
                 </li>
                 }
             </ul>

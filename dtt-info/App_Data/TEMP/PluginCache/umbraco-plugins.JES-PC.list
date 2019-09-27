@@ -496,8 +496,8 @@ Umbraco.Core.Persistence.Mappers.UmbracoEntityMapper, Umbraco.Core, Version=1.0.
 Umbraco.Core.Persistence.Mappers.UserMapper, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Models.Identity.IdentityModelMappings, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Auditing.AuditEventHandler, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
-dtt_info.App_Code.BundleConfig, App_Code.5b6sgdyn, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-dtt_info.App_Code.CustomApplicationEventHandler, App_Code.5b6sgdyn, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+dtt_info.App_Code.BundleConfig, App_Code.0thxqs-c, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+dtt_info.App_Code.CustomApplicationEventHandler, App_Code.0thxqs-c, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 umbraco.businesslogic.ContentApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
 umbraco.businesslogic.MediaApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
 umbraco.businesslogic.SettingsApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
@@ -560,8 +560,8 @@ Umbraco.Core.Strategies.RelateOnCopyHandler, Umbraco.Core, Version=1.0.7009.2619
 Umbraco.Core.Strategies.RelateOnTrashHandler, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Models.Identity.IdentityModelMappings, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Auditing.AuditEventHandler, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
-dtt_info.App_Code.BundleConfig, App_Code.5b6sgdyn, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
-dtt_info.App_Code.CustomApplicationEventHandler, App_Code.5b6sgdyn, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+dtt_info.App_Code.BundleConfig, App_Code.0thxqs-c, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+dtt_info.App_Code.CustomApplicationEventHandler, App_Code.0thxqs-c, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
 umbraco.BusinessLogic.ApplicationRegistrar, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
 umbraco.BusinessLogic.ApplicationTreeRegistrar, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
 
@@ -720,6 +720,66 @@ Umbraco.Web.PublishedContentModels.SymbolItem, dtt-info, Version=1.0.0.0, Cultur
 Umbraco.Web.PublishedContentModels.SymbolsOverview, dtt-info, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.PublishedContentModels.TopImagesPage, dtt-info, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
 
+Umbraco.Web.Trees.TreeController
+Umbraco.Web.Trees.TreeAttribute
+Umbraco.Web.Trees.DictionaryTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.MacroTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.UserTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.ContentBlueprintTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.ContentTypeTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.PackagesTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.MediaTypeTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.MemberTypeTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.XsltTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.ScriptTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.DataTypeTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.LanguageTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.MemberTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.TemplatesTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.MediaTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.ContentTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.PartialViewMacrosTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.Trees.PartialViewsTreeController, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+
+umbraco.interfaces.IAction
+
+umbraco.cms.presentation.developer.RelationTypes.TreeMenu.ActionDeleteRelationType, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.cms.presentation.developer.RelationTypes.TreeMenu.ActionNewRelationType, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.businesslogic.Actions.ActionCreateBlueprintFromContent, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.PlaceboAction, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionAssignDomain, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionAudit, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionBrowse, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionChangeDocType, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionCopy, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionDelete, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionDisable, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionEmptyTranscan, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionExport, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionImport, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionMove, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionNew, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionNewFolder, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionNotify, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionNull, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionPackage, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionPackageCreate, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionProtect, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionPublish, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionQuit, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionRefresh, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionRePublish, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionRights, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionRollback, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionSendToTranslate, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionSort, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionToPublish, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionTranslate, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionUpdate, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ContextMenuSeperator, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionUnPublish, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+umbraco.BusinessLogic.Actions.ActionRestore, cms, Version=1.0.7009.26205, Culture=neutral, PublicKeyToken=null
+
 Umbraco.Core.PropertyEditors.IParameterEditor
 
 Umbraco.Web.PropertyEditors.DropdownFlexiblePropertyEditor, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
@@ -777,8 +837,55 @@ Umbraco.Web.PropertyEditors.ParameterEditors.SingleMediaPickerParameterEditor, u
 Umbraco.Core.PropertyEditors.ParameterEditor, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.PropertyEditors.PropertyEditor, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 
-Umbraco.Core.Deploy.IServiceConnector
+umbraco.interfaces.ITree
 
+umbraco.loadPackager, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadDLRScripts, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadRelationTypes, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadContent, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadcontentItemType, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadDataTypes, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadLanguages, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadMacros, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadMedia, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadMediaTypes, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadMemberGroups, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadMembers, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadMemberTypes, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadNodeTypes, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadPython, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadScripts, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadStylesheetProperty, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadStylesheets, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadTemplates, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadOpenTasks, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadYourTasks, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadUsers, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadXslt, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.cms.presentation.Trees.MediaRecycleBin, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.cms.presentation.Trees.ContentRecycleBin, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.cms.presentation.Trees.NullTree, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.cms.presentation.Trees.LegacyTree, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.editorControls.MultiNodeTreePicker.FilteredContentTree, umbraco.editorControls, Version=1.0.7009.26209, Culture=neutral, PublicKeyToken=null
+umbraco.editorControls.MultiNodeTreePicker.FilteredMediaTree, umbraco.editorControls, Version=1.0.7009.26209, Culture=neutral, PublicKeyToken=null
+
+umbraco.interfaces.ITree
+umbraco.businesslogic.TreeAttribute
+umbraco.loadRelationTypes, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadMemberGroups, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadPython, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadStylesheetProperty, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.loadStylesheets, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+
+umbraco.interfaces.IApplication
+umbraco.businesslogic.ApplicationAttribute
+umbraco.businesslogic.ContentApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
+umbraco.businesslogic.MediaApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
+umbraco.businesslogic.SettingsApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
+umbraco.businesslogic.DeveloperApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
+umbraco.businesslogic.UsersApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
+umbraco.businesslogic.MembersApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
+umbraco.businesslogic.TranslationApplicationDefinition, businesslogic, Version=1.0.7009.26204, Culture=neutral, PublicKeyToken=null
 
 Umbraco.Core.Persistence.Mappers.BaseMapper
 Umbraco.Core.Persistence.Mappers.MapperForAttribute
@@ -814,10 +921,11 @@ Umbraco.Core.Persistence.Mappers.ServerRegistrationMapper, Umbraco.Core, Version
 Umbraco.Core.Persistence.Mappers.UmbracoEntityMapper, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 Umbraco.Core.Persistence.Mappers.UserMapper, Umbraco.Core, Version=1.0.7009.26199, Culture=neutral, PublicKeyToken=null
 
-umbraco.cms.businesslogic.macro.IMacroEngine
+Umbraco.Web.Editors.IEditorValidator
 
-Umbraco.Web.Macros.PartialViewMacroEngine, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
-umbraco.MacroEngines.RazorMacroEngine, umbraco.MacroEngines, Version=1.0.7009.26210, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Validation.ContentTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.10.102, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Validation.MediaTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.10.102, Culture=neutral, PublicKeyToken=null
+Umbraco.ModelsBuilder.Validation.MemberTypeModelValidator, Umbraco.ModelsBuilder, Version=3.0.10.102, Culture=neutral, PublicKeyToken=null
 
 umbraco.interfaces.ICacheRefresher
 
@@ -842,4 +950,31 @@ Umbraco.Web.Cache.TemplateCacheRefresher, umbraco, Version=1.0.7009.26206, Cultu
 Umbraco.Web.Cache.UnpublishedPageCacheRefresher, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserCacheRefresher, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
 Umbraco.Web.Cache.UserGroupPermissionsCacheRefresher, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+
+Umbraco.Core.Deploy.IServiceConnector
+
+
+umbraco.cms.businesslogic.macro.IMacroEngine
+
+Umbraco.Web.Macros.PartialViewMacroEngine, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+umbraco.MacroEngines.RazorMacroEngine, umbraco.MacroEngines, Version=1.0.7009.26210, Culture=neutral, PublicKeyToken=null
+
+Umbraco.Web.HealthCheck.HealthCheck
+
+Umbraco.Web.HealthCheck.Checks.DataIntegrity.XmlDataIntegrityHealthCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Permissions.FolderAndFilePermissionsCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Config.MacroErrorsCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Config.NotificationEmailCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Config.TrySkipIisCustomErrorsCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Config.CustomErrorsCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Config.TraceCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Config.CompilationDebugCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Security.XssProtectionCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Security.HstsCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Security.NoSniffCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Security.ExcessiveHeadersCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Security.ClickJackingCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Security.HttpsCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Services.Tls12Check, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
+Umbraco.Web.HealthCheck.Checks.Services.SmtpCheck, umbraco, Version=1.0.7009.26206, Culture=neutral, PublicKeyToken=null
 

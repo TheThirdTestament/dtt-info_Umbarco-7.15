@@ -13,10 +13,20 @@
     </div>
 </div>
 
-@Html.GetGridHtml(Model, "mainContent", "bootstrap3")
 
+<div class="row">
+    <div class="col-8">
 
-@*@Umbraco.RenderMacro("listImageWidgets")*@
+        @Html.GetGridHtml(Model, "mainContent", "bootstrap3")
 
-@*@Umbraco.RenderMacro("listEvents")*@
+    </div>
+    <div class="col-4">
+
+        @Umbraco.RenderMacro("listEvents")
+        
+        @Umbraco.RenderMacro("listImageWidgets")
+
+    </div>
+</div>
+
 

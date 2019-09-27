@@ -1,0 +1,26 @@
+Speaker
+- first name
+- last name
+- presentation
+- email
+- phone
+
+Location
+- name
+- description
+- address
+- zip
+- city
+- country
+- images
+
+Organizer
+- first name
+- last name
+- note (RTE)
+- address
+- zip
+- city
+- country
+- email
+- phone
