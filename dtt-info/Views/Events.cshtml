@@ -1,11 +1,20 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Events>
 @using Umbraco.Core.Models
 @using Umbraco.Web
+@using System.Globalization;
+@using System.Text.RegularExpressions;
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
     Layout = "Master.cshtml";
 }
-
+@helper StripParagraph(string input)
+{
+    if (!string.IsNullOrEmpty(input))
+    {
+        input = Regex.Replace(input, "</?p>", String.Empty);
+        @Html.Raw(input)
+    }
+}
 
 
 @{
@@ -27,225 +36,244 @@
 }
 
 
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Kommende arrangementer</h1>
-                        <br />
-                    </div>
+<div class="row">
+    <div class="col-12">
+        <h1>Kommende arrangementer</h1>
+        <br />
+    </div>
+</div>
+
+@if (foredrag.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Foredrag</h2>
+        </div>
+    </div>
+
+    foreach (Event item in foredrag)
+    {
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @Html.Raw(item.GetPropertyValue("shortDescription"))
+
+                    <br />
+                    @{
+                        var typedMultiNodeTreePicker = item.GetPropertyValue<IEnumerable<IPublishedContent>>("time");
+                        foreach (var timeSloth in typedMultiNodeTreePicker)
+                        {
+                            <span>@timeSloth.GetPropertyValue("startTime") til @timeSloth.GetPropertyValue("endTime") </span>
+                        }
+                    }
+
                 </div>
-                
-                @if (foredrag.Count() > 0)
-                {  
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Foredrag</h2>
-                        </div>
-                    </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
 
-                        foreach (Event item in foredrag)
-                        {
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                            @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                        </div>
-                                    </div>
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                          }
-                        
-                    }
-                    
-                   
-                    @if (kurser.Count() > 0)
-                    { 
-                        <div class="row">
-                            <div class="col-12">
-                                <h2>Kurser</h2>
-                            </div>
-                        </div>
-
-                        foreach (Event item in kurser)
-                        {
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                        @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                    </div>
-                                </div>
-                       
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                        }
-                    }
-                  
-                    
-                    @if (seminarer.Count() > 0)
-                    {
-                        <div class="row">
-                            <div class="col-12">
-                                <h2>Seminarer</h2>
-                            </div>
-                        </div>
-
-                  
-                        foreach (Event item in seminarer)
-                        {
-                       
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                        @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                    </div>
-                                </div>
-                       
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                        }
-                    }
+}
 
 
- 
-                    @if (fester.Count() > 0)
-                    {
-                        <div class="row">
-                            <div class="col-12">
-                                <h2>Festdag</h2>
-                            </div>
-                        </div>
+@if (kurser.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Kurser</h2>
+        </div>
+    </div>
 
-                  
-                        foreach (Event item in fester)
-                        {
-                       
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                        @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                    </div>
-                                </div>
-                       
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                        }
-                    }
-
-
-                <div class="row">
+    foreach (Event item in kurser)
+    {
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @(StripParagraph(item.GetPropertyValue("shortDescription").ToString()))<br />
+                    @Html.Partial("displayTimeSloths", item.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
                 </div>
-                <div class="row">
-                    <div class="col-12">
-                        <h1>Afholdte arrangementer</h1>
-                        <br />
-                    </div>
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+}
+
+
+@if (seminarer.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Seminarer</h2>
+        </div>
+    </div>
+
+
+    foreach (Event item in seminarer)
+    {
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @(StripParagraph(item.GetPropertyValue("shortDescription").ToString()))<br />
+                    @Html.Partial("displayTimeSloths", item.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+
+                    
                 </div>
+            </div>
 
-               @if (afholdteForedrag.Count() > 0)
-                {  
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>Foredrag</h2>
-                        </div>
-                    </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+}
 
-                        foreach (Event item in afholdteForedrag)
-                        {
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                            @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                        </div>
-                                    </div>
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                          }
-                        
-                    }
-                    
-                   
-                    @if (afholdteKurser.Count() > 0)
-                    { 
-                        <div class="row">
-                            <div class="col-12">
-                                <h2>Kurser</h2>
-                            </div>
-                        </div>
 
-                        foreach (Event item in afholdteKurser)
-                        {
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                        @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                    </div>
-                                </div>
-                       
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                        }
-                    }
-                  
-                    
-                    @if (afholdteSeminarer.Count() > 0)
-                    {
-                        <div class="row">
-                            <div class="col-12">
-                                <h2>Seminarer</h2>
-                            </div>
-                        </div>
 
-                  
-                        foreach (Event item in afholdteSeminarer)
-                        {
-                       
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                        @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                    </div>
-                                </div>
-                       
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                        }
-                    }
+@if (fester.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Festdag</h2>
+        </div>
+    </div>
 
-                    @if (afholdtefester.Count() > 0)
-                    {
-                        <div class="row">
-                            <div class="col-12">
-                                <h2>Festdag</h2>
-                            </div>
-                        </div>
 
-                  
-                        foreach (Event item in afholdtefester)
-                        {
-                       
-                            <div class="row">
-                                <div class="col-sm-8">
-                                    <div style="margin-bottom:2em">
-                                        <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
-                                        @Html.Raw(item.GetPropertyValue("shortDescription"))
-                                    </div>
-                                </div>
-                       
-                                <div class="col-sm-4">
-                                </div>
-                            </div>
-                        }
-                    }
+    foreach (Event item in fester)
+    {
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @(StripParagraph(item.GetPropertyValue("shortDescription").ToString()))<br />
+                    @Html.Partial("displayTimeSloths", item.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+}
+
+
+<div class="row">
+</div>
+<div class="row">
+    <div class="col-12">
+        <h1>Afholdte arrangementer</h1>
+        <br />
+    </div>
+</div>
+
+@if (afholdteForedrag.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Foredrag</h2>
+        </div>
+    </div>
+
+    foreach (Event item in afholdteForedrag)
+    {
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @(StripParagraph(item.GetPropertyValue("shortDescription").ToString()))<br />
+                    @Html.Partial("displayTimeSloths", item.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+                </div>
+            </div>
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+
+}
+
+
+@if (afholdteKurser.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Kurser</h2>
+        </div>
+    </div>
+
+    foreach (Event item in afholdteKurser)
+    {
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @(StripParagraph(item.GetPropertyValue("shortDescription").ToString()))<br />
+                    @Html.Partial("displayTimeSloths", item.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+}
+
+
+@if (afholdteSeminarer.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Seminarer</h2>
+        </div>
+    </div>
+
+
+    foreach (Event item in afholdteSeminarer)
+    {
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @(StripParagraph(item.GetPropertyValue("shortDescription").ToString()))<br />
+                    @Html.Partial("displayTimeSloths", item.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+}
+
+@if (afholdtefester.Count() > 0)
+{
+    <div class="row">
+        <div class="col-12">
+            <h2>Festdag</h2>
+        </div>
+    </div>
+
+
+    foreach (Event item in afholdtefester)
+    {
+
+        <div class="row">
+            <div class="col-sm-8">
+                <div style="margin-bottom:2em">
+                    <a class="headline" href="@item.Url"><b>@item.Name</b></a><br />
+                    @(StripParagraph(item.GetPropertyValue("shortDescription").ToString()))<br />
+                    @Html.Partial("displayTimeSloths", item.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+                </div>
+            </div>
+
+            <div class="col-sm-4">
+            </div>
+        </div>
+    }
+}

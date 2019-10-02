@@ -9,22 +9,21 @@
 }
 
 
-@*
-    our.umbraco.com/forum/umbraco-7/using-umbraco-7/73346-check-if-umbraco-grid-is-empty
-    @{GridDataModel json = Model.Content.GetPropertyValue<GridDataModel>("bodyGrid");
-
-        if (json.HasData())
-        {
-            Do stuff if the grid has content
-        }
-*@
+@helper StripParagraph(string input)
+{
+    if (!string.IsNullOrEmpty(input))
+    {
+        input = Regex.Replace(input, "</?p>", String.Empty);
+        @Html.Raw(input)
+    }
+}
 
 
 
 @if (TempData["success"] == null)
 {
     <div class="row">
-        <div class="col-sm-12" >
+        <div class="col-sm-12">
             <h1>@Html.Raw(@Model.Title)</h1>
         </div>
     </div>
@@ -36,12 +35,12 @@
             {
                 <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
                 <p>
-                    Afholdes @Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK")) 
+                    Afholdes @Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK"))
                     @if (@Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK")) != @Model.StartTime.ToString("dddd \\den d. MMMM", CultureInfo.CreateSpecificCulture("da-DK")))
-                        { 
-                            @Html.Raw("til") @Model.EndTime.ToString("dddd \\den d. MMMM yyyy", CultureInfo.CreateSpecificCulture("da-DK")) <br />
-                            @Model.Location
-                        }
+                    {
+                        @Html.Raw("til") @Model.EndTime.ToString("dddd \\den d. MMMM yyyy", CultureInfo.CreateSpecificCulture("da-DK")) <br />
+                        @Model.Location
+                    }
                 </p>
             }
 
@@ -140,13 +139,13 @@
 
     </div>
 
-    }
-    else
-    {
+}
+else
+{
     <div class="row">
         <div class="col-sm-8" style="margin-bottom:2em">
             <h1>@Model.Title</h1>
             <p>Tak for din tilmelding. Vi svarer snarest!</p>
         </div>
     </div>
-    }
+}

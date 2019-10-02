@@ -416,6 +416,7 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
+    <Content Include="Views\Partials\displayTimeSloths.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -438,6 +439,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="App_Code\UmbracoExtensions.cs" />
+    <Content Include="App_Code\StringExtensions.cs" />
     <Compile Include="App_Data\Models\ArticleItem.generated.cs" />
     <Compile Include="App_Data\Models\ArticlesOverview.generated.cs" />
     <Compile Include="App_Data\Models\Book.generated.cs" />
