@@ -417,6 +417,8 @@
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
     <Content Include="Views\Partials\displayTimeSloths.cshtml" />
+    <Content Include="Views\Partials\displayLocation.cshtml" />
+    <Content Include="Views\Partials\displayOrganizer.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

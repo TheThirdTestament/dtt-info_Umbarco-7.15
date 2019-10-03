@@ -1,0 +1,24 @@
+﻿@model IPublishedContent
+@using System.Globalization;
+@using dtt_info.App_Code;
+@using System.Text.RegularExpressions;
+
+
+@{
+    <p>
+        @if (Model.GetPropertyValue("Title").ToString().Length > 0)
+        {
+            @Model.GetPropertyValue("Title") <br />
+        }
+        @if (Model.GetPropertyValue("Address").ToString().Length > 0)
+        {
+            @Model.GetPropertyValue("Address")<br />
+        }
+
+        @if (Model.GetPropertyValue("City").ToString().Length > 0 && Model.GetPropertyValue("Zip").ToString().Length > 0)
+        {
+            @Model.GetPropertyValue("Zip")@Html.Raw("&nbsp;")@Model.GetPropertyValue("City")
+        }
+    </p>
+}
+
