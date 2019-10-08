@@ -1,0 +1,5 @@
+﻿Search Box
+- https://codepen.io/artful_addict/pen/GZOrxy
+- https://stackoverflow.com/questions/50830110/search-bar-toggle-in-native-javascript
+- https://codepen.io/itsfreshmade/pen/yOmMbX
+- https://www.solodev.com/blog/web-design/creating-a-toggled-search-bar.stml
