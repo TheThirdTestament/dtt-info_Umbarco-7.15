@@ -32,23 +32,31 @@
     <div class="row">
         <div class="col-sm-8" style="margin-bottom:0em">
 
-            @if (@Model.SubTitle != null)
-            {
-                <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
+            @{
+                if (@Model.SubTitle != null)
+                {
+                    <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
+                }
+
+                if (@Model.ShortDescription != null)
+                {
+                    <p>@Model.ShortDescription</p>
+                }
+
+                @Html.Partial("displaySpeakers", Model.GetPropertyValue<IEnumerable<IPublishedContent>>("speaker"))
+
                 <p>
                     @Html.Partial("displayTimeSloths", Model.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
-                    @Model.Location
                     @Html.Partial("displayLocation", Model.Location2)
                 </p>
+
             }
 
 
             @if (@Model.Organizer != null && @Model.Organizer.ToString().Length > 8)
             {
                 <p>
-                    @Model.Organizer
-                    <strong>Arrangeret af</strong><br />
-                    @Html.Partial("displayOrganizer", Model.Organizer2)
+                    Arrangeret af @Html.Partial("displayOrganizer", Model.Organizer2)
                 </p>
             }
             </div>

@@ -419,6 +419,7 @@
     <Content Include="Views\Partials\displayTimeSloths.cshtml" />
     <Content Include="Views\Partials\displayLocation.cshtml" />
     <Content Include="Views\Partials\displayOrganizer.cshtml" />
+    <Content Include="Views\Partials\displaySpeakers.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -457,6 +458,7 @@
     <Compile Include="App_Data\Models\ImageWidget.generated.cs" />
     <Compile Include="App_Data\Models\ImageWidgetOverview.generated.cs" />
     <Compile Include="App_Data\Models\LiteratureOverview.generated.cs" />
+    <Compile Include="App_Data\Models\Location.generated.cs" />
     <Compile Include="App_Data\Models\Master.generated.cs" />
     <Compile Include="App_Data\Models\Member.generated.cs" />
     <Compile Include="App_Data\Models\Message.generated.cs" />
@@ -467,6 +469,7 @@
     <Compile Include="App_Data\Models\SimpleGridLayout.generated.cs" />
     <Compile Include="App_Data\Models\SimplePage.generated.cs" />
     <Compile Include="App_Data\Models\Site.generated.cs" />
+    <Compile Include="App_Data\Models\Speaker.generated.cs" />
     <Compile Include="App_Data\Models\StudyGroup.generated.cs" />
     <Compile Include="App_Data\Models\StudyGroups.generated.cs" />
     <Compile Include="App_Data\Models\SymbolItem.generated.cs" />
