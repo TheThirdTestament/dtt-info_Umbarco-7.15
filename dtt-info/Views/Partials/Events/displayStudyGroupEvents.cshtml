@@ -1,0 +1,7 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Event>
+
+<div style="margin-bottom:2em">
+    <a class="headline" href="@Model.Url"><b>@Model.Title</b></a><br />
+    @Html.Partial("Events/displayShortDescription", Model)
+    @Html.Partial("Events/displayLocationCity", Model.Location2)
+</div>

@@ -1,0 +1,38 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Event>
+@using System.Globalization;
+@using dtt_info.App_Code;
+
+@if (Model.EndTime > DateTime.Now)
+{
+    if (Model.StartTime.Date != Model.EndTime.Date)
+    {
+        <time>
+            @(Model.StartTime.ToString("dddd \\den d. MMMM\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")).FirstCharToUpper())  til
+            @(Model.EndTime.ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+        </time>
+    }
+    else
+    {
+        <time>
+            @(Model.StartTime.ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")).FirstCharToUpper())-@(Model.EndTime.ToString("HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+        </time>
+    }
+}
+else
+{
+    if (Model.StartTime.Date != Model.EndTime.Date)
+    {
+        <span>Afholdt </span>
+        <time>
+            @(Model.StartTime.ToString("dddd \\den d. MMMM\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")))  til
+            @(Model.EndTime.ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+        </time>
+    }
+    else
+    {
+        <span>Afholdt </span>
+        <time>
+            @(Model.StartTime.ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")))-@(Model.EndTime.ToString("HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+        </time>
+    }
+}

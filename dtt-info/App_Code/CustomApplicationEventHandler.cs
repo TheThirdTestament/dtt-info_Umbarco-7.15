@@ -27,6 +27,18 @@ namespace dtt_info.App_Code
                     category = UrlParameter.Optional
                 },
                 new UmbracoVirtualNodeByIdRouteHandler(1212));
+
+
+            RouteTable.Routes.MapUmbracoRoute(
+                "EventCustomRoute",
+                "Arrangementer/{category}",
+                new
+                {
+                    controller = "Arrangementer",
+                    action = "index",
+                    category = UrlParameter.Optional
+                },
+                new UmbracoVirtualNodeByIdRouteHandler(2665));
         }
     }
 

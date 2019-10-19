@@ -4,159 +4,163 @@
 @using System.Text.RegularExpressions;
 @using dtt_info.App_Code
 @{
-    /**/
-
     Layout = "Master.cshtml";
-}
+    var introImages = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
 
+
+}
 
 @helper StripParagraph(string input)
 {
     if (!string.IsNullOrEmpty(input))
     {
-        input = Regex.Replace(input, "</?p>", String.Empty);
+        input = Regex.Replace(input, "</?div>", String.Empty);
         @Html.Raw(input)
     }
 }
 
-
-
-@if (TempData["success"] == null)
+@if (TempData["success"] == null) // if the reservation form is not submitted
 {
     <div class="row">
         <div class="col-sm-12">
-            <h1>@Html.Raw(@Model.Title)</h1>
+            <h1 style="padding-bottom:1em">@Html.Raw(@Model.Title)</h1>
+
         </div>
     </div>
 
     <div class="row">
-        <div class="col-sm-8" style="margin-bottom:0em">
-
+        <div class="col-sm-8">
             @{
-                if (@Model.SubTitle != null)
+                if (@Model.SubTitle.ToString().Length > 3)
                 {
                     <h2 style="padding-bottom:1em">@Model.SubTitle</h2>
                 }
 
+                @Html.Partial("Events/displaySpeakersWithLabel", Model.GetPropertyValue<IEnumerable<IPublishedContent>>("speaker"))
+
                 if (@Model.ShortDescription != null)
                 {
-                    <p>@Model.ShortDescription</p>
+                    @Html.Raw(Model.GetPropertyValue("shortDescription").ToString())
                 }
 
-                @Html.Partial("displaySpeakers", Model.GetPropertyValue<IEnumerable<IPublishedContent>>("speaker"))
-
-                <p>
-                    @Html.Partial("displayTimeSloths", Model.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
-                    @Html.Partial("displayLocation", Model.Location2)
-                </p>
-
+                if (@Model.EventType.ToString() == "Studiegruppe")
+                {
+                    <div>
+                        @Html.Partial("Events/displayLocation", Model.Location2)
+                    </div>
+                    <div>
+                        Der afholdes studiegrupper på disse tidspunkter:
+                    </div>
+                    @Html.Partial("Events/displayTimeSloths", Model)
+                }
+                else
+                {
+                    <div>
+                        @Html.Partial("Events/displayTime", Model)
+                        @Html.Partial("Events/displayLocation", Model.Location2)
+                    </div>
+                }
             }
-
 
             @if (@Model.Organizer != null && @Model.Organizer.ToString().Length > 8)
             {
-                <p>
-                    Arrangeret af @Html.Partial("displayOrganizer", Model.Organizer2)
-                </p>
+                <div>
+                    Arrangeret af @Html.Partial("Events/displayOrganizer", Model.Organizer2)
+                </div>
             }
-            </div>
 
-        @{
-
-            var introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
-            var relatedLinkItems = Model.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("videoLinks");
-
-            int i = 1;
-            if (introImageItems != null || relatedLinkItems != null)
+            @if (Model.HasGridValue("details"))
             {
-                @Html.Raw("<div class=\"col-sm-4\" style=\"margin-top:2em\">")
+                <div style="margin:2em 0 2em -1em">
+                    @Html.GetGridHtml(Model, "details")
+                </div>
 
+                // all intro images except the first
 
-                if (introImageItems != null && introImageItems.Any())
+                var moreIntroImageItems = (introImages != null && introImages.Count() > 1) ? introImages.Skip(1) : null;
+
+                if (moreIntroImageItems != null)
                 {
-                    foreach (var imageItem in introImageItems)
-                    {
-                        if (i == 1)
+                    <div style="margin-top:2em; ">
+                        @foreach (var imageItem in moreIntroImageItems)
                         {
                             <div style="margin-bottom:1em">
-                                <img src='@imageItem.Url'>
+                                <img src="@imageItem.Url">
                             </div>
-                            i++;
-                        }
-                    }
-                }
-
-
-
-                if (relatedLinkItems != null && relatedLinkItems.Any())
-                {
-                    <div>
-                        @foreach (var item in relatedLinkItems)
-                        {
-                            var linkTarget = (item.NewWindow) ? "_blank" : null;
-                            <p><a href="@item.Link" target="@linkTarget">@item.Caption</a></p>
                         }
                     </div>
                 }
-
-                @Html.Raw("</div>")
-
             }
-        }
-    </div>
 
-    <div class="row">
-
-
-        @if (Model.HasGridValue("details"))
-        {
-            <div class="col-sm-8" style="margin-bottom:2em;padding:0">
-                @Html.GetGridHtml(Model, "details")
-            </div>
-
-            introImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("introImages");
-            if (introImageItems != null)
+            @if (@Model.Price != null && Model.Price.ToString().Length > 8 || @Model.Registration != null && Model.Registration.ToString().Length > 8)
             {
-                @Html.Raw("<div class=\"col-sm-4\" style=\"margin-top:2em; \">")
+                <div>
+                    @if (Model.Price != null && @Model.Price.ToString().Length > 8)
+                    {
+                        @Model.Price
+                    }
+                    @if (Model.Registration != null && Model.Registration.ToString().Length > 8)
+                    {
+                        @Model.Registration
+                        @Html.Action("Index", "EventFormSurface")
+                    }
+                </div>
+            }
+        </div>
 
-                foreach (var imageItem in introImageItems)
-                {
-                    if (i > 2)
+        @{
+
+            var firstIntroImage = (introImages != null) ? introImages.First() : null;
+            var relatedLinkItems = Model.GetPropertyValue<Umbraco.Web.Models.RelatedLinks>("videoLinks");
+
+            if (firstIntroImage != null || relatedLinkItems != null)
+            {
+                <div class="col-sm-4">
+                    @if (firstIntroImage != null)
                     {
                         <div style="margin-bottom:1em">
-                            <img src="@imageItem.Url">
+                            <img src='@firstIntroImage.Url'>
                         </div>
                     }
-                    i++;
-                }
-            }
-            @Html.Raw("</div>")
-        }
 
-        @if (@Model.Prices != null && Model.Prices.ToString().Length > 8 || @Model.Registration != null && Model.Registration.ToString().Length > 8)
-        {
-            <div class="col-sm-8">
-                @if (Model.Prices != null && @Model.Prices.ToString().Length > 8)
-                {
-                    @Model.Prices
-                }
-                @if (Model.Registration != null && Model.Registration.ToString().Length > 8)
-                {
-                    @Model.Registration
-                    @Html.Action("Index", "EventFormSurface")
-                }
-            </div>
+                    @if (relatedLinkItems != null)
+                    {
+                        <div>
+                            @foreach (var item in relatedLinkItems)
+                            {
+                                var linkTarget = (item.NewWindow) ? "_blank" : null;
+                                <div><a href="@item.Link" target="@linkTarget">@item.Caption</a></div>
+                            }
+                        </div>
+                    }
+                </div>
+            }
         }
 
     </div>
 
+    var fullWithImageItems = Model.GetPropertyValue<IEnumerable<IPublishedContent>>("fullWithImages");
+    if (fullWithImageItems != null)
+    {
+        <div class="row">
+            <div class="col-sm-12">
+                @foreach (var imageItem in fullWithImageItems)
+                {
+                    <div style="margin:1em 0 1em 0; text-align:center">
+                        <img src='@imageItem.Url' alt="@imageItem.GetPropertyValue("altText")">
+                        <span class="caption">@imageItem.GetPropertyValue("caption")</span>
+                    </div>
+                }
+            </div>
+        </div>
+    }
 }
 else
 {
     <div class="row">
         <div class="col-sm-8" style="margin-bottom:2em">
             <h1>@Model.Title</h1>
-            <p>Tak for din tilmelding. Vi svarer snarest!</p>
+            <div>Tak for din tilmelding. Vi svarer snarest!</div>
         </div>
     </div>
 }

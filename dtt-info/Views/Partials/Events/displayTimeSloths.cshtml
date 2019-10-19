@@ -1,0 +1,96 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<Event>
+@using System.Globalization;
+@using dtt_info.App_Code;
+
+@if (Model.GetPropertyValue<IEnumerable<IPublishedContent>>("time").Count() == 1)
+{
+    foreach (var timeSloth in Model.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+    {
+        if (timeSloth.GetPropertyValue<DateTime>("endTime") > DateTime.Now)
+        {
+            if (timeSloth.GetPropertyValue<DateTime>("startTime").Date != timeSloth.GetPropertyValue<DateTime>("endTime").Date)
+            {
+                <time>
+                    @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")).FirstCharToUpper())  til
+                    @(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                </time>
+            }
+            else
+            {
+                <time>
+                    @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")).FirstCharToUpper())-@(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                </time>
+            }
+        }
+        else
+        {
+            if (timeSloth.GetPropertyValue<DateTime>("startTime").Date != timeSloth.GetPropertyValue<DateTime>("endTime").Date)
+            {
+                <span>Afholdt </span>
+                <time>
+                    @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")))  til
+                    @(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                </time>
+            }
+            else
+            {
+                <span>Afholdt </span>
+                <time>
+                    @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")))-@(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                </time>
+            }
+        }
+    }
+}
+else if (Model.GetPropertyValue<IEnumerable<IPublishedContent>>("time").Count() > 1)
+{
+    <p>
+        <ul>
+            @foreach (var timeSloth in Model.GetPropertyValue<IEnumerable<IPublishedContent>>("time"))
+            {
+                if (timeSloth.GetPropertyValue<DateTime>("endTime") > DateTime.Now)
+                {
+                    if (timeSloth.GetPropertyValue<DateTime>("startTime").Date != timeSloth.GetPropertyValue<DateTime>("endTime").Date)
+                    {
+                        <li>
+                            <time>
+                                @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")).FirstCharToUpper())  til
+                                @(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                            </time>
+                        </li>
+                    }
+                    else
+                    {
+                        <li>
+                            <time>
+                                @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")).FirstCharToUpper())-@(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                            </time>
+                        </li>
+                    }
+                }
+                @*else
+                    {
+                        if (timeSloth.GetPropertyValue<DateTime>("startTime").Date != timeSloth.GetPropertyValue<DateTime>("endTime").Date)
+                        {
+                            <li>
+                                <span>Afholdt </span>
+                                <time>
+                                    @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")))  til
+                                    @(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                                </time>
+                            </li>
+                        }
+                        else
+                        {
+                            <li>
+                                <span>Afholdt </span>
+                                <time>
+                                    @(timeSloth.GetPropertyValue<DateTime>("startTime").ToString("dddd \\den d. MMMM yyyy\\, kl. HH:mm", CultureInfo.CreateSpecificCulture("da-DK")))-@(timeSloth.GetPropertyValue<DateTime>("endTime").ToString("HH:mm", CultureInfo.CreateSpecificCulture("da-DK"))).
+                                </time>
+                            </li>
+                        }
+                    }*@
+            }
+        </ul>
+    </p>
+}

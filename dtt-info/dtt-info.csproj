@@ -367,6 +367,7 @@
     <Content Include="Views\ArticleItem.cshtml" />
     <Content Include="Views\ArticlesOverview.cshtml" />
     <Content Include="Views\ContactForm.cshtml" />
+    <Content Include="Views\Event.cshtml" />
     <Content Include="Views\Home.cshtml" />
     <Content Include="Views\LiteratureList.cshtml" />
     <Content Include="Views\LiteratureOverview.cshtml" />
@@ -402,7 +403,6 @@
     <Content Include="Views\Global.cshtml" />
     <Content Include="Views\Page.cshtml" />
     <Content Include="Views\TenNuggets.cshtml" />
-    <Content Include="Views\Event.cshtml" />
     <Content Include="Views\Events.cshtml" />
     <Content Include="Views\MacroPartials\listEvents.cshtml" />
     <Content Include="Views\DnvArticle.cshtml" />
@@ -416,10 +416,19 @@
     <Content Include="Views\Partials\Grid\Bootstrap3-Fluid.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2.cshtml" />
     <Content Include="Views\Partials\Grid\Bootstrap2-Fluid.cshtml" />
-    <Content Include="Views\Partials\displayTimeSloths.cshtml" />
-    <Content Include="Views\Partials\displayLocation.cshtml" />
-    <Content Include="Views\Partials\displayOrganizer.cshtml" />
-    <Content Include="Views\Partials\displaySpeakers.cshtml" />
+    <Content Include="Views\Partials\Events\displayTimeSloths.cshtml" />
+    <Content Include="Views\Partials\Events\displayLocation.cshtml" />
+    <Content Include="Views\Partials\Events\displayOrganizer.cshtml" />
+    <Content Include="Views\Partials\Events\displaySpeakers.cshtml" />
+    <Content Include="Views\Partials\Events\displaySpeakersWithLabel.cshtml" />
+    <Content Include="Views\Partials\Events\displayShortDescription.cshtml" />
+    <Content Include="Views\Partials\Events\displayLocationCity.cshtml" />
+    <Content Include="Views\Partials\Events\displayEvent.cshtml" />
+    <Content Include="Views\Partials\Events\displayEventWithAuthor.cshtml" />
+    <Content Include="Views\Partials\Events\displayStudyGroupEvents.cshtml" />
+    <Content Include="Views\Partials\Events\displayTime.cshtml" />
+    <Content Include="Views\Partials\Events\displayEventsTypeHeader.cshtml" />
+    <Content Include="Views\Partials\Events\displayEventsHeader.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -480,6 +489,7 @@
     </Content>
     <Compile Include="Controllers\EventFormSurfaceController.cs" />
     <Compile Include="Controllers\ContactFormSurfaceController.cs" />
+    <Compile Include="Controllers\ArrangementerController.cs" />
     <Compile Include="Controllers\LiteratureOverviewController.cs" />
     <Compile Include="Controllers\NewsletterFormSurfaceController.cs" />
     <Compile Include="Global.asax.cs">
@@ -497,6 +507,7 @@
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
     <Compile Include="ViewModels\ContactMessage.cs" />
+    <Compile Include="ViewModels\EventListViewModel.cs" />
     <Compile Include="ViewModels\LiteratureListViewModel.cs" />
     <Compile Include="ViewModels\NewsletterRegistration.cs" />
   </ItemGroup>
@@ -507,6 +518,7 @@
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Views\fz3-15713888238480\" />
     <Folder Include="Views\LitteratureOverview\" />
   </ItemGroup>
   <ItemGroup>

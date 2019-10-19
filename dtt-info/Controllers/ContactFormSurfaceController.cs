@@ -13,6 +13,11 @@ namespace DttInfo.Controllers
         // GET: ContactFormSurface
         public ActionResult Index()
         {
+            //var dts = Services.DataTypeService;
+            //var eventTypes = dts.GetPreValuesCollectionByDataTypeId(2918);
+
+
+
             return PartialView("contactForm", new ContactMessage());
         }
 

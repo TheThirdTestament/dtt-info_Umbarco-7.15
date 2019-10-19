@@ -1,0 +1,11 @@
+﻿@model IPublishedContent
+
+@{
+    <div>
+        @if (Model.GetPropertyValue("City").ToString().Length > 0 && Model.GetPropertyValue("Zip").ToString().Length > 0)
+        {
+            @Model.GetPropertyValue("Zip")@Html.Raw("&nbsp;")@Model.GetPropertyValue("City")
+        }
+    </div>
+}
+

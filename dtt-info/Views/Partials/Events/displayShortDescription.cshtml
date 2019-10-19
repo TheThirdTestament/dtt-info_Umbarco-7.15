@@ -1,0 +1,17 @@
+﻿@model IPublishedContent
+@using System.Text.RegularExpressions;
+
+@helper StripParagraph(string input)
+{
+    if (!string.IsNullOrEmpty(input))
+    {
+        input = Regex.Replace(input, "</?p>", String.Empty);
+        @Html.Raw(input)
+    }
+}
+
+@if (Model.GetPropertyValue("shortDescription").ToString().Length > 6)
+{
+    StripParagraph(Model.GetPropertyValue("shortDescription").ToString());
+}
+
