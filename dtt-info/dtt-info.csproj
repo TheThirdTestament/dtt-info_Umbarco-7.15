@@ -424,7 +424,6 @@
     <Content Include="Views\Partials\Events\displayShortDescription.cshtml" />
     <Content Include="Views\Partials\Events\displayLocationCity.cshtml" />
     <Content Include="Views\Partials\Events\displayEvent.cshtml" />
-    <Content Include="Views\Partials\Events\displayEventWithAuthor.cshtml" />
     <Content Include="Views\Partials\Events\displayStudyGroupEvents.cshtml" />
     <Content Include="Views\Partials\Events\displayTime.cshtml" />
     <Content Include="Views\Partials\Events\displayEventsTypeHeader.cshtml" />
@@ -489,7 +488,7 @@
     </Content>
     <Compile Include="Controllers\EventFormSurfaceController.cs" />
     <Compile Include="Controllers\ContactFormSurfaceController.cs" />
-    <Compile Include="Controllers\ArrangementerController.cs" />
+    <Compile Include="Controllers\EventsController.cs" />
     <Compile Include="Controllers\LiteratureOverviewController.cs" />
     <Compile Include="Controllers\NewsletterFormSurfaceController.cs" />
     <Compile Include="Global.asax.cs">

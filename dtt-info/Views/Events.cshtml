@@ -1,6 +1,7 @@
 ﻿@inherits Umbraco.Web.Mvc.UmbracoViewPage<EventListViewModel>
 @using dtt_info.ViewModels;
 @using Umbraco.Web
+@using System
 @using System.Text.RegularExpressions;
 @using Umbraco.Core.Models;
 @using Umbraco.Core.Services;
@@ -8,152 +9,51 @@
 @{
     Layout = "Master.cshtml";
 
-
-    var dataType = ApplicationContext.Services.DataTypeService.GetDataTypeDefinitionByName("Event - Event type - Dropdown");
-    var eventTypes = ApplicationContext.Services.DataTypeService.GetPreValuesCollectionByDataTypeId(dataType.Id).PreValuesAsDictionary.Select(x => x.Value).ToList();
-}
-
-@helper StripParagraph(string input)
-{
-    if (!string.IsNullOrEmpty(input))
-    {
-        input = Regex.Replace(input, "</?p>", String.Empty);
-        @Html.Raw(input)
-    }
-}
-
-@{
-    // upcomming events
-    IEnumerable<IPublishedContent> events = Model.Events.Where(x => x.GetPropertyValue<DateTime>("endtime") >= DateTime.Now).OrderBy(x => x.GetPropertyValue<DateTime>("StartTime"));
-
-    IEnumerable<IPublishedContent> foredrag = events.Where(x => x.GetPropertyValue("eventType").ToString() == "Foredrag");
-    IEnumerable<IPublishedContent> kurser = events.Where(x => x.GetPropertyValue("eventType").ToString() == "Kursus");
-    IEnumerable<IPublishedContent> seminarer = events.Where(x => x.GetPropertyValue("eventType").ToString() == "Seminar");
-    IEnumerable<IPublishedContent> fester = events.Where(x => x.GetPropertyValue("eventType").ToString() == "Festdag");
-    IEnumerable<IPublishedContent> studiegrupper = events.Where(x => x.GetPropertyValue("eventType").ToString() == "Studiegruppe");
-
-    // past events
-    IEnumerable<IPublishedContent> pastEvents = Model.Events.Where(x => x.GetPropertyValue<DateTime>("endtime") < DateTime.Now && x.IsVisible()).OrderByDescending(x => x.GetPropertyValue<DateTime>("StartTime"));
-    IEnumerable<IPublishedContent> afholdteForedrag = pastEvents.Where(x => x.GetPropertyValue("eventType").ToString() == "Foredrag");
-    IEnumerable<IPublishedContent> afholdteKurser = pastEvents.Where(x => x.GetPropertyValue("eventType").ToString() == "Kursus");
-    IEnumerable<IPublishedContent> afholdteSeminarer = pastEvents.Where(x => x.GetPropertyValue("eventType").ToString() == "Seminar");
-    IEnumerable<IPublishedContent> afholdteFester = pastEvents.Where(x => x.GetPropertyValue("eventType").ToString() == "Festdag");
+    IEnumerable<IPublishedContent> events = Model.Events;
 }
 
 <div class="row">
     <div class="col-sm-3">
     </div>
-
     <div class="col-sm-9">
         @{
-            // Header: Kommender arrangementer
-            @Html.Partial("Events/displayEventsHeader", "Kommende arrangementer")
+            var header = Model.Catagory.ToLower() == "afholdte" ? "Afholdte arrangementer" : Model.Catagory;
+            @Html.Partial("Events/displayEventsHeader", header.ToFirstUpper())
         }
     </div>
 </div>
 
 <div class="row">
+    <!-- Submenu -->
     <div class="col-sm-3" style="margin-top:2em">
-
         <div class="card">
             <div class="card-body">
-                <h3 class="card-title">Arrangementtype</h3>
+                <h3 class="card-title">Arrangementer</h3>
                 <ul>
-                    @foreach (var item in eventTypes)
-                    {
-                        if (item.Value != "0")
+                    @{
+                        foreach (var item in Model.SubMenuItems)
                         {
-                            <li><a href="@item.Value">@item.Value</a></li>
-                        }
+                            <li><a href="@item.ToLower()">@item</a></li>
+                         }
                     }
                 </ul>
             </div>
         </div>
-
-
     </div>
+
+    <!-- Events -->
     <div class="col-sm-9">
         @{
-            if (foredrag.Count() > 0)
+            if (events.Count() > 0)
             {
-                @Html.Partial("Events/displayEventsTypeHeader", "Foredrag")
-                foreach (Event item in foredrag)
+                var eventType = "";
+                foreach (Event item in events)
                 {
-                    @Html.Partial("Events/displayEventWithAuthor", item)
-                }
-            }
-
-            if (kurser.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Kurser")
-                foreach (Event item in kurser)
-                {
-                    @Html.Partial("Events/displayEvent", item)
-                }
-            }
-
-            if (seminarer.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Seminarer")
-                foreach (Event item in seminarer)
-                {
-                    @Html.Partial("Events/displayEvent", item)
-                }
-            }
-
-            if (fester.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Festdag")
-                foreach (Event item in fester)
-                {
-                    @Html.Partial("Events/displayEvent", item)
-                }
-            }
-
-            if (studiegrupper.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Studiegrupper")
-                foreach (Event item in studiegrupper)
-                {
-                    @Html.Partial("Events/displayStudyGroupEvents", item)
-                }
-            }
-
-            // Afholdte arrangementer
-            @Html.Partial("Events/displayEventsHeader", "Afholdte arrangementer")
-
-            if (afholdteForedrag.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Foredrag")
-                foreach (Event item in afholdteForedrag)
-                {
-                    @Html.Partial("Events/displayEventWithAuthor", item)
-                }
-            }
-
-            if (afholdteKurser.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Kurser")
-                foreach (Event item in afholdteKurser)
-                {
-                    @Html.Partial("Events/displayEvent", item)
-                }
-            }
-
-            if (afholdteSeminarer.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Seminarer")
-                foreach (Event item in afholdteSeminarer)
-                {
-                    @Html.Partial("Events/displayEvent", item)
-                }
-            }
-
-            if (afholdteFester.Count() > 0)
-            {
-                @Html.Partial("Events/displayEventsTypeHeader", "Festdag")
-                foreach (Event item in afholdteFester)
-                {
+                    if (Model.Catagory == "afholdte" && eventType != item.EventType)
+                    {
+                        @Html.Partial("Events/displayEventsTypeHeader", item.EventType)
+                    }
+                    eventType = item.EventType;
                     @Html.Partial("Events/displayEvent", item)
                 }
             }

@@ -16,20 +16,19 @@ namespace dtt_info.Controllers
         {
             if (RouteData.Values["category"] != null)
             {
-
                 // url segment "category"
                 string category = RouteData.Values["category"].ToString();
-
+                // the model
                 LiteratureListViewModel viewModel = new LiteratureListViewModel(model.Content);
 
                 switch (category)
                 {
                     case "livets-bog":
-                        viewModel.Catagory = "<em>Livets Bog</em>";
+                        viewModel.Catagory = "Livets Bog";
                         viewModel.Books = Umbraco.TypedContentAtRoot().First().Descendants().Where(x => x.DocumentTypeAlias == "book").Where(x => x.GetPropertyValue<int>("sortNo") > 0 && x.GetPropertyValue<int>("sortNo") < 10).Select(x => (Book)x).ToList();
                         break;
                     case "det-evige-verdensbillede":
-                        viewModel.Catagory = "<em>Det evige verdensbillede</em>";
+                        viewModel.Catagory = "Det Evige Verdensbillede";
                         viewModel.Books = Umbraco.TypedContentAtRoot().First().Descendants().Where(x => x.DocumentTypeAlias == "book").Where(x => x.GetPropertyValue<int>("sortNo") > 10 && x.GetPropertyValue<int>("sortNo") < 20).Select(x => (Book)x).ToList();
                         break;
                     case "andre-store-boeger":

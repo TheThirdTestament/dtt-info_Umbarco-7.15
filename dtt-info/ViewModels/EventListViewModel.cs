@@ -13,9 +13,11 @@ namespace dtt_info.ViewModels
             public EventListViewModel(IPublishedContent content) : base(content)
             {
                 IEnumerable<Event> Events = new List<Event>();
+                IEnumerable<string> SubMenuItems = new List<string>();
             }
             public string Catagory { get; set; }
             public IEnumerable<Umbraco.Web.PublishedContentModels.Event> Events { get; set; }
-        
+            public IEnumerable<string> SubMenuItems { get; set; }
+
     }
 }

@@ -34,7 +34,7 @@ namespace dtt_info.App_Code
                 "Arrangementer/{category}",
                 new
                 {
-                    controller = "Arrangementer",
+                    controller = "Events",
                     action = "index",
                     category = UrlParameter.Optional
                 },
