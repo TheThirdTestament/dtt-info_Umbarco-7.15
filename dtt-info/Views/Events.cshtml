@@ -25,7 +25,7 @@
 
 <div class="row">
     <!-- Submenu -->
-    <div class="col-sm-3" style="margin-top:2em">
+    <div class="col-sm-3" style="margin-top:0.5em">
         <div class="card">
             <div class="card-body">
                 <h3 class="card-title">Arrangementer</h3>
@@ -33,7 +33,9 @@
                     @{
                         foreach (var item in Model.SubMenuItems)
                         {
-                            <li><a href="@item.ToLower()">@item</a></li>
+                            <li class="nav-item @(item.ToLower() == Model.Catagory.ToLower()  ? "current" : null)">
+                                <a href="@item.ToLower()">@item</a>
+                            </li>
                          }
                     }
                 </ul>

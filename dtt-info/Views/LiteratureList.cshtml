@@ -21,10 +21,18 @@
             <div class="card-body">
                 <h3 class="card-title">Det Tredie Testamente</h3>
                 <ul>
-                    <li><a href="/litteratur/livets-bog">Livets Bog</a></li>
-                    <li><a href="/litteratur/det-evige-verdensbillede">Det Evige Verdensbillede</a></li>
-                    <li><a href="/litteratur/andre-store-boeger">Øvrige store bøger</a></li>
-                    <li><a href="/litteratur/smaaboeger">Småbøger</a></li>
+                    <li class="nav-item @("livets bog" == Model.Catagory.ToLower()  ? "current" : null)">
+                        <a href="/litteratur/livets-bog">Livets Bog</a>
+                    </li>
+                    <li class="nav-item @("det evige verdensbillede" == Model.Catagory.ToLower()  ? "current" : null)">
+                        <a href="/litteratur/det-evige-verdensbillede">Det Evige Verdensbillede</a>
+                    </li>
+                    <li class="nav-item @("de øvrige store bøger" == Model.Catagory.ToLower()  ? "current" : null)">
+                        <a href="/litteratur/andre-store-boeger">Øvrige store bøger</a>
+                    </li>
+                    <li class="nav-item @("småbøger" == Model.Catagory.ToLower()  ? "current" : null)">
+                        <a href="/litteratur/smaaboeger">Småbøger</a>
+                    </li>
                 </ul>
             </div>
         </div>
